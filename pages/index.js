@@ -7,6 +7,9 @@ export default function Home() {
       <Head>
         <title> henrik's shitty website </title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="keywords" content="henrik, van tassell, henrik tech, henrik techguy" />
+        <meta name="description" content="henrik's shitty personal website" />
+        <meta name="author" content="henrik vt" />
       </Head>
 
       <main className={styles.main}>
