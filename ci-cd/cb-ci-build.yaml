@@ -1,4 +1,5 @@
 steps:
+- runs-on: 'ubuntu'
 # install dependencies
 - name: 'gcr.io/cloud-builders/npm' 
   args: ["install"]
