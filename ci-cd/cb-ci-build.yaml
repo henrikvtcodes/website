@@ -1,4 +1,10 @@
 steps:
-#install dependencies
+# install dependencies
 - name: 'gcr.io/cloud-builders/npm' 
   args: ["install"]
+# test build the site
+- name: 'gcr.io/cloud-builders/npm'
+  args: ["run", "build"]
+# test export the site
+- name: 'gcr.io/cloud-builders/npm'
+  args: ["run", "export"]
