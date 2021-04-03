@@ -1,5 +1,6 @@
 main.container {
     height: 100px;
+    width: 100%;
     background-color: red;
 
     /* Define Flexbox Behavior */
