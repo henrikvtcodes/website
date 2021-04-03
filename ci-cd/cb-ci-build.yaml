@@ -1,6 +1,6 @@
 steps:
 # install dependencies
-- name: 'gcr.io/cloud-builders/npm' 
+- name: 'gcr.io/cloud-builders/npm'
   args: ["install"]
 # test build the site
 - name: 'gcr.io/cloud-builders/npm'
