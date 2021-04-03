@@ -12,3 +12,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Global Styles */
+h1,
+h2 {
+  font-family: "Uni Sans Heavy";
+}
+
+h3,
+h4,
+h5,
+h6,
+p,
+div {
+  font-family: "Whitney";
+}
