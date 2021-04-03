@@ -3,7 +3,9 @@ import Link from "next/link";
 
 function Header() {
     return (
-    <p> this is a header </p>
+    <header>
+        dis is a header
+    </header>
     )
 }
 
