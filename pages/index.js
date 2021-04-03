@@ -2,7 +2,7 @@ import Head from 'next/head'
 
 import Header from '@components/header.js'
 import Footer from '@components/footer.js'
-import styles from '@styles/home.module.css'
+import styles from '@styles/Home.module.css'
 
 export default function Home() {
   return (
