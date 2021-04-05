@@ -9,11 +9,12 @@
 }
 
 /* TailwindCSS imports */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 /* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
 h1,
 h2 {
   font-family: "Uni Sans Heavy";

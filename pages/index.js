@@ -15,7 +15,7 @@ export default function Home() {
         <meta name="author" content="henrik vt" />
       </Head>
       
-      <Header />
+      <Header /> 
 
       <div className={styles.main}>
         
