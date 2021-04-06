@@ -2,33 +2,33 @@ import React from 'react';
 import Link from "next/link";
 
 import styles from '@styles/header.module.css'
-import henrik from '@media/henriklogo.png'
+// import henrik from '@media/henriklogo.png'
 
 function Header() {
     return (
         <navbar className={styles.navbar}>
             <ul>
-                <li> // home button and main logo
+                <li> {/* main logo, home page link */}
                     <Link href="/">
-                        <img src={henrik} alt="Circular Cartoon Henrik Face" />
+                        <img src={'/henriklogo-spin.gif'} alt="Circular Cartoon Henrik Face" />
                     </Link>
                 </li>
-                <li> // about page
+                <li> {/* link to about page */}
                     <Link href="/about">
                     About
                     </Link>
                 </li>
-                <li> // media page; twitch, youtube, twitter feed, etc.
+                <li> {/* media page; twitch, youtube, twitter, insta embeds*/}
                     <Link href="/media">
                     Media
                     </Link>
                 </li>
-                <li> // projects page; psuedo blog where i write about my various code and IT projects
+                <li> {/* project psuedo-blog; content generated based on markdown files */}
                     <Link href="/projects">
                     Projects
                     </Link>
                 </li>
-                <li> // contact page; contact form
+                <li> {/* contact form */}
                     <Link href="/contact">
                     Contact
                     </Link>
