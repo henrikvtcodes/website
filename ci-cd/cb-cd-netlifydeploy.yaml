@@ -2,9 +2,13 @@ steps:
 # install dependencies
 - name: 'gcr.io/cloud-builders/npm'
   args: ["ci"]
-# test build the site
+# build the site
 - name: 'gcr.io/cloud-builders/npm'
   args: ["run", "build"]
-# test export the site
+# export the site
 - name: 'gcr.io/cloud-builders/npm'
   args: ["run", "export"]
+
+# setup netlify-cli to deploy
+- name: 'gcr.io/cloud-builders/npm'
+  args: ['install', "netlify-cli"]
