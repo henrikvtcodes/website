@@ -1,8 +1,9 @@
+import React from 'react';
 import Head from 'next/head'
 
 import Header from '@components/header.js'
 import Footer from '@components/footer.js'
-import styles from '@styles/Home.module.css'
+import styles from '@styles/home.module.css'
 
 export default function Home() {
   return (
@@ -18,7 +19,9 @@ export default function Home() {
       <Header /> 
 
       <div className={styles.main}>
-        
+        <h1>
+          HOME PAGE
+        </h1>
       </div>
 
       <Footer />
