@@ -10,7 +10,7 @@ function Header() {
             <ul>
                 <li> {/* main logo, home page link */}
                     <Link href="/">
-                        <img src={'/henriklogo-spin.gif'} alt="Circular Cartoon Henrik Face" />
+                        <img src={'/henriklogo-spin-crop.gif'} alt="Circular Cartoon Henrik Face" />
                     </Link>
                 </li>
                 <li> {/* link to about page */}

@@ -11,7 +11,20 @@
   border-bottom: 1px solid gray;
   z-index: 99;
   box-sizing: border-box;
+  animation-name: fyre;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
 }
+@keyframes fyre {
+  0%   {background-color: #ffca28;}
+  20%  {background-color: #ffa000;}
+  40%  {background-color: #F57C00;}
+  60%  {background-color: #F57C00;}
+  80%  {background-color: #ffa000;}
+  100% {background-color: #ffca28;}
+}
+/*linear-gradient(#FFCA28, #FFA000, #F57C00, #000000);*/
+
 
 .navbar ul {
   list-style-type: none;
@@ -30,26 +43,3 @@
   cursor: pointer;
 }
   
-
-main.container {
-  height: 100px;
-  width: 100%;
-  background-color: red;    
-  box-sizing: border-box;
-
-  /* Define Flexbox Behavior */
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: flex-start;
-  align-content: flex-start;
-}
-
-div.logo {
-  height: 80px;
-  width: 80px;
-
-  /* Define Flexbox Behavior */
-  order: 1;
-  flex-grow: 1;
-}
