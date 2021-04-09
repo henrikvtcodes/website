@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 import Header from '@components/header.js'
 import Footer from '@components/footer.js'
-import styles from '@styles/home.module.css'
+import styles from '@styles/about.module.css'
 
 export default function About() {
     return (
