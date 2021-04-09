@@ -3,7 +3,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Folders & Branches
 Index for all the the permanent branches in this project and their folders.
-#### `main` branch
+### `main` branch
 - `pages`: This directory holds the pages for the website. These pages are written in JavaScript.
 - `styles`: Stylesheets for the website pages and components.
 - `components`: Hold the components for the site; ie: `header.js` and `footer.js`
@@ -11,7 +11,7 @@ Index for all the the permanent branches in this project and their folders.
 - `lib`: Not quite sure what this is called, but it holds `js` files for stuff like the Firebase config and whatnot.
 - `ci-cd`: `yaml` files that describe the cloudbuild routines for this project.
 
-#### `functions` branch
+### `functions` branch
 - `functions`: functions directly lol
 - `functions/firebase-src`: firebase functions - these functions operate async to the website.
 - `functions/netlifylambda-src`: *This Directory Does Not Exist Yet.* Functions that operate in response to events from the website. Form handlers, etc.

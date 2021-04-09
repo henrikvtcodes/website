@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 }
   
 .footer img {
@@ -15,4 +16,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.logo {
+    height: 1em;
 }
