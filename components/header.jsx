@@ -2,7 +2,6 @@ import React from 'react';
 import Link from "next/link";
 
 import styles from '@styles/header.module.css'
-// import henrik from '@media/henriklogo.png'
 
 function Header() {
     return (
