@@ -21,3 +21,5 @@ This section describes the standards in this repository.
 ### File extensions
 - `.js` is used for anything that is vanilla JavaScript
 - `.jsx` is used for anything that is a React component or generates a viewable page.
+### File Naming
+- CSS Modules (`Foo.module.css`) start with a capital letter. This helps avoid resolution/compilation errors.

@@ -3,7 +3,7 @@ import Head from 'next/head'
 
 import Header from '@components/header.jsx'
 import Footer from '@components/footer.jsx'
-import styles from '@styles/projects.module.css'
+import styles from '@styles/Projects.module.css'
 
 export default function Projects() {
     return (
