@@ -2,13 +2,30 @@ steps:
 # install dependencies
 - name: 'gcr.io/cloud-builders/npm'
   args: ["ci"]
-# build the site
-- name: 'gcr.io/cloud-builders/npm'
-  args: ["run", "build"]
-# export the site
-- name: 'gcr.io/cloud-builders/npm'
-  args: ["run", "export"]
 
-# setup netlify-cli to deploy
+# install netlify-cli
 - name: 'gcr.io/cloud-builders/npm'
-  args: ['install', "netlify-cli"]
+  args: ['install','netlify-cli']
+
+# login & link netlify
+- name: 'ubuntu:20.04'
+  args: ['netlify','login','$$NETLIFY_TOKEN']
+  secretEnv: ['NETLIFY_TOKEN']
+- name: 'ubuntu:20.04'
+  args: ['netlify','link','--name','${NETLIFY_SITENAME}']
+  substitutions:
+    NETLIFY_SITENAME: henrikvtcom-nextjs-2
+
+# build netlify
+- name: 'ubuntu:20.04'
+  args: ['netlify','build','']
+
+# deploy to netlify with production flag
+- name: 'ubuntu:20.04'
+  args: ['netlify','deploy','--prod']
+
+
+availableSecrets:
+  secretManager:
+  - versionName: projects/940155333710/secrets/NETLIFY_PERSONAL_ACCESS_TOKEN/versions/latest #get the netlify tokent to enable deploys
+    env: NETLIFY_TOKEN
