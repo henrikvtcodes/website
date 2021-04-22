@@ -8,13 +8,12 @@ export default function Contact() {
 const { register, handleSubmit } = useForm();
 
     return(
-        <form netlify >
+        <form netlify>
             <input {...register("firstName", { required: true })} placeholder="First name" />
             <input {...register("lastName", { required: true })} placeholder="Last name" />
         </form>
     )
 }
-
 
 
 
