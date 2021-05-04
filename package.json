@@ -5,8 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "export": "next export"
+    "start": "next start -p $PORT",
+    "export": "next export",
+    "heroku-postbuild":"npm run build"
+
   },
   "dependencies": {
     "firebase": "^8.3.2",
