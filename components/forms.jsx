@@ -4,7 +4,7 @@ import { useForm } from "react-hook-form";
 import styles from '@styles/Forms.module.css'
 import firestore from '@lib/firebase.js'
 
-export default function Contact() {
+const Contact = () =>{
 const { register, handleSubmit } = useForm();
 
     return(
@@ -15,6 +15,4 @@ const { register, handleSubmit } = useForm();
     )
 }
 
-
-
-// export {};
+export default Contact;

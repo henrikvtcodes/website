@@ -3,13 +3,13 @@ import Link from "next/link";
 
 import styles from '@styles/Header.module.css'
 
-function Header() {
+const Header = () => {
     return (
         <navbar className={styles.navbar}>
             <ul>
                 <li> {/* main logo, home page link */}
                     <Link href="/">
-                        <img src={'/henriklogo-spin-crop.gif'} alt="Circular Cartoon Henrik Face" />
+                        <img src={'/henriklogo.png'} alt="Circular Cartoon Henrik Face" />
                     </Link>
                 </li>
                 <li> {/* link to about page */}
