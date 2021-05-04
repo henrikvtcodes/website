@@ -4,7 +4,7 @@ import Head from 'next/head'
 import Header from '@components/header.jsx'
 import Footer from '@components/footer.jsx'
 import Contact from '@components/forms.jsx'
-import styles from '@styles/Home.module.css'
+import styles from '@styles/contact.module.css'
 
 export default function ContactPage() {
     return (
