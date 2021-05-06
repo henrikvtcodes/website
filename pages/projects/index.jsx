@@ -21,8 +21,11 @@ export default function Projects() {
   
         <div className={styles.main}>
           <h1>
-            PROJECTS PAGE
+            Henrik's Projects
           </h1>
+          <p>
+            Here is a list of projects that Henrik has done for himself or other people.
+          </p>
         </div>
   
         <Footer />
