@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "firebase": "^8.3.2",
+    "frontmatter": "^0.0.3",
+    "gray-matter": "^4.0.3",
     "next": "10.0.9",
     "raw-loader": "^4.0.2",
     "react": "17.0.2",
