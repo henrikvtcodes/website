@@ -1,9 +1,10 @@
 import React from 'react';
-import Head from 'next/head'
+import Head from 'next/head';
+import Link from 'next/link';
 
-import Header from '@components/header.jsx'
-import Footer from '@components/footer.jsx'
-import styles from '@styles/projects.module.css'
+import Header from '@components/header.jsx';
+import Footer from '@components/footer.jsx';
+import styles from '@styles/projects.module.css';
 
 export default function Projects() {
     return (
