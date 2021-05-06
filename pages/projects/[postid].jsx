@@ -1,18 +1,29 @@
 import React from 'react';
 import { useRouter } from 'next/router'
+import matter from 'gray-matter';
 
 import styles from '@styles/projects.module.css'
 import projectPage from '@components/layout.jsx'
+import Header from '@components/header.jsx';
+import Footer from '@components/footer.jsx';
 
-const router = useRouter()
-const { postid } = router.query
+
 
 export default function Post() {
+    const router = useRouter()
+    const { postid } = router.query
     return(
-        <main>
-            <h1>
-                Post ID: {postid}
-            </h1>
+        <main className={styles.container}>
+            <Header />
+
+            <div className={styles.main}>
+                <h1>
+                A Post
+                </h1>
+                <h4>Your post ID is: <i>{ postid }</i> </h4>
+            </div>
+
+            <Footer />
         </main>
     )
 }
