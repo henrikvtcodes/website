@@ -2,7 +2,7 @@ import Image from 'next/image'
 
 import styles from '@styles/404.module.css';
 
-function error() {
+function Error() {
     return(
         <main className={styles.page}>
             <div>
@@ -13,4 +13,4 @@ function error() {
     )
 }
 
-export default error;
+export default Error;
