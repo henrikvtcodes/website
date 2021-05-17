@@ -1,9 +1,12 @@
+import React from 'react';
 import Head from 'next/head'
 
+
 export default function Meta({title, site, image, description, author}) {
+    let full_title = title + " | henrik's shitty website"
     return (
         <Head>
-            <title>{title}</title>
+            <title>{full_title}</title>
             <meta name="twitter:card" content="summary" />
             <meta name="twitter:site" content="@henrik_tech" />
             <meta name="twitter:title" content={title} />
