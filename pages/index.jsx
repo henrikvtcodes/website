@@ -9,7 +9,7 @@ import styles from '@styles/Home.module.css';
 export default function Home() {
   return (
     <main className={styles.container}>
-      <Meta title='home' description='homepage' image='/henriklogo.png' />
+      <Meta title='home' description='homepage' url='henriktech.com' />
       
       <Header /> 
 
