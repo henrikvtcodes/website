@@ -11,6 +11,8 @@ body {
 }
 
 /* FONTS */
+@import "https://rsms.me/inter/inter.css";
+
 @font-face {
   font-family: 'Uni Sans Heavy';
   src: url('uni-sans.heavy-caps.otf') format('opentype');
@@ -18,6 +20,18 @@ body {
 @font-face {
   font-family: "Whitney";
   src: url('whitneymedium.otf') format('opentype')
+}
+
+.Inter {
+  font-family: Inter;
+}
+
+.Whitney {
+  font-family: Whitney;
+}
+
+.UniSansHeavy {
+  font-family: "Uni Sans Heavy";
 }
 
 /* TAILWIND CSS */
