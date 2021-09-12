@@ -11,6 +11,7 @@ interface Meta {
     description: string;
     url?: string | "henriktech.com" | "henrikvt.com";
     image?: string;
+    favicon?: string;
     twitter?: TwitterMeta;
     
 }
@@ -20,6 +21,7 @@ const DefaultProps:Meta = {
     description: "henrik's portfolio site",
     url: "henriktech.com",
     image: "/images/henrik-forest.jpg",
+    favicon: "/images/henriklogo.png",
     twitter:{
         site: "@henrik_tech",
         card: "summary-large-image",
@@ -34,6 +36,7 @@ const DefaultMeta = () =>{
         <title> {DefaultProps.title} </title>
         <meta name="title" content={DefaultProps.title} />
         <meta name="description" content={DefaultProps.description} />
+        <link rel="icon" type="image/png" href={DefaultProps.favicon} />
         {/** FACEBOOK / OPENGRAPH */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content={DefaultProps.url} />
@@ -57,6 +60,8 @@ const CustomMeta = (MetaProps:Meta) => {
       <title> {MetaProps.title || DefaultProps.title} </title>
       <meta name="title" content={MetaProps.title || DefaultProps.title} />
       <meta name="description" content={MetaProps.description || DefaultProps.description} />
+      <link rel="icon" type="image/png" href={ MetaProps.favicon || DefaultProps.favicon} />
+
       {/** FACEBOOK / OPENGRAPH */}
       <meta property="og:type" content="website" />
       <meta property="og:url" content={MetaProps.url ||  DefaultProps.url} />
