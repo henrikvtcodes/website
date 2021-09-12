@@ -4,6 +4,11 @@ body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+
+  height: 100%;
+  width: 100%;
+
+  font-family: Inter;
 }
 
 * {
@@ -12,6 +17,7 @@ body {
 
 /* FONTS */
 @import "https://rsms.me/inter/inter.css";
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono');
 
 @font-face {
   font-family: 'Uni Sans Heavy';
@@ -34,6 +40,35 @@ body {
   font-family: "Uni Sans Heavy";
 }
 
+.RobotoMono {
+  font-family: "Roboto Mono"
+}
+
 /* TAILWIND CSS */
 @tailwind components;
 @tailwind utilities;
+
+/* GRID & FLEXBOX */
+.home-container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-end safe;
+  align-items: center;
+
+
+  /* grid-template-columns: [left] 20% [left-mid] 30% [mid] 30% [right-mid] 20% [right];
+  grid-template-rows: [top] auto [top-mid] minmax( 270px, 25%) [bot-title] 1fr [bot-mid] minmax(10%, 216px) [bot]; */
+}
+
+.home-title {
+  order: 1;
+}
+
+.flex-child-nav{
+  order: 2;
+}
+
+.flex-child-socials{
+  order: 3;
+}
