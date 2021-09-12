@@ -9,14 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "autoprefixer": "^10.2.6",
+    "autoprefixer": "^10.3.4",
     "daisyui": "^1.14.0",
     "next": "^11.1.2",
-    "postcss": "^8.2.13",
+    "postcss": "^8.3.6",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "supercons": "^0.0.1",
-    "tailwindcss": "^2.2.4"
+    "tailwindcss": "^2.2.15"
   },
   "devDependencies": {
     "@types/node": "^16.0.3",
