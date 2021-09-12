@@ -4,26 +4,15 @@ import Link from 'next/link'
 
 const NavBar = () => {
   return (
-  <nav>
+  <nav className="mt-2 mb-2">
       
-      <Link href='/twitch' passHref><button className="btn"> twitch </button></Link>
+      <Link href='/about' passHref><button className="btn m-4"> about </button></Link>
       
-
+      <Link href='/blog' passHref><button className="btn m-4"> blog </button></Link>  
       
-      <Link href='/blog' passHref><button className="btn"> blog </button></Link>  
-      
-
-      
-      <Link href='/projects' passHref><button className="btn"> projects </button></Link>
+      <Link href='/projects' passHref><button className="btn m-4"> projects </button></Link>
         
-
-      
-      <Link href='/contact' passHref><button className="btn"> contact </button></Link>
-          
-
-      
-      <Link href='/about' passHref><button className="btn"> about </button></Link>
-      
+      <Link href='/contact' passHref><button className="btn m-4"> contact </button></Link>
 
   </nav>
   )

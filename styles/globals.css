@@ -58,9 +58,8 @@ body {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
-  justify-content: flex-end safe;
+  justify-content: center;
   align-items: center;
-
 
   /* grid-template-columns: [left] 20% [left-mid] 30% [mid] 30% [right-mid] 20% [right];
   grid-template-rows: [top] auto [top-mid] minmax( 270px, 25%) [bot-title] 1fr [bot-mid] minmax(10%, 216px) [bot]; */
@@ -76,4 +75,14 @@ body {
 
 .flex-child-socials{
   order: 3;
+}
+
+/* CUSTOM CLASSES */
+.home-bg {
+  background-image: url('../public/images/henrik-inabox.jpg');
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+}
+.home-bg-overlay {
+  background: rgba(39,62,84,0.4);
 }

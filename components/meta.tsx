@@ -1,4 +1,5 @@
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 type TwitterMeta = {
     card?: string;
@@ -29,7 +30,7 @@ const DefaultMeta = () =>{
 
 
     return (
-      <div>
+      <Head>
         <title> {DefaultProps.title} </title>
         <meta name="title" content={DefaultProps.title} />
         <meta name="description" content={DefaultProps.description} />
@@ -46,13 +47,13 @@ const DefaultMeta = () =>{
         <meta property="twitter:description" content={DefaultProps.description} />
         <meta property="twitter:image" content={DefaultProps.image} />
         <meta property="twitter:site" content={DefaultProps.twitter?.site} />
-      </div>
+      </Head>
     );
 }
 
 const CustomMeta = (MetaProps:Meta) => {
   return (
-    <div>
+    <Head>
       <title> {MetaProps.title || DefaultProps.title} </title>
       <meta name="title" content={MetaProps.title || DefaultProps.title} />
       <meta name="description" content={MetaProps.description || DefaultProps.description} />
@@ -69,8 +70,9 @@ const CustomMeta = (MetaProps:Meta) => {
       <meta property="twitter:description" content={MetaProps.description || DefaultProps.description} />
       <meta property="twitter:image" content={MetaProps.image || DefaultProps.image} />
       <meta property="twitter:site" content={MetaProps.twitter?.site || DefaultProps.twitter?.site} />
-    </div>
+    </Head>
   );
 };
 
 export default DefaultMeta;
+export {CustomMeta};

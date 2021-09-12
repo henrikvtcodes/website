@@ -17,6 +17,7 @@ module.exports = {
       colors: {
         transparent: 'transparent',
         current: 'currentColor',
+        black: '#000000',
         gray: {
           manatee: '#9CA3AF',
           jet: '#2c2f33',
