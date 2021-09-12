@@ -1,9 +1,25 @@
+import  Link  from 'next/link';
+
+import SocialBar  from '~component/socials';
+import NavBar from '~component/navlinks';
+import DefaultMeta from '~component/meta';
 
 
 
-
-export default function Home() {
+function Home() {
   return (
-    <main></main>
+    
+  <main className="home-container ">
+    <DefaultMeta />
+    <h1 className=" home-title "> Henrik VT </h1>
+    <div className="flex-child-nav ">
+      <NavBar />
+    </div>
+    <div className="flex-child-socials ">
+      <SocialBar />
+    </div>
+  </main>
   )
 }
+
+export default Home;
