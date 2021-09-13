@@ -2,7 +2,6 @@ const { withSentryConfig } = require('@sentry/nextjs');
 
 const moduleExports = {
   reactStrictMode: true,
-  target: 'serverless',
   images: {
     domains: ['c.tenor.com'],
   },
