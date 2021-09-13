@@ -79,5 +79,13 @@ const CustomMeta = (MetaProps:Meta) => {
   );
 };
 
+const Favicon = () => {
+  return (
+    <Head>
+      <link rel="icon" type="image/png" href={DefaultProps.favicon}/>
+    </Head>
+  );
+}
+
 export default DefaultMeta;
-export {CustomMeta};
+export {CustomMeta, Favicon};
