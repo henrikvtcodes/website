@@ -20,7 +20,8 @@
       "~util/*":["lib/*","utils/*","util/*"],
       "~lib/*":["lib/*","utils/*","util/*"],
       "~page/*":["pages/*"],
-      "~static/*":["public/*"]
+      "~static/*":["public/*"],
+      "~/*": ["*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/document.js"],
