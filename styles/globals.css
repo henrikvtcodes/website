@@ -22,7 +22,7 @@ body {
 
 /* FONTS */
 @import url("https://rsms.me/inter/inter.css");
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 
 @font-face {
   font-family: 'Uni Sans Heavy';
@@ -46,7 +46,7 @@ body {
 }
 
 .RobotoMono {
-  font-family: "Roboto Mono"
+  font-family: "Roboto Mono";
 }
 
 /* TAILWIND CSS */
