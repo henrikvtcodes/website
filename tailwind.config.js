@@ -39,7 +39,10 @@ module.exports = {
           amethyst: '#a663cc',
           wisteria: '#b298dc',
           electric: '#b14aed',
-        }
+        },
+        spanishViolet: '#432371',
+        MacAndCheese: '#faae7b',
+
       }
     },
     colors: {
