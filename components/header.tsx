@@ -11,7 +11,7 @@ const logoSize:number = 60
 const Header = () => {
   return (
     <header className="flex flex-nowrap flex-row flex-1 justify-center gap-x-4 py-4 ">
-      <span className=" justify-start hover:cursor-pointer ">
+      {/* <span className=" justify-start hover:cursor-pointer ">
         <Link href="/" passHref>
           <Image
             src={"/images/henriklogo.png"}
@@ -20,7 +20,7 @@ const Header = () => {
             height={logoSize}
           />
         </Link>
-      </span>
+      </span> */}
 
       <span className=" px-4 hover:cursor-pointer ">
         <Link href="/" passHref>
