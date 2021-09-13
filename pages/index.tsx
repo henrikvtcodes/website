@@ -1,7 +1,7 @@
 import  Link  from 'next/link';
 
 
-import SocialBar  from '~component/socials';
+import SocialBlock  from '~component/socials';
 import NavBar from '~component/navlinks';
 import DefaultMeta from '~component/meta';
 
@@ -16,7 +16,7 @@ function Home() {
         <NavBar />
       </div>
       <div className="flex-child-socials ">
-        <SocialBar />
+        <SocialBlock />
       </div>
     </main>
   );

@@ -3,7 +3,7 @@ import Icon from "supercons";
 
 
 
-const SocialBar = (flexClass:any) => {
+const SocialBlock = (flexClass:any) => {
     return (
       <nav className="mt-2 mb-2">
           <span className=" hover:cursor-pointer m-4 ">
@@ -23,4 +23,4 @@ const SocialBar = (flexClass:any) => {
 }
 
 
-export default SocialBar;
+export default SocialBlock;
