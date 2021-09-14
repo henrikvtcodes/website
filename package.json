@@ -12,6 +12,7 @@
     "@sentry/nextjs": "^6.12.0",
     "autoprefixer": "^10.3.4",
     "daisyui": "^1.14.0",
+    "kute.js": "^2.1.2",
     "next": "^11.1.2",
     "postcss": "^8.3.6",
     "react": "17.0.2",

@@ -1,13 +1,13 @@
 import  Link  from 'next/link';
-
+import useEffect from 'react';
 
 import SocialBlock  from '~component/socials';
 import NavBar from '~component/navlinks';
 import DefaultMeta from '~component/meta';
 import { HomePageWave, HakeiBlurryGradient1 } from '~component/shapes';
 
-
 function Home(props) {
+
   return (
     <main className="home-container UniSansHeavy pagefill home-bg-wave bg-fixed bg-center bg-cover">
       <DefaultMeta />
