@@ -1,23 +1,26 @@
 import Link from "next/link";
-import Icon from "supercons";
-import * as Feather from "react-feather";
+// import Icon from "supercons";
+import * as Icon from "react-feather";
 
 
 
 const SocialBlock = (flexClass:any) => {
+
+    const iconSize:number = 36
+
     return (
       <nav className="mt-2 mb-2">
           <span className=" hover:cursor-pointer m-4 ">
-              <Link href="https://github.com/henrikvtcodes" passHref><Icon glyph="github" size={48} /></Link>
+              <Link href="https://github.com/henrikvtcodes" passHref><Icon.GitHub size={iconSize} /></Link>
           </span>
           <span className=" hover:cursor-pointer m-4 ">
-              <Link href="https://twitter.com/henrik_tech" passHref><Icon glyph="twitter" size={48} /></Link>
+              <Link href="https://twitter.com/henrik_tech" passHref><Icon.Twitter size={iconSize} /></Link>
           </span>
           <span className=" hover:cursor-pointer m-4 ">
-              <Link href="https://instagram.com/henrik_tech" passHref><Icon glyph="instagram" size={48} /></Link>
+              <Link href="https://instagram.com/henrik_tech" passHref><Icon.Instagram size={iconSize} /></Link>
           </span>
           <span className=" hover:cursor-pointer m-4 ">
-              <Link href="https://twitch.tv/henriktech" passHref><Icon glyph="twitch" size={48} /></Link>
+              <Link href="https://twitch.tv/henriktech" passHref><Icon.Twitch size={iconSize} /></Link>
           </span>
       </nav>
     );

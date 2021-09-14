@@ -12,7 +12,7 @@ function Home(props) {
     <main className="home-container UniSansHeavy pagefill home-bg-wave bg-fixed bg-center bg-cover">
       <DefaultMeta />
       <HomePageWave />
-      <h1 className=" home-title m-8 "> Henrik VT </h1>
+      <h1 className=" home-title m-8 text-7xl text-white "> Henrik VT </h1>
       <div className="flex-child-nav ">
         <NavBar />
       </div>

@@ -3,19 +3,36 @@ import Icon from 'supercons';
 
 
 const NavBar = () => {
-  return (
-  <nav className="mt-2 mb-2">
-      
-      <Link href='/about' passHref><button className="btn m-4"><Icon glyph="person" size={48} /></button></Link>
-      
-      <Link href='/blog' passHref><button className="btn m-4"><Icon glyph="docs" size={48} /></button></Link>  
-      
-      <Link href='/projects' passHref><button className="btn m-4"><Icon glyph="code" size={48} /></button></Link>
-        
-      <Link href='/contact' passHref><button className="btn m-4"><Icon glyph="email" size={48} /></button></Link>
 
-  </nav>
-  )
+  const navIconSize: number = 64
+
+  return (
+    <nav className="mt-2 mb-2">
+      <span className=" xl:px-24 lg:px-20 md:px-12 sm:px-6 hover:cursor-pointer ">
+        <Link href="/about" passHref>
+          <Icon glyph="person-card" size={navIconSize} />
+        </Link>
+      </span>
+
+      <span className=" xl:px-24 lg:px-20 md:px-12 sm:px-6 hover:cursor-pointer ">
+        <Link href="/blog" passHref>
+          <Icon glyph="docs" size={navIconSize} />
+        </Link>
+      </span>
+
+      <span className=" xl:px-24 lg:px-20 md:px-12 sm:px-6 hover:cursor-pointer ">
+        <Link href="/projects" passHref>
+          <Icon glyph="code" size={navIconSize} />
+        </Link>
+      </span>
+
+      <span className=" xl:px-24 lg:px-20 md:px-12 sm:px-6 hover:cursor-pointer ">
+        <Link href="/contact" passHref>
+          <Icon glyph="email" size={navIconSize} />
+        </Link>
+      </span>
+    </nav>
+  );
 };
 
 export default NavBar;

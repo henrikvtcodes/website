@@ -61,12 +61,14 @@ body {
   justify-content: center;
   align-items: center;
 
+  color: white;
   /* grid-template-columns: [left] 20% [left-mid] 30% [mid] 30% [right-mid] 20% [right];
   grid-template-rows: [top] auto [top-mid] minmax( 270px, 25%) [bot-title] 1fr [bot-mid] minmax(10%, 216px) [bot]; */
 }
 
 .home-title {
   order: 1;
+  color: white;
 }
 
 .flex-child-nav{
