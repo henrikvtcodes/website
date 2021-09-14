@@ -86,3 +86,31 @@ body {
 .home-bg-overlay {
   background: rgba(39,62,84,0.4);
 }
+
+.home-bg-gradient {
+  background-image: url('../public/svgs/blurry-gradient-haikei.svg') 
+}
+.home-bg-wave {
+  background-image: url('../public/svgs/wave-haikei.svg') 
+}
+
+/* SHAPE DIVIDER */
+.custom-shape-divider-top-1631590391 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1631590391 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 209px;
+}
+
+.custom-shape-divider-top-1631590391 .shape-fill {
+    fill: #B14AED;
+}

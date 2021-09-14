@@ -43,6 +43,9 @@ module.exports = {
         spanishViolet: '#432371',
         MacAndCheese: '#faae7b',
 
+      },
+      backgroundImage: {
+        'home-gradient-1':"url(./public/svgs/blurry-gradient-hakei.svg)"
       }
     },
     colors: {
