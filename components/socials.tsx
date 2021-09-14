@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Icon from "supercons";
+import * as Feather from "react-feather";
 
 
 
@@ -21,6 +22,7 @@ const SocialBlock = (flexClass:any) => {
       </nav>
     );
 }
+
 
 
 export default SocialBlock;
