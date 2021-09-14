@@ -1,7 +1,5 @@
 import { useForm, SubmitHandler } from "react-hook-form";
 
-import { handleContactSubmit } from "~util/formHandler";
-
 type Inputs = {
   example: string,
   exampleRequired: string,
