@@ -123,3 +123,8 @@ body {
 .custom-shape-divider-top-1631590391 .shape-fill {
     fill: #00a6fb;
 }
+
+/* @apply directives */
+.navlinks-hover{
+  @apply hover:text-purple-electric hover:scale-50 hover:cursor-pointer ;
+}

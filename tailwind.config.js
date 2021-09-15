@@ -33,12 +33,15 @@ module.exports = {
           prussian: '#1d3557',
           pacific: '#0eb1d2',
           azure: '#3185fc',
-          jeans: '#00a6fb'
+          jeans: '#00a6fb',
+          twitter: '#1DA1F2'
         },
         purple: {
           amethyst: '#a663cc',
           wisteria: '#b298dc',
           electric: '#b14aed',
+          instagram: '#E1306C',
+          twitch: '#6b3fa0'
         },
         spanishViolet: '#432371',
         MacAndCheese: '#faae7b',
