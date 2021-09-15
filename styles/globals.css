@@ -33,8 +33,9 @@ body {
   src: url('whitneymedium.otf') format('opentype')
 }
 
-.Inter {
-  font-family: Inter;
+:root { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  :root { font-family: 'Inter var', sans-serif; }
 }
 
 .Whitney {
