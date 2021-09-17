@@ -12,7 +12,12 @@ function Home(props) {
     <main className="home-container pagefill home-bg-wave bg-fixed bg-center bg-cover">
       <DefaultMeta />
       <HomePageWave />
-      <h1 className=" home-title m-8 text-7xl text-white Tourney"> Henrik VT </h1>
+      <Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" passHref>
+        <h1 className=" home-title m-8 text-7xl text-white Tourney hover:cursor-pointer">
+          Henrik VT
+        </h1>
+      </Link>
+      
       <div className="flex-child-nav ">
         <NavBar />
       </div>
