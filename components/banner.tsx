@@ -9,23 +9,23 @@ const SocialBanner = () =>{
     const iconSize: number = 24
 
     return (
-      <main className=" flex flex-row flex-nowrap justify-end content-center bg-opacity-0">
-        <span className=" hover:cursor-pointer my-1 ">
+      <main className=" flex flex-row flex-nowrap justify-end content-center bg-opacity-0 space-x-2">
+        <span className="  hover:cursor-pointer hover:text-black my-1 ">
           <Link href="https://github.com/henrikvtcodes" passHref>
             <Feather.GitHub color={iconColor} size={iconSize} />
           </Link>
         </span>
-        <span className=" hover:cursor-pointer my-1 ">
+        <span className=" hover:cursor-pointer hover:text-blue-twitter my-1 ">
           <Link href="https://twitter.com/henrik_tech" passHref>
             <Feather.Twitter color={iconColor} size={iconSize} />
           </Link>
         </span>
-        <span className=" hover:cursor-pointer my-1 ">
+        <span className=" hover:cursor-pointer hover:text-purple-instagram my-1 ">
           <Link href="https://instagram.com/henrik_tech" passHref>
             <Feather.Instagram color={iconColor} size={iconSize} />
           </Link>
         </span>
-        <span className=" hover:cursor-pointer my-1 ">
+        <span className=" hover:cursor-pointer hover:text-purple-twitch my-1 ">
           <Link href="https://twitch.tv/henriktech" passHref>
             <Feather.Twitch color={iconColor} size={iconSize} />
           </Link>

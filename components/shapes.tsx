@@ -4,7 +4,7 @@
 
 const HomePageWave = () => {
     return (
-      <div className="custom-shape-divider-top-1631590391">
+      <div className="custom-shape-divider-top-1631590391 z-0">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"

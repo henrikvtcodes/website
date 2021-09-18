@@ -77,13 +77,14 @@ body {
   order: 1;
   color: white;
 }
-
-.flex-child-nav{
+.home-flex-sourcecode {
   order: 2;
 }
-
+.flex-child-nav{
+  order: 4;
+}
 .flex-child-socials{
-  order: 3;
+  order: 5;
 }
 
 /* CUSTOM CLASSES */
@@ -97,10 +98,18 @@ body {
 }
 
 .home-bg-gradient {
-  background-image: url('../public/svgs/blurry-gradient-haikei.svg') 
+  background-image: url('../public/svgs/blurry-gradient-haikei.svg');
 }
 .home-bg-wave {
-  background-image: url('../public/svgs/wave-haikei.svg') 
+  background-image: url('../public/svgs/wave-haikei.svg'); 
+}
+.svgbg-blue {
+  background-image: url('../public/svgs/bg.svg');
+  z-index: 0;
+}
+
+.page-layerwave {
+  background-image: url('../public/svgs/layered-waves-haikei.svg');
 }
 
 /* SHAPE DIVIDER */
@@ -111,6 +120,8 @@ body {
     width: 100%;
     overflow: hidden;
     line-height: 0;
+
+    z-index: 0;
 }
 
 .custom-shape-divider-top-1631590391 svg {
@@ -118,10 +129,14 @@ body {
     display: block;
     width: calc(100% + 1.3px);
     height: 209px;
+
+    z-index: 0;
 }
 
 .custom-shape-divider-top-1631590391 .shape-fill {
     fill: #00a6fb;
+
+    z-index: 0;
 }
 
 /* @apply directives */

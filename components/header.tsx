@@ -13,7 +13,7 @@ const Header = () => {
   const logoSize: number = 60;
 
   return (
-    <header className="flex flex-nowrap flex-row flex-1 justify-center gap-x-4 py-1 bg-blue-900">
+    <header className="flex flex-nowrap flex-row flex-1 justify-center gap-x-4 py-1">
       {/* <span className=" justify-start hover:cursor-pointer ">
         <Link href="/" passHref>
           <Image
