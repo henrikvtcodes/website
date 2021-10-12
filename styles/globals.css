@@ -87,7 +87,7 @@ body {
   order: 5;
 }
 
-/* CUSTOM CLASSES */
+/* bACKGROUNDS */
 .home-bg {
   background-image: url('../public/images/henrik-inabox.jpg');
   background-repeat: no-repeat;
@@ -110,6 +110,10 @@ body {
 
 .page-layerwave {
   background-image: url('../public/svgs/layered-waves-haikei.svg');
+}
+
+.only-layerwave {
+  background-image: url('../public/svgs/layer-wave-only.svg');
 }
 
 /* SHAPE DIVIDER */
@@ -142,4 +146,8 @@ body {
 /* @apply directives */
 .navlinks-hover{
   @apply hover:text-purple-electric hover:scale-50 hover:cursor-pointer ;
+}
+
+.header-hover{
+  @apply hover:text-purple-electric hover:cursor-pointer ;
 }

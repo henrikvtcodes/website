@@ -1,28 +1,19 @@
-<svg id="visual" viewBox="0 0 900 600" width="900" height="600" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
-    <defs>
+<svg id="visual" viewBox="0 0 960 540" width="960" height="540" xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+  <defs>
     <filter id="blur1" x="-10%" y="-10%" width="120%" height="120%">
-        <feFlood flood-opacity="0" result="BackgroundImageFix"
-        ></feFlood>
-        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape">
-        </feBlend>
-        <feGaussianBlur stdDeviation="161" result="effect1_foregroundBlur">
-        </feGaussianBlur>
+      <feFlood flood-opacity="0" result="BackgroundImageFix"></feFlood>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"></feBlend>
+      <feGaussianBlur stdDeviation="163" result="effect1_foregroundBlur"></feGaussianBlur>
     </filter>
-    </defs>
-    <rect width="900" height="600" fill="#e25822">
-    </rect>
-    <g filter="url(#blur1)">
-        <circle cx="149" cy="111" fill="#b14aed" r="357">
-        </circle>
-        <circle cx="806" cy="314" fill="#e25822" r="357">
-        </circle>
-        <circle cx="66" cy="455" fill="#b14aed" r="357">
-        </circle>
-        <circle cx="260" cy="450" fill="#b14aed" r="357">
-        </circle>
-        <circle cx="587" cy="365" fill="#e25822" r="357">
-        </circle>
-        <circle cx="352" cy="237" fill="#b14aed" r="357">
-    </circle>
-    </g>
+  </defs>
+  <rect width="960" height="540" fill="#0eb1d2"></rect>
+  <g filter="url(#blur1)">
+    <circle cx="457" cy="78" fill="#00a6fb" r="363"></circle>
+    <circle cx="303" cy="290" fill="#0eb1d2" r="363"></circle>
+    <circle cx="687" cy="437" fill="#00a6fb" r="363"></circle>
+    <circle cx="59" cy="402" fill="#00a6fb" r="363"></circle>
+    <circle cx="237" cy="528" fill="#0eb1d2" r="363"></circle>
+    <circle cx="716" cy="167" fill="#00a6fb" r="363"></circle>
+  </g>
 </svg>
