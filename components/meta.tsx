@@ -37,6 +37,7 @@ const DefaultMeta = () =>{
         <meta name="title" content={DefaultProps.title} />
         <meta name="description" content={DefaultProps.description} />
         <link rel="icon" type="image/png" href={DefaultProps.favicon} />
+        <link rel="canonical" href="https://next.henriktech.com" />
         {/** FACEBOOK / OPENGRAPH */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content={DefaultProps.url} />
