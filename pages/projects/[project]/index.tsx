@@ -9,3 +9,4 @@ const Project = () =>{
         </PostLayout>
     )
 }
+export default Project;

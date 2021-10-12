@@ -7,12 +7,12 @@ import { HomePageWave } from '~component/shapes';
 
 const StdLayout = ({children}) =>{
     return (
-      <main className=" page-layerwave ">
-        
-        <SocialBanner />
-        <Header />
-        <section className=" svgbg-blue ">{children}</section>
-        <Footer />
+      <main className=" svgbg-blue pagefill">
+        <div className=" home-bg-gradient bg-cover bg-blue-pacific rounded-b-2xl ">
+          <SocialBanner />
+          <Header />
+        </div>
+        {children}
       </main>
     );
 }

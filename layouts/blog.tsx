@@ -4,14 +4,14 @@ import SocialBar from "~component/socials"
 
 const PostLayout = ({ children }) => {
   return (
-    <>
+    <main>
       <SocialBar />
       <Header />
       <article>
-      {children}
+        {children}
       </article>
       <Footer />
-    </>
+    </main>
   );
 };
 

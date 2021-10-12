@@ -3,10 +3,13 @@ import { useRouter } from "next/router";
 import PostLayout from "layouts/blog";
 
 const Post = () => {
-  return 
-  <PostLayout>
+  const router = useRouter();
 
-  </PostLayout>;
+  return(
+  <PostLayout>
+    <h1>hello</h1>
+  </PostLayout>
+  )
 };
 
 export default Post;
