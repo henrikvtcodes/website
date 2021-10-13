@@ -1139,6 +1139,11 @@
     get-random-values "^1.2.2"
     lodash "^4.17.15"
 
+"@sanity/cli@^2.21.0":
+  version "2.21.0"
+  resolved "https://registry.yarnpkg.com/@sanity/cli/-/cli-2.21.0.tgz#e61daf44e7acf1acf26a696a7585af020e756f5a"
+  integrity sha512-GUieacO0Y7oSJHss15MZ+dZrJpx3AhcCzPL1BfLgExiW0X7evKcFkznl1qDQ7oc9hvmIzlcO0dgXkkytdSD5jQ==
+
 "@sanity/client@2.21.0":
   version "2.21.0"
   resolved "https://registry.npmjs.org/@sanity/client/-/client-2.21.0.tgz#2f81d97941e8c46299cb120369ab6957aa954bae"
