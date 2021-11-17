@@ -1,4 +1,4 @@
-/* DEFAULTS */
+/* DEFAULTS & BASICS */
 html,
 body {
   padding: 0;
@@ -9,6 +9,7 @@ body {
   width: 100%;
 
   font-family: Inter;
+  color: white;
 }
 
 * {
@@ -18,6 +19,11 @@ body {
 .pagefill {
   min-height: 100vh;
   width: 100vw;
+}
+
+.containerfill {
+  min-height: 100%;
+  width: 100%;
 }
 
 /* FONTS */
@@ -87,7 +93,7 @@ body {
   order: 5;
 }
 
-/* bACKGROUNDS */
+/* BACKGROUNDS */
 .home-bg {
   background-image: url('../public/images/henrik-inabox.jpg');
   background-repeat: no-repeat;
