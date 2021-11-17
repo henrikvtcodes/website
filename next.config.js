@@ -26,8 +26,11 @@
 
 module.exports = {
   reactStrictMode: true,
-  target: 'serverless',
+  target: "serverless",
   images: {
-    domains: ['c.tenor.com'],
+    domains: ["c.tenor.com"],
   },
-}
+  experimental: {
+    urlImports: ["https://cdn.skypack.dev"],
+  },
+};
