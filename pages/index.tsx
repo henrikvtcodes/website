@@ -17,10 +17,6 @@ function Home(props) {
           Henrik VT
         </h1>
       </Link>
-      
-      <div className="flex-child-nav ">
-        <NavBar />
-      </div>
       <div className="flex-child-socials ">
         <SocialBlock />
       </div>
