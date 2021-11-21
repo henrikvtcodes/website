@@ -1,3 +1,44 @@
+/* FONTS */
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  html { font-family: 'Inter var', sans-serif; }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Tourney&display=swap');
+@font-face {
+  font-family: 'Uni Sans Heavy';
+  src: url('uni-sans.heavy-caps.otf') format('opentype');
+}
+@font-face {
+  font-family: "Whitney";
+  src: url('whitneymedium.otf') format('opentype')
+}
+
+.Whitney {
+  font-family: Whitney;
+}
+
+.UniSansHeavy {
+  font-family: "Uni Sans Heavy";
+}
+
+.RobotoMono {
+  font-family: "Roboto Mono";
+}
+
+.Tourney {
+  font-family: 'Tourney', cursive;  
+  font-weight: 300;
+  font-style: normal;
+}
+
+.Inter {
+  font-family: Inter;
+}
+
+
 /* DEFAULTS & BASICS */
 html,
 body {
@@ -26,41 +67,7 @@ body {
   width: 100%;
 }
 
-/* FONTS */
-@import url("https://rsms.me/inter/inter.css");
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Tourney&display=swap');
-@font-face {
-  font-family: 'Uni Sans Heavy';
-  src: url('uni-sans.heavy-caps.otf') format('opentype');
-}
-@font-face {
-  font-family: "Whitney";
-  src: url('whitneymedium.otf') format('opentype')
-}
 
-:root { font-family: 'Inter', sans-serif; }
-@supports (font-variation-settings: normal) {
-  :root { font-family: 'Inter var', sans-serif; }
-}
-
-.Whitney {
-  font-family: Whitney;
-}
-
-.UniSansHeavy {
-  font-family: "Uni Sans Heavy";
-}
-
-.RobotoMono {
-  font-family: "Roboto Mono";
-}
-
-.Tourney {
-  font-family: 'Tourney', cursive;  
-  font-weight: 300;
-  font-style: normal;
-}
 
 /* TAILWIND CSS */
 @tailwind components;

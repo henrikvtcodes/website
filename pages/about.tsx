@@ -1,18 +1,16 @@
 
-import Header from "~component/header";
-import Footer from "~component/footer";
-import SocialBanner from "~component/banner";
-import { HomePageWave } from "~component/shapes";
 import StdLayout from "layouts/std";
+import AboutCard from "~component/aboutcard";
 
-const About = () => {
+const About = (props) => {
   return (
-    <main className=" svgbg-blue pagefill">
-      <div className=" home-bg-gradient bg-cover bg-blue-pacific rounded-b-2xl ">
-        <SocialBanner />
-        <Header />
-      </div>
-    </main>
+    <StdLayout>
+      <section className=" p-8 containerfill ">
+        <div className=" ">
+          <AboutCard />
+        </div>
+      </section>
+    </StdLayout>
   );
 };
 

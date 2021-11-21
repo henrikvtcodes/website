@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 
-import PostLayout from "~/layouts/blog";
+import PostLayout from "~/layouts/post";
 
 const Project = () =>{
     return(

@@ -13,7 +13,7 @@ function Home(props) {
       <DefaultMeta />
       <HomePageWave />
       <Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" passHref>
-        <h1 className=" home-title m-8 text-7xl text-white Tourney hover:cursor-pointer">
+        <h1 className=" home-title m-8 text-7xl UniSansHeavy text-white hover:cursor-pointer">
           Henrik VT
         </h1>
       </Link>

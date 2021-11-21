@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from 'next/image'
 import Icon from 'supercons'
-import { BooleanValueNode } from "graphql";
 
 
 
@@ -39,7 +38,7 @@ const Header = () => {
 
   return (
     <header className="flex flex-nowrap flex-row flex-1 justify-center gap-x-4 py-1">
-      {/* <span className=" justify-start hover:header-hover ">
+      {/* <span className=" justify-start navlinks-hover ">
         <Link href="/" passHref>
           <Image
             src={"/images/henriklogo.png"}
@@ -50,31 +49,31 @@ const Header = () => {
         </Link>
       </span> */}
 
-      <span className=" xl:px-24 lg:px-20 md:px-12 sm:px-6 hover:header-hover ">
+      <span className=" xl:px-24 lg:px-20 md:px-12 sm:px-6 navlinks-hover ">
         <Link href="/" passHref>
           <Icon glyph={`home`} size={navIconSize} />
         </Link>
       </span>
 
-      <span className=" xl:px-24 lg:px-20 md:px-12 sm:px-6 hover:header-hover ">
+      <span className=" xl:px-24 lg:px-20 md:px-12 sm:px-6 navlinks-hover ">
         <Link href="/about" passHref>
           <Icon glyph={`profile`} size={navIconSize} />
         </Link>
       </span>
 
-      <span className=" xl:px-24 lg:px-20 md:px-12 sm:px-6 hover:header-hover ">
+      <span className=" xl:px-24 lg:px-20 md:px-12 sm:px-6 navlinks-hover ">
         <Link href="/blog" passHref>
           <Icon glyph={`docs`} size={navIconSize} />
         </Link>
       </span>
 
-      <span className=" xl:px-24 lg:px-20 md:px-12 sm:px-6 hover:header-hover ">
+      <span className=" xl:px-24 lg:px-20 md:px-12 sm:px-6 navlinks-hover ">
         <Link href="/projects" passHref>
           <Icon glyph={`code`} size={navIconSize} />
         </Link>
       </span>
 
-      <span className=" xl:px-24 lg:px-20 md:px-12 sm:px-6 hover:header-hover ">
+      <span className=" xl:px-24 lg:px-20 md:px-12 sm:px-6 navlinks-hover ">
         <Link href="/contact" passHref>
           <Icon glyph={`email`} size={navIconSize} />
         </Link>

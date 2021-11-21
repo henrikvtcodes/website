@@ -16,7 +16,7 @@ const NavBar = () => {
       </span>
 
       <span className=" xl:px-24 lg:px-20 md:px-12 sm:px-6 navlinks-hover ">
-        <Link href="/blog" passHref>
+        <Link href="/blog" passHref >
           <Icon glyph={`docs`} size={navIconSize} />
         </Link>
       </span>

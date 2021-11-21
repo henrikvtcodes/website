@@ -28,10 +28,10 @@ const errorgifs: object = {
 };
 
 
-const Error404 = () => {
+const Error404 = (props) => {
     let errorgifselect: number = Math.floor(Math.random() * 3) + 1;
     return (
-      <main className="grid place-items-center bg-gray-jet pagefill text-white">
+      <main className="grid place-items-center svgbg-blue pagefill text-white">
           <DefaultMeta  />
         <div>
             {/* <h1 className="UniSansHeavy text-center"> PAGE NOT FOUND </h1> */}
