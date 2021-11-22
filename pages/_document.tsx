@@ -17,6 +17,9 @@ class MyDocument extends Document {
             defer
             data-website-id="092500af-34de-4128-93c8-a7b8fdac19d9"
             src="https://analytics.henriktech.com/umami.js"
+            data-cache="true"
+            data-do-not-track="true"
+            data-host-url="http://analytics.henriktech.com"
           ></script>
         </Head>
         <body>
