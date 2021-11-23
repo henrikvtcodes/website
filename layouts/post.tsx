@@ -1,6 +1,6 @@
-import Header from "~component/header";
-import Footer from "~component/footer";
-import SocialBanner from "~component/socials"
+import Header from "~component/old/header";
+import Footer from "~component/old/footer";
+import SocialBanner from "~component/old/socials"
 import StdLayout from "./std";
 
 const StdPostLayout = ({ children }) => {
