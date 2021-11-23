@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 
-import StdPostLayout from "~/layouts/post";
+import StdPostLayout from "~/layouts/old/post";
 
 const Post = (props) => {
   const router = useRouter();

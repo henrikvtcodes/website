@@ -1,9 +1,9 @@
 import Image from "next/image";
 
-import Header from "~component/header";
-import Footer from "~component/footer";
-import SocialBanner from "~component/banner";
-import { HomePageWave } from "~component/shapes";
+import Header from "~component/old/header";
+import Footer from "~component/old/footer";
+import SocialBanner from "~component/old/banner";
+import { HomePageWave } from "~component/old/shapes";
 
 const BlogLayout = ({ children }) => {
   return (

@@ -1,6 +1,6 @@
 
-import StdLayout from "layouts/std";
-import AboutCard from "~component/aboutcard";
+import StdLayout from "~/layouts/old/std";
+import AboutCard from "~component/old/aboutcard";
 
 const About = (props) => {
   return (
