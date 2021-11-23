@@ -1,10 +1,10 @@
 import  Link  from 'next/link';
 import useEffect from 'react';
 
-import SocialBlock  from '~component/socials';
-import NavBar from '~component/navlinks';
-import DefaultMeta from '~component/meta';
-import { HomePageWave, HakeiBlurryGradient1 } from '~component/shapes';
+import SocialBlock  from '~component/old/socials';
+import NavBar from '~component/old/navlinks';
+import DefaultMeta from '~component/old/meta';
+import { HomePageWave, HakeiBlurryGradient1 } from '~component/old/shapes';
 
 function Home(props) {
 

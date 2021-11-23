@@ -7,6 +7,7 @@ class MyDocument extends Document {
         <Head>
           {/* <!-- Cloudflare Web Analytics --> */}
           <script
+            async
             defer
             src="https://static.cloudflareinsights.com/beacon.min.js"
             data-cf-beacon='{"token": "e76ccca08dcc4e0d8e4e3752f8dc5d12"}'
@@ -15,7 +16,7 @@ class MyDocument extends Document {
           <script
             async
             defer
-            data-website-id="092500af-34de-4128-93c8-a7b8fdac19d9"
+            data-website-id="5be5a980-82fd-40f0-8f84-e5bed361223b"
             src="https://analytics.henriktech.com/umami.js"
             data-cache="true"
             data-do-not-track="true"
