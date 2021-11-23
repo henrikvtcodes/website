@@ -1,5 +1,5 @@
-import StdLayout from "layouts/std";
-import ContactForm from "~component/contact";
+import StdLayout from "~/layouts/old/std";
+import ContactForm from "~component/old/contact";
 
 const Contact = (props) => {
   return (

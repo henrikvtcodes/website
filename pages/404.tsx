@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import { useEffect } from 'react';
 
-import { CustomMeta } from '~component/meta';
-import DefaultMeta from '~component/meta';
+import { CustomMeta } from '~component/old/meta';
+import DefaultMeta from '~component/old/meta';
 
 
 

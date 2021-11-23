@@ -1,6 +1,6 @@
 
-import BlogLayout from "~/layouts/blogpage";
-import PostCard from "components/postcard"
+import BlogLayout from "~/layouts/old/blogpage";
+import PostCard from "components/old/postcard"
 import Post from "./[post]";
 
 interface BlogProps{

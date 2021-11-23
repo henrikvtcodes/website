@@ -1,6 +1,6 @@
 
 
-import StdLayout from "layouts/std";
+import StdLayout from "~/layouts/old/std";
 
 const Projects = () => {
   return (
