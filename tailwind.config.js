@@ -1,5 +1,3 @@
-const colors = require('tailwindcss/colors')
-
 module.exports = {
   purge: [
     "./pages/**/*.{js,ts,jsx,tsx}",
@@ -10,12 +8,6 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      gridTemplateRows: {
-        home: "[top] auto [top-mid] minmax( 270px, 25%) [bot-title] 1fr [bot-mid] minmax(10%, 216px) [bot]",
-      },
-      gridTemplateColumns: {
-        home: "[left] 20% [left-mid] 30% [mid] 30% [right-mid] 20% [right] ",
-      },
       colors: {
         transparent: "transparent",
         current: "currentColor",
