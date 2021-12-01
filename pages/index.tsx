@@ -1,12 +1,15 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
 
-const Home: NextPage = () => {
+import StdLayout from '../layouts/standard';
+import ThemeButton from '../components/themeChange';
+
+const Home = () => {
   return (
-    <div className="">
-      
-    </div>
+    <StdLayout >
+      <ThemeButton />
+    </StdLayout>
   )
 }
 
