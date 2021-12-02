@@ -7,7 +7,7 @@ module.exports = {
     "./layouts/**/*.{js,ts,jsx,tsx}",
   ],
   mode: "jit",
-  darkMode: 'media', // or 'media' or 'class'
+  darkMode: "media", // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
@@ -61,11 +61,10 @@ module.exports = {
         spanishViolet: "#432371",
         MacAndCheese: "#faae7b",
       },
-      backgroundImage: {
-        "home-gradient-1": "url(./public/svgs/blurry-gradient-hakei.svg)",
+      width: {
+        "5xl": "64rem",
       },
     },
-    colors: {},
     fontFamily: {
       sans: ["Uni Sans Heavy", "sans-serif"],
       serif: ["Whitney", "Helvetica"],
