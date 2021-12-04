@@ -28,11 +28,11 @@ const NavItem = ({ href, text }:any) => {
 const NavBar = () => {
 
   return( 
-  <nav className="flex flex-row flex-nowrap gap-4 py-2">
+  <nav className="flex flex-row flex-nowrap gap-4 py-2 z-50">
     <NavItem href="/" text="Home" />
     <NavItem href="/about" text="About" />
     <NavItem href="/projects" text="Projects" />
-    <NavItem href="/contact" text="Contact" />
+    <NavItem href="/blog" text="Blog" />
   </nav>
   );
 };

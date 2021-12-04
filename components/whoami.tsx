@@ -72,19 +72,7 @@ const WhoAmI = ({props}:WhoAmIProps) => {
         </div>
       );
     case "about":
-      return (
-        <div className="flex">
-          <div className="whoami-about-pic aspect-w-1 aspect-h-1 ">
-            <Image src={'/images/henrik-inabox.jpg'} layout='fill' alt='henrik in an FTC Sizing Tool' />
-          </div>
-          <div className="whoami-about-name">
-
-          </div>
-          <div> 
-
-          </div>
-        </div>
-      );
+      return null;
     case "author":
       return (
         <div className="grid">

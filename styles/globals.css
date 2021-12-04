@@ -114,7 +114,7 @@ body {
 .whoami-short-container{
   display: grid;
   grid-template-columns: [left] 40%  [mid] 60% [right];
-  grid-template-rows: [top] 20% [top-mid] 20% [mid] auto [bot-mid] 10% [bot];
+  grid-template-rows: [top] 20% [top-mid] 15% [mid] auto [bot-mid] 20% [bot];
 }
 
 .whoami-short-pic{
@@ -129,13 +129,46 @@ body {
   justify-self: center;
 }
 
-.whoami-short-bio{
+.whoami-short-username{
   grid-column: mid / right;
-  grid-row: top-mid / bot-mid;
+  grid-row: top-mid / mid;
   
   justify-self: center;
 }
 
+.whoami-short-bio{
+  grid-column: mid / right;
+  grid-row: mid / bot-mid;
+  
+  justify-self: center;
+}
+
+.whoami-short-socials{
+  grid-column: mid / right;
+  grid-row: bot-mid / bot;
+  
+  align-self: center;
+  justify-self: center;
+}
+.about-container{
+  display: grid;
+  grid-template-columns: [left] 25%  [mid-left] 50% [mid-right] 25% [right];
+  grid-template-rows: [top] 20% [top-mid] 100px [mid] auto [bot-mid] auto [bot];
+}
+
+.about-title{
+  grid-column: left / right;
+  grid-row: top / top-mid;
+  
+  justify-self: left;
+}
+
+.about-image{
+  grid-column: mid-left / mid-right;
+  grid-row: top-mid / mid;
+  
+  justify-self: center;
+}
 /* BACKGROUNDS */
 .home-bg {
   background-image: url('../public/images/henrik-inabox.jpg');
