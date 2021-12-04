@@ -1,5 +1,8 @@
-# `website`: Henrik's Portfolio website
-After nearly a year's journey from zero to hero, I finally present my personal portfolio. It's not quite done yet but its come a long way.
+# Henrik's Website `v2`
+This is the version 2 of my website. It was originally going to look and behave like a computer desktop, but I realized that the time investment for that was not worth it for me. Instead, the `v2` design and architecture of this site is heavily based off [Lee Robinson's website](https://leerob.io) with some of my own touches.
 
-## Basic Architecture
-This website is built with Next.js and React. It uses TailwindCSS / PostCSS for styling. I also chose DaisyUI for a basic selection of UI components.
+
+## Made With
+- [Next.js](https://nextjs.org/)
+- [TailwindCSS](https://tailwindcss.com)
+

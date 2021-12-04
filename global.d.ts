@@ -1,1 +1,3 @@
-declare module 'supercons'
+declare module 'supercons';
+
+declare module 'classnames';

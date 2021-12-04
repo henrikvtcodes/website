@@ -7,13 +7,31 @@ html { font-family: 'Inter', sans-serif; }
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Tourney&display=swap');
+
 @font-face {
   font-family: 'Uni Sans Heavy';
   src: url('uni-sans.heavy-caps.otf') format('opentype');
 }
+
 @font-face {
   font-family: "Whitney";
   src: url('whitneymedium.otf') format('opentype')
+}
+
+@font-face {
+  font-family: "CalSans";
+  src: url('CalSans-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Cascadia Code";
+  src: url('CascadiaCode/CascadiaCode.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Cascadia Code";
+  variation: italic;
+  src: url('CascadiaCode/CascadiaCodeItalic.ttf') format('truetype');
 }
 
 .Whitney {
@@ -24,18 +42,16 @@ html { font-family: 'Inter', sans-serif; }
   font-family: "Uni Sans Heavy";
 }
 
-.RobotoMono {
-  font-family: "Roboto Mono";
-}
-
-.Tourney {
-  font-family: 'Tourney', cursive;  
-  font-weight: 300;
-  font-style: normal;
+.CalSans {
+  font-family: CalSans;
 }
 
 .Inter {
   font-family: Inter;
+}
+
+.CascadiaCode {
+  font-family: "Cascadia Code";
 }
 
 
@@ -57,6 +73,12 @@ body {
   box-sizing: border-box;
 }
 
+#__next {
+  @apply bg-white dark:bg-gray-jet;
+  min-height: 100vh;
+  width: 100vw;
+}
+
 .pagefill {
   min-height: 100vh;
   width: 100vw;
@@ -67,39 +89,86 @@ body {
   width: 100%;
 }
 
-
-
 /* TAILWIND CSS */
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* @apply directives */
+.navlinks-hover{
+  @apply hover:text-purple-electric hover:scale-50 hover:cursor-pointer ;
+}
+
+.header-hover{
+  @apply hover:text-purple-electric hover:cursor-pointer ;
+}
+
+/* CUSTOM CSS */
+.main-element-size{
+  min-height: 100vh;
+  width: 40rem;
+}
+
 /* GRID & FLEXBOX */
-.home-container{
-  display: flex;
-  flex-direction: column;
-  flex-wrap: nowrap;
-  justify-content: center;
-  align-items: center;
 
-  color: white;
-  /* grid-template-columns: [left] 20% [left-mid] 30% [mid] 30% [right-mid] 20% [right];
-  grid-template-rows: [top] auto [top-mid] minmax( 270px, 25%) [bot-title] 1fr [bot-mid] minmax(10%, 216px) [bot]; */
+.whoami-short-container{
+  display: grid;
+  grid-template-columns: [left] 40%  [mid] 60% [right];
+  grid-template-rows: [top] 20% [top-mid] 15% [mid] auto [bot-mid] 20% [bot];
 }
 
-.home-title {
-  order: 1;
-  color: white;
-}
-.home-flex-sourcecode {
-  order: 2;
-}
-.flex-child-nav{
-  order: 4;
-}
-.flex-child-socials{
-  order: 5;
+.whoami-short-pic{
+  grid-column: left / mid;
+  grid-row: top / bot;
 }
 
+.whoami-short-name{
+  grid-column: mid / right;
+  grid-row: top / top-mid;
+  
+  justify-self: center;
+}
+
+.whoami-short-username{
+  grid-column: mid / right;
+  grid-row: top-mid / mid;
+  
+  justify-self: center;
+}
+
+.whoami-short-bio{
+  grid-column: mid / right;
+  grid-row: mid / bot-mid;
+  
+  justify-self: center;
+}
+
+.whoami-short-socials{
+  grid-column: mid / right;
+  grid-row: bot-mid / bot;
+  
+  align-self: center;
+  justify-self: center;
+}
+.about-container{
+  display: grid;
+  grid-template-columns: [left] 25%  [mid-left] 50% [mid-right] 25% [right];
+  grid-template-rows: [top] 20% [top-mid] 100px [mid] auto [bot-mid] auto [bot];
+}
+
+.about-title{
+  grid-column: left / right;
+  grid-row: top / top-mid;
+  
+  justify-self: left;
+}
+
+.about-image{
+  grid-column: mid-left / mid-right;
+  grid-row: top-mid / mid;
+  
+  justify-self: center;
+}
 /* BACKGROUNDS */
 .home-bg {
   background-image: url('../public/images/henrik-inabox.jpg');
@@ -129,38 +198,12 @@ body {
   background-image: url('../public/svgs/layer-wave-only.svg');
 }
 
-/* SHAPE DIVIDER */
-.custom-shape-divider-top-1631590391 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-
-    z-index: 0;
-}
-
-.custom-shape-divider-top-1631590391 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 209px;
-
-    z-index: 0;
-}
-
-.custom-shape-divider-top-1631590391 .shape-fill {
-    fill: #00a6fb;
-
-    z-index: 0;
-}
-
-/* @apply directives */
-.navlinks-hover{
-  @apply hover:text-purple-electric hover:scale-50 hover:cursor-pointer ;
-}
-
-.header-hover{
-  @apply hover:text-purple-electric hover:cursor-pointer ;
+/* EFFECTS */
+#tsparticles {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
 }

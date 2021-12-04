@@ -1,17 +1,13 @@
 
-import StdLayout from "layouts/std";
-import AboutCard from "~component/aboutcard";
+import StdLayout from '../layouts/standard';
+import ThemeButton from '../components/themeChange';
 
-const About = (props) => {
+const Home = () => {
   return (
-    <StdLayout>
-      <section className=" p-8 containerfill ">
-        <div className=" ">
-          <AboutCard />
-        </div>
-      </section>
+    <StdLayout >
+      
     </StdLayout>
-  );
-};
+  )
+}
 
-export default About;
+export default Home

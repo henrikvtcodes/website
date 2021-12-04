@@ -1,92 +1,100 @@
-import { useRouter } from 'next/router';
-import Head from 'next/head';
-
-type TwitterMeta = {
-    card?: string;
-    site?: string | "@henrik_tech";
-}
-
-interface Meta {
-    title: string;
-    description: string;
-    url?: string | "henriktech.com" | "henrikvt.com";
-    image?: string;
-    favicon?: string;
-    twitter?: TwitterMeta;
-    
-}
-
-const DefaultProps:Meta = {
-    title: "henriks shitty website",
-    description: "henrik's portfolio site",
-    url: "henriktech.com",
-    image: "/images/henrik-forest.jpg",
-    favicon: "/images/henriklogo.png",
-    twitter:{
-        site: "@henrik_tech",
-        card: "summary-large-image",
-    }
-}
-
-const DefaultMeta = () =>{
+import Head from 'next/head'
+import { useRouter } from "next/router";
 
 
-    return (
-      <Head>
-        <title> {DefaultProps.title} </title>
-        <meta name="title" content={DefaultProps.title} />
-        <meta name="description" content={DefaultProps.description} />
-        <link rel="icon" type="image/png" href={DefaultProps.favicon} />
-        <link rel="canonical" href="https://next.henriktech.com" />
-        {/** FACEBOOK / OPENGRAPH */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={DefaultProps.url} />
-        <meta property="og:title" content={DefaultProps.title} />
-        <meta property="og:description" content={DefaultProps.description} />
-        <meta property="og:image" content={DefaultProps.image} />
-        {/* TWITTER */}
-        <meta property="twitter:card" content={DefaultProps.twitter?.card} />
-        <meta property="twitter:url" content={DefaultProps.url} />
-        <meta property="twitter:title" content={DefaultProps.title} />
-        <meta property="twitter:description" content={DefaultProps.description} />
-        <meta property="twitter:image" content={DefaultProps.image} />
-        <meta property="twitter:site" content={DefaultProps.twitter?.site} />
-      </Head>
-    );
-}
-
-const CustomMeta = (MetaProps:Meta) => {
-  return (
-    <Head>
-      <title> {MetaProps.title || DefaultProps.title} </title>
-      <meta name="title" content={MetaProps.title || DefaultProps.title} />
-      <meta name="description" content={MetaProps.description || DefaultProps.description} />
-      <link rel="icon" type="image/png" href={ MetaProps.favicon || DefaultProps.favicon} />
-
-      {/** FACEBOOK / OPENGRAPH */}
-      <meta property="og:type" content="website" />
-      <meta property="og:url" content={MetaProps.url ||  DefaultProps.url} />
-      <meta property="og:title" content={MetaProps.title || DefaultProps.title} />
-      <meta property="og:description" content={MetaProps.description || DefaultProps.description} />
-      <meta property="og:image" content={MetaProps.image ||  DefaultProps.image} />
-      {/* TWITTER */}
-      <meta property="twitter:card" content={MetaProps.twitter?.card || DefaultProps.twitter?.card} />
-      <meta property="twitter:url" content={MetaProps.url || DefaultProps.url} />
-      <meta property="twitter:title" content={MetaProps.title || DefaultProps.title} />
-      <meta property="twitter:description" content={MetaProps.description || DefaultProps.description} />
-      <meta property="twitter:image" content={MetaProps.image || DefaultProps.image} />
-      <meta property="twitter:site" content={MetaProps.twitter?.site || DefaultProps.twitter?.site} />
-    </Head>
-  );
+const meta = {
+  title: "henrik's shitty website",
+  desc: "hi, im henrik. i've spent to much time on this project.",
+  author: "henrik",
+  icon: "images/henriklogo.png",
+  image: "images/henrik-forest.jpg",
+  twitterSite:"@henrik_tech"
 };
 
 const Favicon = () => {
   return (
     <Head>
-      <link rel="icon" type="image/png" href={DefaultProps.favicon}/>
+      <link rel="icon" type="image/png" href={meta.icon} />
+    </Head>
+  );
+};
+
+const DefaultMeta = () =>{
+
+  const router = useRouter();
+
+  let canonUrl = `https://henriktech.com${router.asPath}`;
+  return (
+    <Head>
+      {/* Primary Meta Tags */}
+      <title>{meta.title}</title>
+      <meta name="title" content={meta.title} />
+      <meta name="description" content={meta.desc} />
+      <link rel="canonical" href={canonUrl} />
+
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={canonUrl} />
+      <meta property="og:title" content={meta.title} />
+      <meta property="og:description" content={meta.desc} />
+      <meta property="og:image" content={meta.image} />
+
+      {/* Twitter */}
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content={canonUrl} />
+      <meta property="twitter:title" content={meta.title} />
+      <meta property="twitter:description" content={meta.desc} />
+      <meta property="twitter:image" content={meta.image} />
+      <meta property="twitter:site" content={meta.twitterSite} />
     </Head>
   );
 }
 
-export default DefaultMeta;
-export {CustomMeta, Favicon};
+type CustomMetaProps = { 
+  props:{
+    title: string,
+    desc: string,
+    published?: string,
+    author?: string,
+    image?: string,
+  }
+}
+
+
+const CustomMeta = ({props}:CustomMetaProps) => {
+  const router = useRouter();
+
+  let canonUrl = `https://henriktech.com${router.asPath}`;
+
+  return (
+    <Head>
+      {/* Primary Meta Tags */}
+      <title>{props.title}</title>
+      <meta name="title" content={props.title} />
+      <meta name="description" content={props.desc} />
+      {props.published && (
+        <meta property="article:published_time" content={props.published} />
+      )}
+      <meta name='author' content={props.author ? props.author : meta.author} />
+      <link rel="canonical" href={canonUrl} />
+
+      {/* Open Graph / Facebook */}
+      <meta property="og:type" content="website" />
+      <meta property="og:url" content={canonUrl} />
+      <meta property="og:title" content={props.title} />
+      <meta property="og:description" content={props.desc} />
+      <meta property="og:image" content={props.image ? props.image : meta.image} />
+
+      {/* Twitter */}
+      <meta property="twitter:card" content="summary_large_image" />
+      <meta property="twitter:url" content={canonUrl} />
+      <meta property="twitter:title" content={props.title} />
+      <meta property="twitter:description" content={props.desc} />
+      <meta property="twitter:image" content={props.image ? props.image : meta.image} />
+      <meta property="twitter:site" content={meta.twitterSite} />
+    </Head>
+  );
+};
+
+export default Favicon
+export { DefaultMeta, CustomMeta };

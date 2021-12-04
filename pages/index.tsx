@@ -1,27 +1,35 @@
-import  Link  from 'next/link';
-import useEffect from 'react';
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Image from 'next/image';
 
-import SocialBlock  from '~component/socials';
-import NavBar from '~component/navlinks';
-import DefaultMeta from '~component/meta';
-import { HomePageWave, HakeiBlurryGradient1 } from '~component/shapes';
+import StdLayout from '../layouts/standard';
+import WhoAmI from 'components/whoami';
 
-function Home(props) {
-
+const Home = () => {
   return (
-    <main className="home-container pagefill home-bg-wave bg-fixed bg-center bg-cover">
-      <DefaultMeta />
-      <HomePageWave />
-      <Link href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" passHref>
-        <h1 className=" home-title m-8 text-7xl UniSansHeavy text-white hover:cursor-pointer">
-          Henrik VT
-        </h1>
-      </Link>
-      <div className="flex-child-socials ">
-        <SocialBlock />
+    <StdLayout>
+      <div className="flex">
+        <WhoAmI
+          props={{
+            name: "Henrik VT",
+            userName: "henrikvtcodes / henrik_tech",
+            imageURL: "/images/henrik-forest.jpg",
+            shortBio: '"Jack of all trades, master of none, but better than a master of one."',
+            longBio: "Hi, I'm Henrik",
+            tagline: "I'm a software developer",
+            socials: {
+              twitter: "/henrik_tech",
+              github: "/henrikvtcodes",
+              linkedin: "/henrik-van-tassell-68964a216",
+              instagram: "/henrik_tech",
+              twitch: "/henriktech",
+            },
+            type: "short",
+          }}
+        />
       </div>
-    </main>
+    </StdLayout>
   );
 }
 
-export default Home;
+export default Home
