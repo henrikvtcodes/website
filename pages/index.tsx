@@ -14,7 +14,7 @@ const Home = () => {
             name: "Henrik VT",
             userName: "henrikvtcodes / henrik_tech",
             imageURL: "/images/henrik-forest.jpg",
-            shortBio: '<i>"Jack of all trades, master of none, but better than a master of one."</i>',
+            shortBio: '"Jack of all trades, master of none, but better than a master of one."',
             longBio: "Hi, I'm Henrik",
             tagline: "I'm a software developer",
             socials: {

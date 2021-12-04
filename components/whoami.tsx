@@ -44,7 +44,7 @@ const WhoAmI = ({props}:WhoAmIProps) => {
           <h1 className="whoami-short-username CascadiaCode text-xl self-center dark:text-white">
             {props.userName}
           </h1>
-          <p className="whoami-short-bio">{props.shortBio}</p>
+          <p className="whoami-short-bio px-3">{props.shortBio}</p>
           <div className="whoami-short-socials flex flex-row flex-nowrap gap-4 px-4">
             {props.socials.instagram && (
               <SocialButtons social="instagram" tag={props.socials.instagram} />
