@@ -19,7 +19,7 @@ class MyDocument extends Document {
             src="https://analytics.henriktech.com/umami.js"
             data-cache="true"
             data-do-not-track="true"
-            data-host-url="http://analytics.henriktech.com"
+            data-host-url="https://analytics.henriktech.com"
           ></script>
         </Head>
         <body>
