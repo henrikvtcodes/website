@@ -18,11 +18,11 @@ const Home = () => {
             longBio: "Hi, I'm Henrik",
             tagline: "I'm a software developer",
             socials: {
-              twitter: "/henrik_tech",
-              github: "/henrikvtcodes",
-              linkedin: "/henrik-van-tassell-68964a216",
-              instagram: "/henrik_tech",
-              twitch: "/henriktech",
+              twitter: "henrik_tech",
+              github: "henrikvtcodes",
+              linkedin: "henrik-van-tassell-68964a216",
+              instagram: "henrik_tech",
+              twitch: "henriktech",
             },
             type: "short",
           }}
