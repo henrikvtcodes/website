@@ -74,9 +74,11 @@ body {
 }
 
 #__next {
-  @apply bg-white dark:bg-gray-jet;
-  min-height: 100vh;
+  @apply bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white selection:bg-violet-900 selection:text-gray-50;
+  height: 100vh;
+  max-height: 100vh;
   width: 100vw;
+  max-width: 100vw;
 }
 
 .pagefill {
@@ -129,7 +131,7 @@ body {
   justify-self: center;
 }
 
-.whoami-short-username{
+.whoami-short-username {
   grid-column: mid / right;
   grid-row: top-mid / mid;
   
