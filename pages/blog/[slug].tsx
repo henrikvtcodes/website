@@ -6,8 +6,9 @@ import NextLink from "next/link";
 import fs from "fs";
 import path from "path";
 
-import { getPostBySlug, getAllPosts } from "utils/getPost";
+import { getPostBySlug, getPostSlugs } from "utils/getPost";
 import StdLayout from "layouts/standard";
+import markdownCss from "styles/markdown.module.css";
 
 type PageProps = {
   post: PostType;
@@ -32,7 +33,9 @@ const Page = ({ post }: PageProps) => {
   return (
     <StdLayout>
       <div className="flex">
-        <MDXRemote {...post.content} components={components} />
+        <div className={markdownCss["markdown"]}>
+          <MDXRemote {...post.content} components={components} />
+        </div>
       </div>
     </StdLayout>
   );
@@ -43,7 +46,7 @@ async function getStaticPaths() {
 
   const paths = files.map((filename) => ({
     params: {
-      slug: filename.replace(".md", ""),
+      slug: filename.replace(".mdx", ""),
     },
   }));
 
@@ -54,7 +57,7 @@ async function getStaticPaths() {
 }
 
 async function getStaticProps({ params: { slug } }: any) {
-  const post = getPostBySlug('blog', slug, [
+  const post = getPostBySlug("blog", slug, [
     "title",
     "slug",
     "desc",

@@ -7,9 +7,9 @@ type PostCardProps = {
   slug: string;
 };
 
-const PostCard = ({ title, desc, slug }: PostCardProps) => {
+const ProjectCard = ({ title, desc, slug }: PostCardProps) => {
   return (
-    <NextLink href={`/blog/${slug}`}>
+    <NextLink href={`/projects/${slug}`}>
       <a
         className={cn(
           "transform hover:scale-[1.01] transition-all",
@@ -28,4 +28,4 @@ const PostCard = ({ title, desc, slug }: PostCardProps) => {
   );
 };
 
-export default PostCard;
+export default ProjectCard;

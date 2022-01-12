@@ -1,14 +1,13 @@
 import { serialize } from "next-mdx-remote/serialize";
-import type { MDXRemoteSerializeResult } from "next-mdx-remote";
 import { MDXRemote } from "next-mdx-remote";
 import Image from "next/image";
 import NextLink from "next/link";
 import fs from "fs";
 import path from "path";
 
-
-import { getPostBySlug, getAllPosts } from "utils/getPost";
+import { getPostBySlug, getPostSlugs } from "utils/getPost";
 import StdLayout from "layouts/standard";
+import markdownCss from "styles/markdown.module.css";
 
 type PageProps = {
   post: PostType;
@@ -28,13 +27,14 @@ type PostType = {
 };
 
 const Page = ({ post }: PageProps) => {
-
-  const components = {Image, NextLink};
+  const components = { Image, NextLink };
 
   return (
     <StdLayout>
       <div className="flex">
-        <MDXRemote {...post.content} components={components} />
+        <div className={markdownCss["markdown"]}>
+          <MDXRemote {...post.content} components={components} />
+        </div>
       </div>
     </StdLayout>
   );
@@ -45,7 +45,7 @@ async function getStaticPaths() {
 
   const paths = files.map((filename) => ({
     params: {
-      slug: filename.replace(".md", ""),
+      slug: filename.replace(".mdx", ""),
     },
   }));
 
@@ -55,9 +55,8 @@ async function getStaticPaths() {
   };
 }
 
-
 async function getStaticProps({ params: { slug } }: any) {
-  const post = getPostBySlug('projects', slug, [
+  const post = getPostBySlug("projects", slug, [
     "title",
     "slug",
     "desc",
@@ -83,6 +82,5 @@ async function getStaticProps({ params: { slug } }: any) {
     },
   };
 }
-
 export default Page;
 export { getStaticPaths, getStaticProps };
