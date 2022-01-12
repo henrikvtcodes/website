@@ -4,13 +4,14 @@ import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import cn from "classnames";
 
-
-const NavItem = ({ href, text }:any) => {
+const NavItem = ({ href, text }: any) => {
   const router = useRouter();
-  const isActive = router.asPath === href;
+  const currentPage = router.asPath;
+  let isHome: boolean = currentPage === ("/" || "");
+  let isActive = currentPage.includes(href) && (href !== "" || isHome);
 
   return (
-    <Link href={href} passHref>
+    <Link href={`/${href}`} passHref>
       <a
         className={cn(
           isActive
@@ -23,17 +24,18 @@ const NavItem = ({ href, text }:any) => {
       </a>
     </Link>
   );
-}
+};
 
 const NavBar = () => {
-
   return (
-    <nav className="flex flex-row justify-center flex-nowrap gap-4 py-2 z-50 fixed w-full backdrop-blur-lg">
-      <NavItem href="/" text="Home" />
-      <NavItem href="/about" text="About" />
-      <NavItem href="/projects" text="Projects" />
-      <NavItem href="/blog" text="Blog" />
-    </nav>
+    <div className="w-full flex justify-around">
+      <nav className="flex flex-row justify-center flex-nowrap gap-4 py-2 z-50 fixed w-content backdrop-blur-lg">
+        <NavItem href="" text="Home" />
+        <NavItem href="about" text="About" />
+        <NavItem href="projects" text="Projects" />
+        <NavItem href="blog" text="Blog" />
+      </nav>
+    </div>
   );
 };
 
