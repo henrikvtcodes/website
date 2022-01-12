@@ -16,7 +16,7 @@ const NavItem = ({ href, text }:any) => {
           isActive
             ? "font-semibold text-gray-800 dark:text-gray-200"
             : "font-normal text-gray-600 dark:text-gray-400",
-          "hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-800 transition-all"
+          "hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg hover:bg-gray-200 dark:hover:bg-zinc-800 transition-all"
         )}
       >
         <span className="capsize">{text}</span>
@@ -27,13 +27,13 @@ const NavItem = ({ href, text }:any) => {
 
 const NavBar = () => {
 
-  return( 
-  <nav className="flex flex-row flex-nowrap gap-4 py-2 z-50">
-    <NavItem href="/" text="Home" />
-    <NavItem href="/about" text="About" />
-    <NavItem href="/projects" text="Projects" />
-    <NavItem href="/blog" text="Blog" />
-  </nav>
+  return (
+    <nav className="flex flex-row justify-center flex-nowrap gap-4 py-2 z-50 fixed w-full backdrop-blur-lg">
+      <NavItem href="/" text="Home" />
+      <NavItem href="/about" text="About" />
+      <NavItem href="/projects" text="Projects" />
+      <NavItem href="/blog" text="Blog" />
+    </nav>
   );
 };
 

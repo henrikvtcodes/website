@@ -2,7 +2,7 @@ import type { Url } from "url";
 import {FiGithub, FiTwitch, FiTwitter, FiInstagram, FiYoutube, FiLinkedin, FiLink} from "react-icons/fi";
 
 type SocialButtonsProps = {
-  social:
+  social?:
     | "github"
     | "twitter"
     | "instagram"
@@ -14,12 +14,14 @@ type SocialButtonsProps = {
 }
 
 const SocialButtons = ({ social, tag, youtube}: SocialButtonsProps) => {
+
+  const style:string = "w-10 h-10 bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-white flex items-center justify-center rounded-lg hover:ring-2 ring-gray-300  transition-all"
   
   switch (social) {
     default:
       return (
         <a href={`https://${tag}`}>
-          <button className="w-10 h-10 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all">
+          <button className={style}>
             <FiLink />
           </button>
         </a>
@@ -27,7 +29,7 @@ const SocialButtons = ({ social, tag, youtube}: SocialButtonsProps) => {
     case "github":
       return (
         <a href={`https://github.com/${tag}`}>
-          <button className="w-10 h-10 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all">
+          <button className={style}>
             <FiGithub size={20} />
           </button>
         </a>
@@ -35,7 +37,7 @@ const SocialButtons = ({ social, tag, youtube}: SocialButtonsProps) => {
     case "twitter":
       return (
         <a href={`https://twitter.com/${tag}`}>
-          <button className="w-10 h-10 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all">
+          <button className={style}>
             <FiTwitter size={20} />
           </button>
         </a>
@@ -43,7 +45,7 @@ const SocialButtons = ({ social, tag, youtube}: SocialButtonsProps) => {
     case "instagram":
       return (
         <a href={`https://instagram.com/${tag}`}>
-          <button className="w-10 h-10 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all">
+          <button className={style}>
             <FiInstagram size={20} />
           </button>
         </a>
@@ -51,7 +53,7 @@ const SocialButtons = ({ social, tag, youtube}: SocialButtonsProps) => {
     case "youtube":
       return (
         <a href={`https://youtube.com/${youtube}`}>
-          <button className="w-10 h-10 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all">
+          <button className={style}>
             <FiYoutube size={20} />
           </button>
         </a>
@@ -59,15 +61,15 @@ const SocialButtons = ({ social, tag, youtube}: SocialButtonsProps) => {
     case "linkedin":
       return (
         <a href={`https://linkedin.com/in/${tag}`}>
-          <button className="w-10 h-10 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all">
+          <button className={style}>
             <FiLinkedin size={20} />
           </button>
         </a>
       );
     case "twitch":
       return (
-        <a href={`https://twitch.tv${tag}`}>
-          <button className="w-10 h-10 bg-gray-200 rounded-lg dark:bg-gray-600 flex items-center justify-center  hover:ring-2 ring-gray-300  transition-all">
+        <a href={`https://twitch.tv/${tag}`}>
+          <button className={style}>
             <FiTwitch size={20} />
           </button>
         </a>

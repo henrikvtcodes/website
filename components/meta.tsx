@@ -6,8 +6,8 @@ const meta = {
   title: "henrik's shitty website",
   desc: "hi, im henrik. i've spent to much time on this project.",
   author: "henrik",
-  icon: "images/henriklogo.png",
-  image: "images/henrik-forest.jpg",
+  icon: "/images/henriklogo.png",
+  image: "/images/henrik-forest.jpg",
   twitterSite:"@henrik_tech"
 };
 

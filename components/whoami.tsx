@@ -30,18 +30,18 @@ const WhoAmI = ({props}:WhoAmIProps) => {
     case "short":
       return (
         <div className="whoami-short-container w-full pt-8">
-          <div className="whoami-short-pic aspect-w-1 aspect-h-1 ">
+          {/* <div className="whoami-short-pic aspect-w-1 aspect-h-1 ">
             <Image
               src={props.imageURL}
               layout="fill"
               className="rounded-3xl"
               alt="henrik bio pic"
             />
-          </div>
-          <h1 className="whoami-short-name CalSans text-4xl self-center dark:text-white">
+          </div> */}
+          <h1 className="whoami-short-name CalSans text-4xl self-cente">
             {props.name}
           </h1>
-          <h1 className="whoami-short-username CascadiaCode text-xl self-center dark:text-white">
+          <h1 className="whoami-short-username CascadiaCode text-xl self-center">
             {props.userName}
           </h1>
           <p className="whoami-short-bio px-3">{props.shortBio}</p>
