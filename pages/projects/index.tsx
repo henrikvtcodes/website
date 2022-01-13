@@ -10,7 +10,7 @@ type PostProps = {
 
 const Page = ({ posts }: { posts: PostProps[] }) => {
   return (
-    <StdLayout>
+    <StdLayout title="henrik's shitty projects" desc="just my projects lol">
       <h1 className="text-3xl my-4 CalSans">Projects</h1>
       <p className="text-lg">
         Writeups for projects I&apos;ve done. Websites/Apps, OSS Libraries, etc.

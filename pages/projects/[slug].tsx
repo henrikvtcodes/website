@@ -30,7 +30,7 @@ const Page = ({ post }: PageProps) => {
   const components = { Image, NextLink };
 
   return (
-    <StdLayout>
+    <StdLayout title={`${post.title} | henrik's shitty blog`} desc={post.desc}>
       <div className="flex">
         <div className={markdownCss["markdown"]}>
           <MDXRemote {...post.content} components={components} />

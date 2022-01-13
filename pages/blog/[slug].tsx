@@ -1,5 +1,4 @@
 import { serialize } from "next-mdx-remote/serialize";
-import type { MDXRemoteSerializeResult } from "next-mdx-remote";
 import { MDXRemote } from "next-mdx-remote";
 import Image from "next/image";
 import NextLink from "next/link";
@@ -31,7 +30,7 @@ const Page = ({ post }: PageProps) => {
   const components = { Image, NextLink };
 
   return (
-    <StdLayout>
+    <StdLayout title={`${post.title} | henrik's shitty blog`} desc={post.desc}>
       <div className="flex">
         <div className={markdownCss["markdown"]}>
           <MDXRemote {...post.content} components={components} />
