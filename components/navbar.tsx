@@ -3,6 +3,9 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import cn from "classnames";
+import { FiSearch } from "react-icons/fi";
+
+import { SearchButton } from "./search";
 
 const NavItem = ({ href, text }: any) => {
   const router = useRouter();
@@ -29,11 +32,12 @@ const NavItem = ({ href, text }: any) => {
 const NavBar = () => {
   return (
     <div className="w-full flex justify-around">
-      <nav className="flex flex-row justify-center flex-nowrap gap-4 py-2 z-50 bg-inherit fixed w-content">
+      <nav className="flex flex-row justify-center flex-nowrap gap-4 py-2 z-30 bg-inherit fixed w-content">
         <NavItem href="" text="Home" />
         <NavItem href="about" text="About" />
         <NavItem href="projects" text="Projects" />
         <NavItem href="blog" text="Blog" />
+        <SearchButton />
       </nav>
     </div>
   );

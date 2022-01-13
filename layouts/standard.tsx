@@ -1,6 +1,7 @@
-import Favicon, { DefaultMeta, CustomMeta } from "../components/meta";
-import NavBar from "../components/navbar";
+import Favicon, { DefaultMeta, CustomMeta } from "components/meta";
+import NavBar from "components/navbar";
 import DVDLogo from "components/dvdlogo";
+import { SearchModal } from "components/search";
 
 const meta = {
   title: "henrik's shitty website",
@@ -23,7 +24,7 @@ const StdLayout = ({
   desc?: string;
 }) => {
   return (
-    <main className="flex flex-col justify-start content-center h-screen">
+    <main className="flex flex-col justify-start content-center h-screen content">
       <Favicon />
       <CustomMeta
         title={title ? title : meta.title}
@@ -34,8 +35,10 @@ const StdLayout = ({
 
       <NavBar />
 
+      <SearchModal />
+
       <div
-        className={`z-20 pt-16 px-2 backdrop-blur-lg rounded-lg sm:w-content self-center h-full overflow-y-auto ${className} `}
+        className={`z-0 pt-16 px-2 backdrop-blur-lg rounded-lg sm:w-content self-center h-full overflow-y-auto ${className} `}
       >
         {children}
       </div>

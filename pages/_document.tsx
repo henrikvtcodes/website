@@ -6,7 +6,14 @@ export default class Document extends NextDocument {
   render() {
     return (
       <Html lang="en">
-        <Head></Head>
+        <Head>
+          <link
+            rel="search"
+            href="/search.xml"
+            type="application/opensearchdescription+xml"
+            title="Search henrik's shitty website"
+          ></link>
+        </Head>
         <body>
           <ColorModeScript initialColorMode={theme.config.initialColorMode} />
           <Main />

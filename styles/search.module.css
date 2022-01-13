@@ -1,0 +1,3 @@
+.search input {
+  @apply mt-1 appearance-none block w-full px-3 py-2 bg-zinc-700 rounded outline-none border-0 shadow-sm placeholder-gray-400 focus:outline-none focus:ring-white  sm:text-sm;
+}
