@@ -4,4 +4,11 @@ module.exports = {
   images: {
     domains: ["avatars.githubusercontent.com"],
   },
+  devIndicators: {
+    buildActivityPosition: "top-left",
+  },
+  swcMinify: true,
+  experimental: {
+    // urlImports: ["https://cdn.skypack.dev", "https://rsms.me/inter"],
+  },
 };
