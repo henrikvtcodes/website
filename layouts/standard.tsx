@@ -1,6 +1,5 @@
 import Favicon, { DefaultMeta } from "../components/meta";
 import NavBar from "../components/navbar";
-import ParticlesBackground from "components/particles";
 import DVDLogo from "components/dvdlogo";
 
 const StdLayout = ({ children, className }: any) => {
