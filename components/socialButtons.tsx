@@ -1,5 +1,14 @@
 import type { Url } from "url";
-import {FiGithub, FiTwitch, FiTwitter, FiInstagram, FiYoutube, FiLinkedin, FiLink} from "react-icons/fi";
+import {
+  FiGithub,
+  FiTwitch,
+  FiTwitter,
+  FiInstagram,
+  FiYoutube,
+  FiLinkedin,
+  FiLink,
+} from "react-icons/fi";
+import { SiPolywork } from "react-icons/si";
 
 type SocialButtonsProps = {
   social?:
@@ -8,15 +17,16 @@ type SocialButtonsProps = {
     | "instagram"
     | "youtube"
     | "linkedin"
-    | "twitch";
+    | "twitch"
+    | "polywork";
   tag: string | undefined;
-  youtube?: "c/" | "channel/" | "user/"| "";
-}
+  youtube?: "c/" | "channel/" | "user/" | "";
+};
 
-const SocialButtons = ({ social, tag, youtube}: SocialButtonsProps) => {
+const SocialButtons = ({ social, tag, youtube }: SocialButtonsProps) => {
+  const style: string =
+    "w-10 h-10 bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-white flex items-center justify-center rounded-lg hover:ring-2 ring-gray-300  transition-all";
 
-  const style:string = "w-10 h-10 bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-white flex items-center justify-center rounded-lg hover:ring-2 ring-gray-300  transition-all"
-  
   switch (social) {
     default:
       return (
@@ -71,6 +81,14 @@ const SocialButtons = ({ social, tag, youtube}: SocialButtonsProps) => {
         <a href={`https://twitch.tv/${tag}`}>
           <button className={style}>
             <FiTwitch size={20} />
+          </button>
+        </a>
+      );
+    case "polywork":
+      return (
+        <a href={`https://twitch.tv/${tag}`}>
+          <button className={style}>
+            <SiPolywork size={20} />
           </button>
         </a>
       );

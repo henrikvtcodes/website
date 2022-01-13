@@ -1,43 +1,51 @@
-import Image from 'next/image';
+import Image from "next/image";
 
-import SocialButtons from './socialButtons';
+import SocialButtons from "./socialButtons";
 
 type WhoAmIProps = {
-  props:{
-    name:string;
-    userName:string;
-    imageURL:string;
-    tagline:string;
-    shortBio:string;
-    longBio:string;
-    socials:{
-      twitter?:string;
-      github?:string;
-      linkedin?:string;
-      instagram?:string;
-      twitch?:string;
-      youtube?:{
-        urlType:"c/" | "channel/" | "user/"| "";
-        url:string;
-      }
-    }
+  props: {
+    name: string;
+    userName: string;
+    imageURL: string;
+    tagline: string;
+    shortBio: string;
+    longBio: string;
+    socials: {
+      twitter?: string;
+      github?: string;
+      linkedin?: string;
+      instagram?: string;
+      twitch?: string;
+      youtube?: {
+        urlType: "c/" | "channel/" | "user/" | "";
+        url: string;
+      };
+    };
     type: "short" | "about" | "author";
-  }
-}
+  };
+};
 
-const WhoAmI = ({props}:WhoAmIProps) => {
+const WhoAmI = ({ props }: WhoAmIProps) => {
   switch (props.type) {
     case "short":
       return (
         <div className="whoami-short-container w-full pt-8">
-          {/* <div className="whoami-short-pic aspect-w-1 aspect-h-1 ">
-            <Image
+          <div className="whoami-short-pic">
+            {/* eslint-disable */}
+            <img
+              className="object-cover shadow-lg rounded-xl"
+              src={props.imageURL}
+              alt=""
+            />
+
+            {/* <Image
               src={props.imageURL}
               layout="fill"
               className="rounded-3xl"
               alt="henrik bio pic"
-            />
-          </div> */}
+            /> */}
+          </div>
+
           <h1 className="whoami-short-name CalSans text-4xl self-cente">
             {props.name}
           </h1>
@@ -74,12 +82,8 @@ const WhoAmI = ({props}:WhoAmIProps) => {
     case "about":
       return null;
     case "author":
-      return (
-        <div className="grid">
-
-        </div>
-      );
+      return <div className="grid"></div>;
   }
-}
+};
 
 export default WhoAmI;
