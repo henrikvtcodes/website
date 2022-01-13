@@ -11,12 +11,12 @@ function App({ Component, pageProps }: AppProps) {
     <ThemeProvider defaultTheme="system">
       <ChakraProvider>
         <Component {...pageProps} />
-        <script
+        <Script
           async
           defer
           data-website-id="5be5a980-82fd-40f0-8f84-e5bed361223b"
           src="https://analytics.henriktech.com/umami.js"
-        ></script>
+        />
       </ChakraProvider>
     </ThemeProvider>
   );
