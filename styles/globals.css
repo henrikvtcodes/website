@@ -1,37 +1,41 @@
 /* FONTS */
-@import url('https://rsms.me/inter/inter.css');
-html { font-family: 'Inter', sans-serif; }
+@import url("https://rsms.me/inter/inter.css");
+html {
+  font-family: "Inter", sans-serif;
+}
 @supports (font-variation-settings: normal) {
-  html { font-family: 'Inter var', sans-serif; }
+  html {
+    font-family: "Inter var", sans-serif;
+  }
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Tourney&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Tourney&display=swap");
 
 @font-face {
-  font-family: 'Uni Sans Heavy';
-  src: url('uni-sans.heavy-caps.otf') format('opentype');
+  font-family: "Uni Sans Heavy";
+  src: url("uni-sans.heavy-caps.otf") format("opentype");
 }
 
 @font-face {
   font-family: "Whitney";
-  src: url('whitneymedium.otf') format('opentype')
+  src: url("whitneymedium.otf") format("opentype");
 }
 
 @font-face {
   font-family: "CalSans";
-  src: url('CalSans-SemiBold.ttf') format('truetype');
+  src: url("CalSans-SemiBold.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Cascadia Code";
-  src: url('CascadiaCode/CascadiaCode.ttf') format('truetype');
+  src: url("CascadiaCode/CascadiaCode.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Cascadia Code";
   variation: italic;
-  src: url('CascadiaCode/CascadiaCodeItalic.ttf') format('truetype');
+  src: url("CascadiaCode/CascadiaCodeItalic.ttf") format("truetype");
 }
 
 .Whitney {
@@ -54,13 +58,13 @@ html { font-family: 'Inter', sans-serif; }
   font-family: "Cascadia Code";
 }
 
-
 /* DEFAULTS & BASICS */
 html,
 body {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  overflow: hidden;
 
   height: 100%;
   width: 100%;
@@ -74,7 +78,7 @@ body {
 }
 
 #__next {
-  @apply bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white selection:bg-violet-900 selection:text-gray-50;
+  @apply bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white selection:bg-violet-900 selection:text-gray-50 overflow-hidden;
   height: 100vh;
   max-height: 100vh;
   width: 100vw;
@@ -97,107 +101,127 @@ body {
 @tailwind utilities;
 
 /* @apply directives */
-.navlinks-hover{
-  @apply hover:text-purple-electric hover:scale-50 hover:cursor-pointer ;
+.navlinks-hover {
+  @apply hover:text-purple-electric hover:scale-50 hover:cursor-pointer;
 }
 
-.header-hover{
-  @apply hover:text-purple-electric hover:cursor-pointer ;
+.header-hover {
+  @apply hover:text-purple-electric hover:cursor-pointer;
 }
 
 /* CUSTOM CSS */
-.main-element-size{
+.main-element-size {
   min-height: 100vh;
   width: 40rem;
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
 /* GRID & FLEXBOX */
 
-.whoami-short-container{
+.whoami-short-container {
   display: grid;
-  grid-template-columns: [left] 40%  [mid] 60% [right];
+  grid-template-columns: [left] 40% [mid] 60% [right];
   grid-template-rows: [top] 20% [top-mid] 15% [mid] auto [bot-mid] 20% [bot];
 }
 
-.whoami-short-pic{
+.whoami-short-pic {
   grid-column: left / mid;
   grid-row: top / bot;
 }
 
-.whoami-short-name{
+.whoami-short-name {
   grid-column: mid / right;
   grid-row: top / top-mid;
-  
+
   justify-self: center;
 }
 
 .whoami-short-username {
   grid-column: mid / right;
   grid-row: top-mid / mid;
-  
+
   justify-self: center;
 }
 
-.whoami-short-bio{
+.whoami-short-bio {
   grid-column: mid / right;
   grid-row: mid / bot-mid;
-  
+
   justify-self: center;
 }
 
-.whoami-short-socials{
+.whoami-short-socials {
   grid-column: mid / right;
   grid-row: bot-mid / bot;
-  
+
   align-self: center;
   justify-self: center;
 }
-.about-container{
+.about-container {
   display: grid;
-  grid-template-columns: [left] 25%  [mid-left] 50% [mid-right] 25% [right];
+  grid-template-columns: [left] 25% [mid-left] 50% [mid-right] 25% [right];
   grid-template-rows: [top] 20% [top-mid] 100px [mid] auto [bot-mid] auto [bot];
 }
 
-.about-title{
+.about-title {
   grid-column: left / right;
   grid-row: top / top-mid;
-  
+
   justify-self: left;
 }
 
-.about-image{
+.about-image {
   grid-column: mid-left / mid-right;
   grid-row: top-mid / mid;
-  
+
   justify-self: center;
 }
 /* BACKGROUNDS */
 .home-bg {
-  background-image: url('../public/images/henrik-inabox.jpg');
+  background-image: url("../public/images/henrik-inabox.jpg");
   background-repeat: no-repeat;
   background-blend-mode: darken;
 }
 .home-bg-overlay {
-  background: rgba(39,62,84,0.4);
+  background: rgba(39, 62, 84, 0.4);
 }
 
 .home-bg-gradient {
-  background-image: url('../public/svgs/blurry-gradient-haikei.svg');
+  background-image: url("../public/svgs/blurry-gradient-haikei.svg");
 }
 .home-bg-wave {
-  background-image: url('../public/svgs/wave-haikei.svg'); 
+  background-image: url("../public/svgs/wave-haikei.svg");
 }
 .svgbg-blue {
-  background-image: url('../public/svgs/bg.svg');
+  background-image: url("../public/svgs/bg.svg");
   z-index: 0;
 }
 
 .page-layerwave {
-  background-image: url('../public/svgs/layered-waves-haikei.svg');
+  background-image: url("../public/svgs/layered-waves-haikei.svg");
 }
 
 .only-layerwave {
-  background-image: url('../public/svgs/layer-wave-only.svg');
+  background-image: url("../public/svgs/layer-wave-only.svg");
 }
 
 /* EFFECTS */
