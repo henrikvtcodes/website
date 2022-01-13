@@ -11,9 +11,13 @@ type PostProps = {
 const Page = ({ posts }: { posts: PostProps[] }) => {
   return (
     <StdLayout>
-      <h1 className="text-3xl">My Blog Posts</h1>
-      <p className="text-lg pt-4">Just some of my technical writing.</p>
-      <hr className="my-2" />
+      <h1 className="text-3xl my-4 CalSans">Projects</h1>
+      <p className="text-lg">
+        Writeups for projects I&apos;ve done. Websites/Apps, OSS Libraries, etc.
+      </p>
+
+      <hr className="my-4 border-zinc-900 dark:border-gray-50 border-t-4 rounded-sm" />
+
       <div className="flex flex-row flex-wrap justify-around content-center items-center gap-2">
         {posts.map((post) => (
           <ProjectCard
