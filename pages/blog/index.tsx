@@ -25,7 +25,7 @@ const Page = ({ posts }: { posts: PostProps[] }) => {
             key={post.slug}
             title={post.title}
             desc={post.desc}
-            slug={post.slug}
+            slug={`mdx/${post.slug}`}
           />
         ))}
       </div>
