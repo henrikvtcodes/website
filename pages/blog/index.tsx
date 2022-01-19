@@ -1,6 +1,6 @@
 import StdLayout from "layouts/standard";
 import PostCard from "components/postCard";
-import { getPostSlugs, getPostBySlug, Items } from "utils/getPost";
+import { getPostSlugs, getPostBySlug, Items } from "utils/getLocalPost";
 
 type PostProps = {
   title: string;

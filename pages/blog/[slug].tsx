@@ -5,7 +5,7 @@ import NextLink from "next/link";
 import fs from "fs";
 import path from "path";
 
-import { getPostBySlug, getPostSlugs } from "utils/getPost";
+import { getPostBySlug, getPostSlugs } from "utils/getLocalPost";
 import StdLayout from "layouts/standard";
 import markdownCss from "styles/markdown.module.css";
 
