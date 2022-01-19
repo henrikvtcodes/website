@@ -15,6 +15,10 @@
     "jsx": "preserve",
     "incremental": true,
     "types": ["@types/react-instantsearch-dom"],
+    "typeRoots": [
+      "node_modules/@types",
+      "/types"
+    ],
     "baseUrl": "."
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
