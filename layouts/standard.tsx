@@ -38,7 +38,7 @@ const StdLayout = ({
       <SearchModal />
 
       <div
-        className={`z-0 pt-16 px-2 backdrop-blur-lg rounded-lg sm:w-content self-center h-full overflow-y-auto ${className} `}
+        className={`pt-16 px-2 backdrop-blur-lg rounded-lg sm:w-content self-center h-full overflow-y-auto ${className} `}
       >
         {children}
       </div>

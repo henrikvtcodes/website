@@ -32,8 +32,8 @@ const NavItem = ({ href, text, alt }: any) => {
 
 const NavBar = () => {
   return (
-    <div className="w-full flex justify-around">
-      <nav className="flex flex-row justify-center flex-nowrap gap-4 py-2 z-30 bg-inherit fixed w-content">
+    <div className="w-full flex justify-around h-14 backdrop-blur-md">
+      <nav className="flex flex-row justify-center align-middle items-center flex-nowrap gap-4 h-14 py-2 fixed w-content">
         <NavItem href="" text="🏠" alt="home" />
         <NavItem href="about" text="👱" alt="about me" />
         <NavItem href="projects" text="🛠️" alt="projects" />
