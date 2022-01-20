@@ -35,6 +35,9 @@ export function getPostBySlug(dir: string, slug: string, fields: string[]) {
     if (field === "content") {
       items[field] = content;
     }
+    if (field === "publishedAt") {
+      items[field] = new Date(data["publishedAt"] as string).toISOString();
+    }
 
     if (typeof data[field] !== "undefined") {
       items[field] = data[field];
@@ -52,7 +55,7 @@ export function getAllPosts(dir: string, fields: string[] = []) {
   const posts = slugs
     .map((slug) => getPostBySlug(dir, slug, fields))
     // sort posts by index in descending order
-    .sort((post1, post2) => (post1.index > post2.index ? -1 : 1));
+    .sort((post1, post2) => (post1.publishedAt > post2.publishedAt ? -1 : 1));
 
   return posts;
 }

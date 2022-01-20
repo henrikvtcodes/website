@@ -5,6 +5,7 @@ export type PostCardProps = {
   title: string;
   desc?: string;
   slug: string;
+  publishedAt: string | Date;
 };
 
 const PostCard = ({ title, desc, slug }: PostCardProps) => {

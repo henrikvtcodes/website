@@ -18,7 +18,7 @@ export type Post = {
 
 export type PostProps = {
   title: string;
-  dateAdded: string;
+  dateAdded: string | Date;
   slug: string;
 };
 

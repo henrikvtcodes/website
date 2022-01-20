@@ -3,7 +3,14 @@ import PostCard, { PostCardProps } from "components/postCard";
 import { getPostSlugs, getPostBySlug, Items } from "utils/getLocalPost";
 import { getAllPosts } from "utils/hashnode/getHNPost";
 
-const Page = ({ fullPosts }: { fullPosts: PostCardProps[] }) => {
+type PostPageProps = {
+  title: string;
+  desc?: string;
+  slug: string;
+  publishedAt: string;
+};
+
+const Page = ({ sortedFullPosts }: { sortedFullPosts: PostPageProps[] }) => {
   return (
     <StdLayout title="henrik's shitty blog" desc="just my blog lol">
       <h1 className="text-3xl my-4 CalSans">Blog</h1>
@@ -15,8 +22,13 @@ const Page = ({ fullPosts }: { fullPosts: PostCardProps[] }) => {
       <hr className="my-4 border-zinc-900 dark:border-gray-50 border-t-4 rounded-sm" />
 
       <div className="flex flex-row flex-wrap justify-around content-center items-center gap-2">
-        {fullPosts.map((post) => (
-          <PostCard key={post.slug} title={post.title} slug={`${post.slug}`} />
+        {sortedFullPosts.map((post) => (
+          <PostCard
+            key={post.slug}
+            title={post.title}
+            slug={`${post.slug}`}
+            publishedAt={post.publishedAt}
+          />
         ))}
       </div>
     </StdLayout>
@@ -35,17 +47,19 @@ async function getStaticProps() {
       "content",
       "author",
       "published",
+      "publishedAt",
     ]);
     return {
       title: post["title"],
       desc: post["desc"],
       slug: `mdx/${post["slug"]}`,
+      publishedAt: new Date(post["publishedAt"]),
     };
   });
 
   let hashnodePosts = await getAllPosts(); // get all posts from Hashnode
 
-  if (hashnodePosts === undefined) {
+  if (hashnodePosts === null) {
     // dismiss ts2532 error
     return {
       props: {
@@ -58,14 +72,35 @@ async function getStaticProps() {
     return {
       title: post.title,
       slug: `hn/${post.slug}`,
+      publishedAt: new Date(post.dateAdded),
     };
   });
 
   let fullPosts: PostCardProps[] = [...localPosts, ...convertedHashnodePosts];
 
+  fullPosts.sort((post1, post2) =>
+    post1.publishedAt > post2.publishedAt ? -1 : 1
+  );
+
+  let sortedFullPosts = fullPosts.map((post) => {
+    if (typeof post.publishedAt !== "string") {
+      return {
+        title: post.title,
+        slug: post.slug,
+        publishedAt: post.publishedAt.toISOString(),
+      };
+    } else {
+      return {
+        title: post.title,
+        slug: post.slug,
+        publishedAt: post.publishedAt,
+      };
+    }
+  });
+
   return {
     props: {
-      fullPosts,
+      sortedFullPosts,
     },
   };
 }
