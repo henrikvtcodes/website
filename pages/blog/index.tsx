@@ -1,14 +1,9 @@
 import StdLayout from "layouts/standard";
-import PostCard from "components/postCard";
+import PostCard, { PostCardProps } from "components/postCard";
 import { getPostSlugs, getPostBySlug, Items } from "utils/getLocalPost";
+import { getAllPosts } from "utils/hashnode/getHNPost";
 
-type PostProps = {
-  title: string;
-  desc: string;
-  slug: string;
-};
-
-const Page = ({ posts }: { posts: PostProps[] }) => {
+const Page = ({ fullPosts }: { fullPosts: PostCardProps[] }) => {
   return (
     <StdLayout title="henrik's shitty blog" desc="just my blog lol">
       <h1 className="text-3xl my-4 CalSans">Blog</h1>
@@ -20,13 +15,8 @@ const Page = ({ posts }: { posts: PostProps[] }) => {
       <hr className="my-4 border-zinc-900 dark:border-gray-50 border-t-4 rounded-sm" />
 
       <div className="flex flex-row flex-wrap justify-around content-center items-center gap-2">
-        {posts.map((post) => (
-          <PostCard
-            key={post.slug}
-            title={post.title}
-            desc={post.desc}
-            slug={`mdx/${post.slug}`}
-          />
+        {fullPosts.map((post) => (
+          <PostCard key={post.slug} title={post.title} slug={`${post.slug}`} />
         ))}
       </div>
     </StdLayout>
@@ -36,7 +26,8 @@ const Page = ({ posts }: { posts: PostProps[] }) => {
 async function getStaticProps() {
   const postSlugs = getPostSlugs("blog");
 
-  let posts: PostProps[] = postSlugs.map((slug) => {
+  let localPosts: PostCardProps[] = postSlugs.map((slug) => {
+    // Get all MDX blog posts
     let post = getPostBySlug("blog", slug, [
       "title",
       "slug",
@@ -48,13 +39,33 @@ async function getStaticProps() {
     return {
       title: post["title"],
       desc: post["desc"],
-      slug: post["slug"],
+      slug: `mdx/${post["slug"]}`,
     };
   });
 
+  let hashnodePosts = await getAllPosts(); // get all posts from Hashnode
+
+  if (hashnodePosts === undefined) {
+    // dismiss ts2532 error
+    return {
+      props: {
+        localPosts,
+      },
+    };
+  }
+
+  let convertedHashnodePosts: PostCardProps[] = hashnodePosts.map((post) => {
+    return {
+      title: post.title,
+      slug: `hn/${post.slug}`,
+    };
+  });
+
+  let fullPosts: PostCardProps[] = [...localPosts, ...convertedHashnodePosts];
+
   return {
     props: {
-      posts,
+      fullPosts,
     },
   };
 }

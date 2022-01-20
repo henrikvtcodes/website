@@ -1,9 +1,9 @@
 import NextLink from "next/link";
 import cn from "classnames";
 
-type PostCardProps = {
+export type PostCardProps = {
   title: string;
-  desc: string;
+  desc?: string;
   slug: string;
 };
 
@@ -18,7 +18,7 @@ const PostCard = ({ title, desc, slug }: PostCardProps) => {
           <h4 className="text-lg md:text-lg font-medium w-full tracking-tight">
             {title}
           </h4>
-          <p>{desc}</p>
+          {desc && <p>{desc}</p>}
         </div>
       </a>
     </NextLink>
