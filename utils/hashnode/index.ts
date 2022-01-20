@@ -1,11 +1,37 @@
 import { createClient } from "@urql/core";
 
-export const hashnode = createClient({
+export const hashnodeClient = createClient({
   url: "https://api.hashnode.com/",
-  fetchOptions: () => {
-    const token: string = process.env.HASHNODE_TOKEN as string;
-    return {
-      headers: { authorization: token ? `Bearer ${token}` : "" },
-    };
-  },
 });
+
+export type Query = {
+  operation: object;
+  data: object;
+};
+
+export type Post = {
+  title: string;
+  slug: string;
+  coverImage: string;
+  contentMarkdown: any;
+};
+
+export type PostProps = {
+  title: string;
+  dateAdded: string;
+  slug: string;
+};
+
+export type NestedPostProps = {
+  user: {
+    publication: {
+      posts: PostProps[];
+    };
+  };
+};
+
+export interface PostQuery extends Query {
+  data: {
+    post: Post;
+  };
+}

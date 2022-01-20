@@ -7,12 +7,11 @@ import { Provider } from "urql";
 import Head from "next/head";
 
 import theme from "../components/themeChange";
-import { hashnode } from "utils/hashnode";
+import { hashnodeClient } from "utils/hashnode";
 
 function App({ Component, pageProps }: AppProps) {
   return (
-    // <Provider value={hashnode}>
-    <>
+    <Provider value={hashnodeClient}>
       <Component {...pageProps} />
       <Script
         async
@@ -20,8 +19,7 @@ function App({ Component, pageProps }: AppProps) {
         data-website-id="5be5a980-82fd-40f0-8f84-e5bed361223b"
         src="https://analytics.henriktech.com/umami.js"
       />
-    </>
-    // </Provider>
+    </Provider>
   );
 }
 

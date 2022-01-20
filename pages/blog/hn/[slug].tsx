@@ -2,12 +2,11 @@ import { serialize } from "next-mdx-remote/serialize";
 import { MDXRemote } from "next-mdx-remote";
 import Image from "next/image";
 import NextLink from "next/link";
-import fs from "fs";
-import path from "path";
 
-import { getPostBySlug, getPostSlugs } from "utils/getLocalPost";
 import StdLayout from "layouts/standard";
 import markdownCss from "styles/markdown.module.css";
+import * as Hashnode from "utils/hashnode/getHNPost";
+import type { Post } from "utils/hashnode";
 
 type PageProps = {
   post: PostType;
@@ -26,14 +25,14 @@ type PostType = {
   published?: boolean;
 };
 
-const Page = ({ post }: PageProps) => {
+const Page = ({ post }: { post: Post }) => {
   const components = { Image, NextLink };
 
   return (
-    <StdLayout title={`${post.title} | henrik's shitty blog`} desc={post.desc}>
+    <StdLayout title={`${post.title} | henrik's shitty blog`} desc={post.title}>
       <div className="flex">
         <div className={markdownCss["markdown"]}>
-          <MDXRemote {...post.content} components={components} />
+          <MDXRemote {...post.contentMarkdown} />
         </div>
       </div>
     </StdLayout>
@@ -41,11 +40,11 @@ const Page = ({ post }: PageProps) => {
 };
 
 async function getStaticPaths() {
-  const files = fs.readdirSync(path.join("content/blog"));
+  let posts = await Hashnode.getAllPosts();
 
-  const paths = files.map((filename) => ({
+  const paths = posts?.map((post) => ({
     params: {
-      slug: filename.replace(".mdx", ""),
+      slug: post.slug,
     },
   }));
 
@@ -56,29 +55,14 @@ async function getStaticPaths() {
 }
 
 async function getStaticProps({ params: { slug } }: any) {
-  const post = getPostBySlug("blog", slug, [
-    "title",
-    "slug",
-    "desc",
-    "content",
-    "author",
-    "published",
-  ]);
+  let post = await Hashnode.getPostBySlug(slug);
 
-  const content = await serialize(post.content);
-
-  if ((post.published as unknown as boolean) !== true) {
-    return {
-      notFound: true,
-    };
-  }
+  // @ts-ignore
+  post.contentMarkdown = await serialize(post?.contentMarkdown || "");
 
   return {
     props: {
-      post: {
-        ...post,
-        content,
-      },
+      post,
     },
   };
 }
