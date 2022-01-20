@@ -1,0 +1,132 @@
+{
+  "operation": {
+    "key": 2296026532,
+    "query": {
+      "kind": "Document",
+      "definitions": [
+        {
+          "kind": "OperationDefinition",
+          "operation": "query",
+          "name": { "kind": "Name", "value": "GetUserPost" },
+          "variableDefinitions": [
+            {
+              "kind": "VariableDefinition",
+              "variable": {
+                "kind": "Variable",
+                "name": { "kind": "Name", "value": "slug" }
+              },
+              "type": {
+                "kind": "NonNullType",
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              },
+              "directives": []
+            },
+            {
+              "kind": "VariableDefinition",
+              "variable": {
+                "kind": "Variable",
+                "name": { "kind": "Name", "value": "baseurl" }
+              },
+              "type": {
+                "kind": "NonNullType",
+                "type": {
+                  "kind": "NamedType",
+                  "name": { "kind": "Name", "value": "String" }
+                }
+              },
+              "directives": []
+            }
+          ],
+          "directives": [],
+          "selectionSet": {
+            "kind": "SelectionSet",
+            "selections": [
+              {
+                "kind": "Field",
+                "name": { "kind": "Name", "value": "post" },
+                "arguments": [
+                  {
+                    "kind": "Argument",
+                    "name": { "kind": "Name", "value": "slug" },
+                    "value": {
+                      "kind": "Variable",
+                      "name": { "kind": "Name", "value": "slug" }
+                    }
+                  },
+                  {
+                    "kind": "Argument",
+                    "name": { "kind": "Name", "value": "hostname" },
+                    "value": {
+                      "kind": "Variable",
+                      "name": { "kind": "Name", "value": "baseurl" }
+                    }
+                  }
+                ],
+                "directives": [],
+                "selectionSet": {
+                  "kind": "SelectionSet",
+                  "selections": [
+                    {
+                      "kind": "Field",
+                      "name": { "kind": "Name", "value": "title" },
+                      "arguments": [],
+                      "directives": []
+                    },
+                    {
+                      "kind": "Field",
+                      "name": { "kind": "Name", "value": "coverImage" },
+                      "arguments": [],
+                      "directives": []
+                    },
+                    {
+                      "kind": "Field",
+                      "name": { "kind": "Name", "value": "slug" },
+                      "arguments": [],
+                      "directives": []
+                    },
+                    {
+                      "kind": "Field",
+                      "name": { "kind": "Name", "value": "contentMarkdown" },
+                      "arguments": [],
+                      "directives": []
+                    },
+                    {
+                      "kind": "Field",
+                      "name": { "kind": "Name", "value": "__typename" }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ],
+      "loc": { "start": 0, "end": 174 }
+    },
+    "variables": {
+      "slug": "",
+      "baseurl": ""
+    },
+    "kind": "query",
+    "context": {
+      "url": "https://api.hashnode.com/",
+      "preferGetMethod": false,
+      "suspense": false,
+      "requestPolicy": "cache-first",
+      "meta": { "cacheOutcome": "miss" }
+    }
+  },
+  "data": {
+    "post": {
+      "title": "",
+      "coverImage": "",
+      "slug": "",
+      "contentMarkdown": "",
+      "__typename": "PostDetailed"
+    }
+  },
+  "hasNext": false
+}
