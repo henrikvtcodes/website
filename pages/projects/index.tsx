@@ -1,4 +1,4 @@
-import StdLayout from "layouts/standard";
+import StdLayout from "layouts/newStandard";
 import ProjectCard from "components/projectCard";
 import { getPostSlugs, getPostBySlug, Items } from "utils/getLocalPost";
 

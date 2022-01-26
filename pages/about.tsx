@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import StdLayout from "../layouts/standard";
+import StdLayout from "../layouts/newStandard";
 import ThemeButton from "../components/themeChange";
 
 const Home = () => {

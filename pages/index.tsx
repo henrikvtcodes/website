@@ -1,9 +1,9 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import Image from 'next/image';
+import type { NextPage } from "next";
+import Head from "next/head";
+import Image from "next/image";
 
-import StdLayout from '../layouts/standard';
-import WhoAmI from 'components/whoami';
+import StdLayout from "../layouts/newStandard";
+import WhoAmI from "components/whoami";
 
 const Home = () => {
   return (
@@ -14,7 +14,8 @@ const Home = () => {
             name: "Henrik VT",
             userName: "henrikvtcodes / henrik_tech",
             imageURL: "/images/henrik-forest.jpg",
-            shortBio: '"Jack of all trades, master of none, but better than a master of one."',
+            shortBio:
+              '"Jack of all trades, master of none, but better than a master of one."',
             longBio: "Hi, I'm Henrik",
             tagline: "I'm a software developer",
             socials: {
@@ -30,6 +31,6 @@ const Home = () => {
       </div>
     </StdLayout>
   );
-}
+};
 
-export default Home
+export default Home;

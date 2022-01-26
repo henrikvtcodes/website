@@ -1,4 +1,4 @@
-import StdLayout from "layouts/standard";
+import StdLayout from "layouts/newStandard";
 import PostCard, { PostCardProps } from "components/postCard";
 import { getPostSlugs, getPostBySlug, Items } from "utils/getLocalPost";
 import { getAllPosts } from "utils/hashnode/getHNPost";

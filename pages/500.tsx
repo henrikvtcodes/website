@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import StdLayout from "layouts/standard";
+import StdLayout from "layouts/newStandard";
 
 const Error500 = () => {
   return (

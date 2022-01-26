@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 
-import StdLayout from "../layouts/standard";
+import StdLayout from "../layouts/newStandard";
 
 const Home = () => {
   const router = useRouter();

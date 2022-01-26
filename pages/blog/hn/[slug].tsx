@@ -3,7 +3,7 @@ import { MDXRemote } from "next-mdx-remote";
 import Image from "next/image";
 import NextLink from "next/link";
 
-import StdLayout from "layouts/standard";
+import StdLayout from "layouts/newStandard";
 import markdownCss from "styles/markdown.module.css";
 import * as Hashnode from "utils/hashnode/getHNPost";
 import type { Post } from "utils/hashnode";

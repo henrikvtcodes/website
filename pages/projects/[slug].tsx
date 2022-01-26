@@ -6,7 +6,7 @@ import fs from "fs";
 import path from "path";
 
 import { getPostBySlug, getPostSlugs } from "utils/getLocalPost";
-import StdLayout from "layouts/standard";
+import StdLayout from "layouts/newStandard";
 import markdownCss from "styles/markdown.module.css";
 
 type PageProps = {
