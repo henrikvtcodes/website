@@ -15,7 +15,6 @@ export default class Document extends NextDocument {
           ></link>
         </Head>
         <body>
-          <ColorModeScript initialColorMode={theme.config.initialColorMode} />
           <Main />
           <NextScript />
         </body>

@@ -10,7 +10,7 @@ type PostPageProps = {
   publishedAt: string;
 };
 
-const Page = ({ sortedFullPosts }: { sortedFullPosts: PostPageProps[] }) => {
+const Page = ({ posts }: { posts: PostPageProps[] }) => {
   return (
     <StdLayout title="henrik's shitty blog" desc="just my blog lol">
       <h1 className="text-3xl my-4 CalSans">Blog</h1>
@@ -22,7 +22,7 @@ const Page = ({ sortedFullPosts }: { sortedFullPosts: PostPageProps[] }) => {
       <hr className="my-4 border-zinc-900 dark:border-gray-50 border-t-4 rounded-sm" />
 
       <div className="flex flex-col flex-nowrap justify-around content-center items-center gap-2">
-        {sortedFullPosts.map((post) => (
+        {posts.map((post) => (
           <PostCard
             key={post.slug}
             title={post.title}
@@ -36,26 +36,26 @@ const Page = ({ sortedFullPosts }: { sortedFullPosts: PostPageProps[] }) => {
 };
 
 async function getStaticProps() {
-  const postSlugs = getPostSlugs("blog");
+  // const postSlugs = getPostSlugs("blog");
 
-  let localPosts: PostCardProps[] = postSlugs.map((slug) => {
-    // Get all MDX blog posts
-    let post = getPostBySlug("blog", slug, [
-      "title",
-      "slug",
-      "desc",
-      "content",
-      "author",
-      "published",
-      "publishedAt",
-    ]);
-    return {
-      title: post["title"],
-      desc: post["desc"],
-      slug: `mdx/${post["slug"]}`,
-      publishedAt: new Date(post["publishedAt"]),
-    };
-  });
+  // let localPosts: PostCardProps[] = postSlugs.map((slug) => {
+  //   // Get all MDX blog posts
+  //   let post = getPostBySlug("blog", slug, [
+  //     "title",
+  //     "slug",
+  //     "desc",
+  //     "content",
+  //     "author",
+  //     "published",
+  //     "publishedAt",
+  //   ]);
+  //   return {
+  //     title: post["title"],
+  //     desc: post["desc"],
+  //     slug: `mdx/${post["slug"]}`,
+  //     publishedAt: new Date(post["publishedAt"]),
+  //   };
+  // });
 
   let hashnodePosts = await getAllPosts(); // get all posts from Hashnode
 
@@ -63,7 +63,7 @@ async function getStaticProps() {
     // dismiss ts2532 error
     return {
       props: {
-        localPosts,
+        posts: [],
       },
     };
   }
@@ -76,7 +76,7 @@ async function getStaticProps() {
     };
   });
 
-  let fullPosts: PostCardProps[] = [...localPosts, ...convertedHashnodePosts];
+  let fullPosts: PostCardProps[] = [...convertedHashnodePosts];
 
   fullPosts.sort((post1, post2) =>
     post1.publishedAt > post2.publishedAt ? -1 : 1
@@ -100,7 +100,7 @@ async function getStaticProps() {
 
   return {
     props: {
-      sortedFullPosts,
+      posts: sortedFullPosts,
     },
   };
 }

@@ -1,5 +1,5 @@
 import { FiSearch } from "react-icons/fi";
-import { Fragment, useState, useRef } from "react";
+import { Fragment, useState, useRef, useEffect } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { useRouter } from "next/router";
 import Link from "next/link";
@@ -11,6 +11,7 @@ import {
   Configure,
 } from "react-instantsearch-dom";
 import cn from "classnames";
+import qs from "qs";
 
 import { algolia } from "utils/search";
 import searchStyles from "styles/search.module.css";
@@ -22,13 +23,9 @@ const SearchButton = () => {
   let isHidden = currentPage.includes("/search") && !isHome;
 
   return (
-    <Link
-      href={`${router.asPath}?searchQuery=""`}
-      as={`/search?query=""`}
-      passHref
-    >
+    <Link href={`${router.asPath}?searchQuery=""`} passHref>
       <a className={cn(isHidden ? "hidden transition-transform ease-out" : "")}>
-        <button className="text-gray-600 dark:text-gray-400 hidden md:inline-block p-1 sm:px-3 sm:py-2 rounded-lg self-end hover:bg-gray-200 dark:hover:bg-zinc-800 transition-all">
+        <button className="text-gray-600 dark:text-gray-400 p-1 sm:px-3 sm:py-2 rounded-lg self-end hover:bg-gray-200 dark:hover:bg-zinc-800 transition-all">
           <FiSearch size={20} />
         </button>
       </a>
@@ -73,10 +70,10 @@ const PageSearchInput = () => {
   const [hits, setHits] = useState([]);
 };
 
+const DEBOUNCE_TIME = 400;
+
 const SearchModal = () => {
   const router = useRouter();
-  const [searchState, setSearchState] = useState(router.query.query);
-  const debouncedSetStateRef = useRef(null);
 
   return (
     <Transition.Root show={!!router.query.searchQuery} as={Fragment}>
@@ -85,7 +82,7 @@ const SearchModal = () => {
         className="fixed z-10 inset-0 overflow-y-auto"
         onClose={() => router.back()}
       >
-        <div className="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
+        <div className="flex items-center justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0">
           <Transition.Child
             as={Fragment}
             enter="ease-out duration-300"
