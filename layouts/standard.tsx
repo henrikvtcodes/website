@@ -2,6 +2,7 @@ import Favicon, { DefaultMeta, CustomMeta } from "components/meta";
 import NavBar from "components/navbar";
 import DVDLogo from "components/dvdlogo";
 import { SearchModal } from "components/search";
+import NextLink from "next/link";
 
 const meta = {
   title: "henrik's shitty website",
@@ -24,7 +25,7 @@ const StdLayout = ({
   desc?: string;
 }) => {
   return (
-    <main className="flex flex-col justify-start content-center h-screen content">
+    <main className="flex flex-col justify-start items-center content-center h-screen content">
       <Favicon />
       <CustomMeta
         title={title ? title : meta.title}
@@ -42,6 +43,27 @@ const StdLayout = ({
       >
         {children}
       </div>
+
+      <hr className="my-4 border-zinc-200 dark:border-gray-500 border-t-1 rounded-sm md:w-content" />
+
+      <footer className="md:w-content grid grid-cols-2 px-4">
+        <div className="col-span-1 col-start-1 flex flex-col justify-start items-start gap-y-4">
+          <NextLink href={"/"}>
+            <a className="text-gray-600 dark:text-gray-400 ">Home</a>
+          </NextLink>
+          <NextLink href={"/about"}>
+            <a className="text-gray-600 dark:text-gray-400">About</a>
+          </NextLink>
+          <NextLink href={"/blog"}>
+            <a className="text-gray-600 dark:text-gray-400">Blog</a>
+          </NextLink>
+        </div>
+        <div className="col-span-1 col-start-2 flex flex-col justify-start items-start">
+          <NextLink href={"/"}>
+            <a className="text-gray-600 dark:text-gray-400">Home</a>
+          </NextLink>
+        </div>
+      </footer>
     </main>
   );
 };
