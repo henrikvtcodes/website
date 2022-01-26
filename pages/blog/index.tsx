@@ -21,7 +21,7 @@ const Page = ({ sortedFullPosts }: { sortedFullPosts: PostPageProps[] }) => {
 
       <hr className="my-4 border-zinc-900 dark:border-gray-50 border-t-4 rounded-sm" />
 
-      <div className="flex flex-row flex-wrap justify-around content-center items-center gap-2">
+      <div className="flex flex-col flex-nowrap justify-around content-center items-center gap-2">
         {sortedFullPosts.map((post) => (
           <PostCard
             key={post.slug}
