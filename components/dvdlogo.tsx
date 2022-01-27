@@ -37,7 +37,7 @@ const DVDLogo = () => {
   let directionX = "right";
   let directionY = "down";
 
-  let colorArr = ["red", "blue", "green", "yellow", "pink", "purple"];
+  let colorArr = ["red", "blue", "green", "yellow", "purple"];
 
   const changeColor = () => {
     if (colorChanging === false) return;
