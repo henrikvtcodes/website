@@ -1,8 +1,11 @@
+import NextLink from "next/link";
+import { useEffect, useLayoutEffect, useRef } from "react";
+import { isMobile } from "react-device-detect";
+
 import Favicon, { DefaultMeta, CustomMeta } from "components/meta";
 import NavBar from "components/navbar";
 import DVDLogo from "components/dvdlogo";
 import { SearchModal } from "components/search";
-import NextLink from "next/link";
 
 const meta = {
   title: "henrik's shitty website",
@@ -32,7 +35,7 @@ const StdLayout = ({
         desc={desc ? desc : meta.desc}
       />
 
-      <DVDLogo />
+      {!isMobile && <DVDLogo />}
 
       <NavBar />
 
