@@ -29,12 +29,12 @@ const WhoAmI = ({ props }: WhoAmIProps) => {
   switch (props.type) {
     case "short":
       return (
-        <div className="whoami-short-container w-full pt-8">
+        <div className="grid grid-cols-5 grid-rows-5 w-full pt-8">
           <div className="whoami-short-pic">
             {/* eslint-disable */}
             <img
-              className="object-cover shadow-lg rounded-xl"
-              src={props.imageURL}
+              className="col-start-1 object-cover shadow-lg rounded-xl"
+              src={"/"}
               alt=""
             />
 
@@ -46,14 +46,16 @@ const WhoAmI = ({ props }: WhoAmIProps) => {
             /> */}
           </div>
 
-          <h1 className="whoami-short-name CalSans text-4xl self-cente">
+          <h1 className="col-start-3 col-span-3 row-start-1 row-span-1 CalSans text-4xl self-center mx-auto">
             {props.name}
           </h1>
-          <h1 className="whoami-short-username CascadiaCode text-xl self-center">
+          <h1 className="col-start-3 col-span-3 row-start-2 row-span-1 CascadiaCode text-xl self-center mx-auto">
             {props.userName}
           </h1>
-          <p className="whoami-short-bio px-3">{props.shortBio}</p>
-          <div className="whoami-short-socials flex flex-row flex-nowrap gap-4 px-4">
+          <p className="col-start-3 col-span-3 row-start-3 row-span-2 mx-auto px-4">
+            {props.shortBio}
+          </p>
+          <div className="col-start-3 col-span-3 row-start-5 row-span-1 flex flex-row flex-nowrap gap-4 mx-auto">
             {props.socials.instagram && (
               <SocialButtons social="instagram" tag={props.socials.instagram} />
             )}

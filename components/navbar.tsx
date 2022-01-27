@@ -31,15 +31,13 @@ const NavItem = ({ href, text, alt }: any) => {
 
 const NavBar = () => {
   return (
-    <div className="w-full flex justify-around h-14 backdrop-blur-md">
-      <nav className="flex flex-row md:justify-center justify-evenly align-middle items-center flex-nowrap gap-4 h-14 md:py-2 fixed w-full md:w-content">
-        <NavItem href="" text="🏠" alt="home" />
-        <NavItem href="about" text="👱" alt="about me" />
-        <NavItem href="projects" text="🛠️" alt="projects" />
-        <NavItem href="blog" text="📰" alt="blog" />
-        <SearchButton />
-      </nav>
-    </div>
+    <nav className="z-50 flex flex-row md:justify-center justify-evenly align-middle items-center flex-nowrap gap-4 h-14 md:py-2 fixed w-screen bg-white dark:bg-zinc-900">
+      <NavItem href="" text="🏠" alt="home" />
+      <NavItem href="about" text="👱" alt="about me" />
+      <NavItem href="projects" text="🛠️" alt="projects" />
+      <NavItem href="blog" text="📰" alt="blog" />
+      <SearchButton />
+    </nav>
   );
 };
 

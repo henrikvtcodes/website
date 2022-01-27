@@ -78,7 +78,7 @@ body {
 }
 
 #__next {
-  @apply bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white selection:bg-violet-900 selection:text-gray-50 overflow-hidden;
+  @apply bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white selection:bg-violet-900 selection:text-gray-50;
   height: 100vh;
   max-height: 100vh;
   width: 100vw;
