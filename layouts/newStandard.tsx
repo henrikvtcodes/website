@@ -35,7 +35,7 @@ const StdLayout = ({
         desc={desc ? desc : meta.desc}
       />
 
-      {!isMobile && <DVDLogo />}
+      {/* {!isMobile && <DVDLogo />} */}
 
       <NavBar />
 
