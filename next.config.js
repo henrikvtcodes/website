@@ -23,14 +23,9 @@
 
 // module.exports = withSentryConfig(moduleExports, SentryWebpackPluginOptions);
 
-
 module.exports = {
   reactStrictMode: true,
-  target: "serverless",
   images: {
     domains: ["c.tenor.com"],
-  },
-  experimental: {
-    urlImports: ["https://cdn.skypack.dev"],
   },
 };

@@ -1,25 +1,15 @@
-const colors = require('tailwindcss/colors')
+const colors = require("tailwindcss/colors");
 
 module.exports = {
-  purge: [
+  content: [
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
     "./layouts/**/*.{js,ts,jsx,tsx}",
   ],
-  mode: "jit",
-  darkMode: false, // or 'media' or 'class'
+  darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {
-      gridTemplateRows: {
-        home: "[top] auto [top-mid] minmax( 270px, 25%) [bot-title] 1fr [bot-mid] minmax(10%, 216px) [bot]",
-      },
-      gridTemplateColumns: {
-        home: "[left] 20% [left-mid] 30% [mid] 30% [right-mid] 20% [right] ",
-      },
       colors: {
-        transparent: "transparent",
-        current: "currentColor",
-        black: "#000000",
         gray: {
           manatee: "#9CA3AF",
           jet: "#2c2f33",
@@ -58,11 +48,6 @@ module.exports = {
       serif: ["Whitney", "Helvetica"],
     },
   },
-  variants: {
-    extend: {},
-  },
-  plugins: [
-    require("daisyui"),
-    require("@tailwindcss/typography")
-  ],
+  variants: {},
+  plugins: [require("daisyui"), require("@tailwindcss/typography")],
 };
