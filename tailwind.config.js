@@ -42,7 +42,6 @@ module.exports = {
         "home-gradient-1": "url(./public/svgs/blurry-gradient-hakei.svg)",
       },
     },
-    colors: {},
     fontFamily: {
       sans: ["Uni Sans Heavy", "sans-serif"],
       serif: ["Whitney", "Helvetica"],
