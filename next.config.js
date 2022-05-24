@@ -22,10 +22,15 @@
 // };
 
 // module.exports = withSentryConfig(moduleExports, SentryWebpackPluginOptions);
+const { withPlausibleProxy } = require("next-plausible");
 
-module.exports = {
+module.exports = withPlausibleProxy({
+  subdirectory: "js",
+  scriptName: "stats",
+  customDomain: "https://plausible.henriktech.com",
+})({
   reactStrictMode: true,
   images: {
     domains: ["c.tenor.com"],
   },
-};
+});

@@ -3111,6 +3111,7 @@ __metadata:
     graphql: ^15.5.3
     next: ^12.1.6
     next-mdx-remote: ^3.0.6
+    next-plausible: ^3.1.9
     nodemon: ^2.0.12
     postcss: ^8.4.14
     react: 17.0.2
@@ -4172,6 +4173,17 @@ __metadata:
     react: ">=16.x <=17.x"
     react-dom: ">=16.x <=17.x"
   checksum: de372708085c7f48ec1c8fb48a9a79cd261235b2d328df0900c9983530d659619f30acc37f5c28eb9813797257ff604449c673b4fba9d17c93af149f436ced6b
+  languageName: node
+  linkType: hard
+
+"next-plausible@npm:^3.1.9":
+  version: 3.1.9
+  resolution: "next-plausible@npm:3.1.9"
+  peerDependencies:
+    next: ^11.1.0 || ^12.0.0
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+  checksum: b13890831173f82e02a21ff593f43f76e2139eb18aab2cc09c037aee24fc3893fa7eaf6e1181fb4152de78a6e32fcd1f7b3ccd84985b262b1a918ae0a8f85aad
   languageName: node
   linkType: hard
 
