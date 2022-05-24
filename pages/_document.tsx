@@ -7,12 +7,12 @@ export default class Document extends NextDocument {
     return (
       <Html lang="en">
         <Head>
-          <link
+          {/* <link
             rel="search"
             href="/search.xml"
             type="application/opensearchdescription+xml"
             title="Search henrik's shitty website"
-          ></link>
+          ></link> */}
         </Head>
         <body>
           <Main />

@@ -1,18 +1,22 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
-import { ThemeProvider } from "next-themes";
-import { ChakraProvider } from "@chakra-ui/react";
 import Script from "next/script";
 import { Provider } from "urql";
-import Head from "next/head";
 
-import theme from "../components/themeChange";
 import { hashnodeClient } from "utils/hashnode";
+import PlausibleProvider from "next-plausible";
 
 function App({ Component, pageProps }: AppProps) {
   return (
     <Provider value={hashnodeClient}>
-      <Component {...pageProps} />
+      <PlausibleProvider
+        domain="henrikvt.com"
+        selfHosted
+        customDomain="https://plausible.henriktech.com"
+        trackOutboundLinks={true}
+      >
+        <Component {...pageProps} />
+      </PlausibleProvider>
       <Script
         async
         defer

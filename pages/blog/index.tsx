@@ -102,6 +102,7 @@ async function getStaticProps() {
     props: {
       posts: sortedFullPosts,
     },
+    revalidate: 43200,
   };
 }
 
