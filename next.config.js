@@ -25,8 +25,8 @@
 const { withPlausibleProxy } = require("next-plausible");
 
 module.exports = withPlausibleProxy({
-  subdirectory: "js",
-  scriptName: "stats",
+  subdirectory: "static",
+  scriptName: "privacy",
   customDomain: "https://plausible.henriktech.com",
 })({
   reactStrictMode: true,

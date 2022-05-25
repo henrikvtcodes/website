@@ -3111,7 +3111,7 @@ __metadata:
     graphql: ^15.5.3
     next: ^12.1.6
     next-mdx-remote: ^3.0.6
-    next-plausible: ^3.1.9
+    next-plausible: 2.2
     nodemon: ^2.0.12
     postcss: ^8.4.14
     react: 17.0.2
@@ -4176,14 +4176,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-plausible@npm:^3.1.9":
-  version: 3.1.9
-  resolution: "next-plausible@npm:3.1.9"
+"next-plausible@npm:2.2":
+  version: 2.2.0
+  resolution: "next-plausible@npm:2.2.0"
   peerDependencies:
-    next: ^11.1.0 || ^12.0.0
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0
-    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-  checksum: b13890831173f82e02a21ff593f43f76e2139eb18aab2cc09c037aee24fc3893fa7eaf6e1181fb4152de78a6e32fcd1f7b3ccd84985b262b1a918ae0a8f85aad
+    next: ^9.4.0 || ^10.0.0 || ~11.0.0
+    react: ^16.8.0 || ^17.0.0
+    react-dom: ^16.8.0 || ^17.0.0
+  checksum: 370ad24ad21647cc166873452feac188159ba067eb0f8657abb54d78582ffbd2de2817405358ceaebea94453777a8acd4cb06d9e6686ca98f794741b4b185d80
   languageName: node
   linkType: hard
 
