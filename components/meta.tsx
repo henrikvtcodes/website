@@ -19,11 +19,11 @@ const DefaultProps: Meta = {
   title: "henrik's website",
   description: "ooooo glassmorphism",
   url: "henriktech.com",
-  image: "/images/henrik-forest.jpg",
-  favicon: "/images/henriklogo.png",
+  image: "images/henrik-forest.jpg",
+  favicon: "images/henriklogo.png",
   twitter: {
     site: "@henrik_tech",
-    card: "summary_large_image",
+    card: "summary",
   },
 };
 
