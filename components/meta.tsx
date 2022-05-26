@@ -23,7 +23,7 @@ const DefaultProps: Meta = {
   favicon: "/images/henriklogo.png",
   twitter: {
     site: "@henrik_tech",
-    card: "summary-large-image",
+    card: "summary_large_image",
   },
 };
 
