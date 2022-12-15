@@ -1,5 +1,2 @@
-# `website`: Henrik's Portfolio website
-After nearly a year's journey from zero to hero, I finally present my personal portfolio. It's not quite done yet but its come a long way.
-
-## Basic Architecture
-This website is built with Next.js and React. It uses TailwindCSS / PostCSS for styling. I also chose DaisyUI for a basic selection of UI components.
+# Henrik's Portfolio Website
+This is my portfolio website - it's really just a landing page. Got some links to my Blog and I.T. Consulting + plus my Github and Twitter accounts. I built it with Next.js 12, React 17, and Tailwind CSS 3. I've also used Feather Icons for socials. The current design varies depending on what I'm feeling, but currently it's based on the design principle of glassmorphism. I think its pretty.

@@ -15,7 +15,7 @@ const SocialBlock = (flexClass: any) => {
         </Link>
       </span>
       <span className=" hover:cursor-pointer hover:text-blue-twitter ">
-        <Link href="https://twitter.com/henrik_tech" passHref>
+        <Link href="https://twitter.com/henrikvtcodes" passHref>
           <a className="no-underline" target={"_blank"}>
             <Twitter className="sm:w-9 w-6 h-auto" />
           </a>
