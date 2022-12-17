@@ -1,8 +1,6 @@
-import { GitHub, Twitch, Twitter, Instagram } from "react-feather";
+import { GitHub, Twitter } from "react-feather";
 
-const SocialBlock = (flexClass: any) => {
-  const iconSize: number = 48;
-
+const SocialBlock = () => {
   return (
     <nav className="mt-2 mb-2 flex space-x-2 md:space-x-4">
       <span className=" hover:cursor-pointer hover:text-black">
