@@ -1,7 +1,23 @@
 ---
-import Layout from '../layouts/Layout.astro';
-
+import InfoCard from "../components/InfoCard.astro";
+import ProfilePic from "components/ProfilePic.astro";
+import Layout from "layouts/Layout.astro";
+import Title from "components/Title.astro";
+import NavButtons from "components/NavButtons.astro";
+import SocialButtons from "components/SocialButtons";
 ---
 
 <Layout title="henrik's website" description="henrik's simple website">
+  <InfoCard>
+    <ProfilePic />
+    <Title />
+    <p class="max-w-md px-4">
+      Hi! I&apos;m Henrik VT, a teenage software developer and general
+      technology enthusiast. I&apos;m interested in high/low level programming,
+      distributed systems, robotics, AV, and 🚆 TRAINS. You should check out my
+      blog and links below. 😄
+    </p>
+    <NavButtons />
+    <SocialButtons client:idle />
+  </InfoCard>
 </Layout>
