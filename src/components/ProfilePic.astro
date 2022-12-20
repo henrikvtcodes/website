@@ -1,0 +1,13 @@
+---
+import { Image } from "@astrojs/image/components";
+const dimension = 96;
+---
+
+<Image
+  src={"/henrik-forest.jpg"}
+  className={"rounded-full"}
+  alt="picture of henrik"
+  height={dimension}
+  aspectRatio={1}
+  quality={100}
+/>
