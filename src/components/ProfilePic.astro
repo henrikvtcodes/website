@@ -1,13 +1,13 @@
 ---
-import { Image } from "@astrojs/image/components";
+import { Image } from "astro:assets";
 const dimension = 96;
 ---
 
 <Image
   src={"/henrik-forest.jpg"}
-  className={"rounded-full"}
+  class={"rounded-full"}
   alt="picture of henrik"
+  width={dimension}
   height={dimension}
-  aspectRatio={1}
   quality={100}
 />

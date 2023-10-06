@@ -4,5 +4,6 @@
     "baseUrl": "src",
     "jsx": "react-jsx",
     "jsxImportSource": "react"
-  }
+  },
+  "exclude": ["node_modules", "astro.config.mjs"]
 }
