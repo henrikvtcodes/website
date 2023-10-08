@@ -13,10 +13,28 @@ dependencies:
     version: 0.4.1
   '@astrojs/react':
     specifier: ^3.0.3
-    version: 3.0.3(@types/react-dom@18.2.10)(@types/react@18.2.25)(react-dom@18.2.0)(react@18.2.0)(vite@4.4.11)
+    version: 3.0.3(@types/react-dom@18.2.11)(@types/react@18.2.25)(react-dom@18.2.0)(react@18.2.0)(vite@4.4.11)
   '@astrojs/tailwind':
     specifier: ^5.0.1
     version: 5.0.1(astro@3.2.3)(tailwindcss@3.3.3)
+  '@fontsource-variable/inter':
+    specifier: ^5.0.13
+    version: 5.0.13
+  '@fontsource-variable/inter-tight':
+    specifier: ^5.0.16
+    version: 5.0.16
+  '@fontsource/ibm-plex-sans':
+    specifier: ^5.0.15
+    version: 5.0.15
+  '@fontsource/ibm-plex-serif':
+    specifier: ^5.0.8
+    version: 5.0.8
+  '@fontsource/inter':
+    specifier: ^5.0.13
+    version: 5.0.13
+  '@fontsource/inter-tight':
+    specifier: ^5.0.15
+    version: 5.0.15
   '@tailwindcss/forms':
     specifier: ^0.5.6
     version: 0.5.6(tailwindcss@3.3.3)
@@ -27,8 +45,8 @@ dependencies:
     specifier: ^18.2.25
     version: 18.2.25
   '@types/react-dom':
-    specifier: ^18.2.10
-    version: 18.2.10
+    specifier: ^18.2.11
+    version: 18.2.11
   astro:
     specifier: ^3.2.3
     version: 3.2.3
@@ -118,7 +136,7 @@ packages:
       prismjs: 1.29.0
     dev: false
 
-  /@astrojs/react@3.0.3(@types/react-dom@18.2.10)(@types/react@18.2.25)(react-dom@18.2.0)(react@18.2.0)(vite@4.4.11):
+  /@astrojs/react@3.0.3(@types/react-dom@18.2.11)(@types/react@18.2.25)(react-dom@18.2.0)(react@18.2.0)(vite@4.4.11):
     resolution: {integrity: sha512-foliIy1whJobo+ZpsvOMS4WCiR0z4/2Seyxth5xMlweVVM+gA1Lqk0GdzE6F0ISUW9CuXrCRS7ZyTNW8SM6vog==}
     engines: {node: '>=18.14.1'}
     peerDependencies:
@@ -128,7 +146,7 @@ packages:
       react-dom: ^17.0.2 || ^18.0.0
     dependencies:
       '@types/react': 18.2.25
-      '@types/react-dom': 18.2.10
+      '@types/react-dom': 18.2.11
       '@vitejs/plugin-react': 4.1.0(vite@4.4.11)
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
@@ -817,6 +835,30 @@ packages:
     dev: false
     optional: true
 
+  /@fontsource-variable/inter-tight@5.0.16:
+    resolution: {integrity: sha512-HkPdi88wdZ/A1mHqrRncUSBHv+pkqIIStV78nGs6Ure3zKBfJFc2whhuKgCITka++/d0huRMOmAjq29wEWT7OQ==}
+    dev: false
+
+  /@fontsource-variable/inter@5.0.13:
+    resolution: {integrity: sha512-mb2WyZ2rHeqIG8aqGJIvLBOmo4sg2x7SHlsE6PUhwxbOicVzO59EZwSGtzNO3FmchuDPFVAxzcXYcR5B6jE6Qw==}
+    dev: false
+
+  /@fontsource/ibm-plex-sans@5.0.15:
+    resolution: {integrity: sha512-sXHiP2X0ujzcA4HyNBQET7MtZxRdAR3BZcAUcp4cEmr9u2ZN3m4G8lhK0w3cEMI3l//7GD/S7YYElRiEqnhwzw==}
+    dev: false
+
+  /@fontsource/ibm-plex-serif@5.0.8:
+    resolution: {integrity: sha512-KUp1E9Wzf2Umhr2SbpcF9HwgFJmuxvKAARmpl7GDDkIG30R1PMFJWxfSfQ7oX/oVBtomGq5RUTaMMUeE0ngEgw==}
+    dev: false
+
+  /@fontsource/inter-tight@5.0.15:
+    resolution: {integrity: sha512-iGvu9l9d2hv5mf92Vk/L59bslFrNw9ejzE1dHNAQDBoVfCuOpsBI/AwMFH+58kzHEe3+MQ0UdxFUYSO3wp3UUA==}
+    dev: false
+
+  /@fontsource/inter@5.0.13:
+    resolution: {integrity: sha512-FVIBhP9X/x02blF2VQl2Pji/c3jUjkWEQ9bom4vIrGwO1MlHRDXhXx9iA1hhjpcCIfH3oX68ihIBdYcFnOXhsg==}
+    dev: false
+
   /@jridgewell/gen-mapping@0.3.3:
     resolution: {integrity: sha512-HLhSWOLRi875zjjMG/r+Nv0oCW8umGb0BgEhyX3dDX3egwZtB8PqLnjz3yedt8R5StBrzcg4aBpnh8UA9D1BoQ==}
     engines: {node: '>=6.0.0'}
@@ -968,8 +1010,8 @@ packages:
     resolution: {integrity: sha512-kMpQpfZKSCBqltAJwskgePRaYRFukDkm1oItcAbC3gNELR20XIBcN9VRgg4+m8DKsTfkWeA4m4Imp4DDuWy7FQ==}
     dev: false
 
-  /@types/react-dom@18.2.10:
-    resolution: {integrity: sha512-5VEC5RgXIk1HHdyN1pHlg0cOqnxHzvPGpMMyGAP5qSaDRmyZNDaQ0kkVAkK6NYlDhP6YBID3llaXlmAS/mdgCA==}
+  /@types/react-dom@18.2.11:
+    resolution: {integrity: sha512-zq6Dy0EiCuF9pWFW6I6k6W2LdpUixLE4P6XjXU1QHLfak3GPACQfLwEuHzY5pOYa4hzj1d0GxX/P141aFjZsyg==}
     dependencies:
       '@types/react': 18.2.25
     dev: false
@@ -1246,7 +1288,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001546
-      electron-to-chromium: 1.4.543
+      electron-to-chromium: 1.4.544
       node-releases: 2.0.13
       update-browserslist-db: 1.0.13(browserslist@4.22.1)
     dev: false
@@ -1524,8 +1566,8 @@ packages:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
     dev: false
 
-  /electron-to-chromium@1.4.543:
-    resolution: {integrity: sha512-t2ZP4AcGE0iKCCQCBx/K2426crYdxD3YU6l0uK2EO3FZH0pbC4pFz/sZm2ruZsND6hQBTcDWWlo/MLpiOdif5g==}
+  /electron-to-chromium@1.4.544:
+    resolution: {integrity: sha512-54z7squS1FyFRSUqq/knOFSptjjogLZXbKcYk3B0qkE1KZzvqASwRZnY2KzZQJqIYLVD38XZeoiMRflYSwyO4w==}
     dev: false
 
   /emoji-regex@10.2.1:
