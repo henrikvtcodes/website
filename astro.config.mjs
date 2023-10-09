@@ -1,18 +1,15 @@
 // @ts-check
 import { defineConfig } from "astro/config";
+
 import tailwind from "@astrojs/tailwind";
-
-// https://astro.build/config
 import partytown from "@astrojs/partytown";
-
-// https://astro.build/config
 import prefetch from "@astrojs/prefetch";
-
-// https://astro.build/config
 import react from "@astrojs/react";
+import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
+  site: "https://henrikvt.com",
   integrations: [
     tailwind(),
     partytown({
@@ -22,5 +19,6 @@ export default defineConfig({
     }),
     prefetch(),
     react(),
+    sitemap(),
   ],
 });

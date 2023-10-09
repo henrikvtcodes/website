@@ -13,6 +13,7 @@
     "@astrojs/partytown": "^2.0.1",
     "@astrojs/prefetch": "^0.4.1",
     "@astrojs/react": "^3.0.3",
+    "@astrojs/sitemap": "^3.0.1",
     "@astrojs/tailwind": "^5.0.1",
     "@fontsource-variable/inter": "^5.0.13",
     "@fontsource-variable/inter-tight": "^5.0.16",
