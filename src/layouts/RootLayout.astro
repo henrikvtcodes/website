@@ -21,7 +21,7 @@ import "@fontsource-variable/inter-tight";
     <title>{title}</title>
     <meta name="title" content={title} />
     <meta name="description" content={description} />
-    <link rel="icon" type="image/png" href={"/henriklogo.png"} />
+    <link rel="icon" type="image/png" href={"/favicon.ico"} />
     <link rel="canonical" href={Astro.url} />
     {/** FACEBOOK / OPENGRAPH */}
     <meta property="og:type" content="website" />
@@ -44,9 +44,7 @@ import "@fontsource-variable/inter-tight";
       src="https://plausible.orangeunilabs.com/js/plausible.outbound-links.js"
     ></script>
   </head>
-  <body
-    class="min-h-screen w-screen bg-gradient-to-tr text-white from-orange-500 via-blue-400 to-purple-400 flex justify-center items-center"
-  >
+  <body class="min-h-screen w-screen">
     <slot />
   </body>
 </html>
