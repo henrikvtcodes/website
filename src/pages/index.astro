@@ -1,7 +1,7 @@
 ---
 import InfoCard from "../components/InfoCard.astro";
 import ProfilePic from "components/ProfilePic.astro";
-import Layout from "layouts/Layout.astro";
+import Layout from "layouts/RootLayout.astro";
 import Title from "components/Title.astro";
 import NavButtons from "components/NavButtons.astro";
 import SocialButtons from "components/SocialButtons";
@@ -21,3 +21,9 @@ import SocialButtons from "components/SocialButtons";
     <SocialButtons client:idle />
   </InfoCard>
 </Layout>
+
+<style is:global>
+  body {
+    @apply bg-gradient-to-tr text-white from-orange-500 via-blue-400 to-purple-400 flex justify-center items-center;
+  }
+</style>
