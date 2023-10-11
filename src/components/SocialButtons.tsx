@@ -1,4 +1,4 @@
-import { GitHub, Twitter } from "react-feather";
+import { GitHub, Twitter, LinkedIn } from "react-feather";
 
 const SocialBlock = () => {
   return (
@@ -12,13 +12,22 @@ const SocialBlock = () => {
           <GitHub className="sm:w-9 w-6 h-auto" />
         </a>
       </span>
-      <span className="hover:cursor-pointer hover:text-blue-twitter ">
+      {/* <span className="hover:cursor-pointer hover:text-blue-twitter ">
         <a
           className="no-underline"
           href="https://twitter.com/henrikvtcodes"
           target={"_blank"}
         >
           <Twitter className="sm:w-9 w-6 h-auto" />
+        </a>
+      </span> */}
+      <span className="hover:cursor-pointer hover:text-[#0072b1] ">
+        <a
+          className="no-underline"
+          href="https://www.linkedin.com/in/henrikvt/"
+          target={"_blank"}
+        >
+          <LinkedIn className="sm:w-9 w-6 h-auto" />
         </a>
       </span>
     </nav>
