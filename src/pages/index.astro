@@ -1,7 +1,20 @@
 ---
-import Layout from "layouts/RootLayout.astro";
+import Card from "@/components/Card/Card.astro";
+import ProfilePic from "@/components/ProfilePic.astro";
+import Layout from "@/layouts/RootLayout.astro";
 ---
 
-<Layout title="henrik's website" description="henrik's simple website" />
+<Layout title="henrik's website" description="henrik's simple website">
+  <div class="w-full flex justify-center">
+    <div class="grid w-3/5 grid-cols-8 grid-flow-row">
+      <!-- Title & Pfp  -->
+      <Card grid={{ width: "full" }} class={"col-start-1"}>
+        <ProfilePic />
+        <h1 class="text-4xl">Henrik VT</h1>
+      </Card>
+      <Card class="col-start-7 col-span-1" grid={{}} />
+    </div>
+  </div>
+</Layout>
 
 <style is:global></style>

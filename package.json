@@ -17,21 +17,34 @@
     "@astrojs/tailwind": "^5.0.1",
     "@fontsource-variable/inter": "^5.0.13",
     "@fontsource-variable/inter-tight": "^5.0.16",
-    "@fontsource/ibm-plex-sans": "^5.0.15",
+    "@fontsource/ibm-plex-sans": "^5.0.18",
     "@fontsource/ibm-plex-serif": "^5.0.8",
     "@fontsource/inter": "^5.0.13",
     "@fontsource/inter-tight": "^5.0.15",
+    "@formkit/auto-animate": "^0.8.0",
+    "@radix-ui/react-icons": "^1.3.0",
     "@tailwindcss/forms": "^0.5.6",
     "@tailwindcss/typography": "^0.5.10",
     "@types/react": "^18.2.25",
     "@types/react-dom": "^18.2.11",
     "astro": "^3.2.3",
     "astro-feather-icons": "^1.0.2",
-    "cva": "1.0.0-beta.1",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.0.0",
+    "cva": "npm:class-variance-authority@^0.7.0",
+    "lucide": "^0.287.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-feather": "^2.0.10",
     "sharp": "^0.32.6",
-    "tailwindcss": "^3.3.3"
+    "tailwind-merge": "^2.2.0",
+    "tailwindcss": "^3.3.3",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
+    "prettier": "^3.0.3",
+    "prettier-plugin-tailwindcss": "^0.5.6",
+    "typescript": "^5.3.3"
   }
 }

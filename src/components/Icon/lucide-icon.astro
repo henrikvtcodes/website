@@ -1,0 +1,26 @@
+---
+import type { Accessibility } from "lucide";
+
+type Props = {
+  icon: typeof Accessibility;
+  class?: string;
+};
+
+const { icon, ...props } = Astro.props;
+
+const [, attributes, children] = icon;
+
+const componentChildren = children
+  ?.map(
+    ([child, attributes]) =>
+      `<${child} ${Object.entries(attributes)
+        .map(([k, v]) => `${k}="${v}"`)
+        .join(" ")} />`
+  )
+  .join("\n");
+
+// 3. Merge `attributes` and `props`
+const componentAttributes = { ...attributes, ...props };
+---
+
+<svg {...componentAttributes} set:html={componentChildren} />

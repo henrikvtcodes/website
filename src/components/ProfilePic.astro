@@ -1,0 +1,14 @@
+---
+import pfp from "https://github.com/henrikvtcodes.png";
+import { Image } from "astro:assets";
+const dimension = 96;
+---
+
+<Image
+  src={pfp}
+  class={"rounded-full"}
+  alt="picture of henrik"
+  width={dimension}
+  height={dimension}
+  quality={100}
+/>
