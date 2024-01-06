@@ -1,15 +1,15 @@
 ---
-export interface Props {
-  title: string;
-  description: string;
-}
-
-const { title, description } = Astro.props;
-
 import "@fontsource/ibm-plex-sans";
 import "@fontsource/ibm-plex-serif";
 import "@fontsource/inter-tight";
 import "@fontsource-variable/inter-tight";
+
+export interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title = "henrik's website", description = "henrik's portfolio website" } = Astro.props;
 ---
 
 <!doctype html>
@@ -22,6 +22,8 @@ import "@fontsource-variable/inter-tight";
     <meta name="title" content={title} />
     <meta name="description" content={description} />
     <link rel="icon" type="image/png" href={"/favicon.ico"} />
+    <link rel="preconnect" href="https://github.com" />
+    <link rel="prefetch" href="https://github.com/henrikvtcodes.png" />
     <link rel="canonical" href={Astro.url} />
     {/** FACEBOOK / OPENGRAPH */}
     <meta property="og:type" content="website" />
@@ -37,14 +39,19 @@ import "@fontsource-variable/inter-tight";
     <meta property="twitter:image" content={"/mountain-sunrise.jpg"} />
     <!-- <meta property="twitter:site" content={DefaultProps.twitter?.site} /> -->
 
-    <script
+    <!-- TODO: Get/setup a new analytics provider -->
+    <!-- <script
       defer
       type="text/partytown"
-      data-domain="henriktech.com"
-      src="https://plausible.orangeunilabs.com/js/plausible.outbound-links.js"
-    ></script>
+      data-domain="henrikvt.com"
+      src="https://plausible.orangeunilabs.com/js/plausible.outbound-links.js"></script> -->
   </head>
   <body class="min-h-screen w-screen">
+    <style>
+      :root {
+        @apply font-sans;
+      }
+    </style>
     <slot />
   </body>
 </html>
