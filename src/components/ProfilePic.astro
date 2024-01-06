@@ -1,14 +1,33 @@
 ---
-import pfp from "https://github.com/henrikvtcodes.png";
 import { Image } from "astro:assets";
-const dimension = 96;
+import pfp from "@/images/henrik-circlehat.png";
+import { cn } from "@/lib/utils";
+
+type Props = {
+  class?: string;
+  dimension?: number;
+  src?: string;
+};
+
+const { class: classes, dimension = 96, src } = Astro.props;
 ---
 
-<Image
-  src={pfp}
-  class={"rounded-full"}
-  alt="picture of henrik"
-  width={dimension}
-  height={dimension}
-  quality={100}
-/>
+{
+  src ? (
+    <Image
+      src={src}
+      class={cn("rounded-full", classes)}
+      alt="picture of henrik"
+      width={dimension}
+      height={dimension}
+    />
+  ) : (
+    <Image
+      src={pfp}
+      class={cn("rounded-full", classes)}
+      alt="picture of henrik"
+      width={dimension}
+      height={dimension}
+    />
+  )
+}
