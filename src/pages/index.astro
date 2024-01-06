@@ -1,20 +1,21 @@
 ---
-import Card from "@/components/Card/Card.astro";
-import ProfilePic from "@/components/ProfilePic.astro";
-import Layout from "@/layouts/RootLayout.astro";
+import HeaderNav from "@/components/HeaderNav.astro";
+import SocialButtons from "@/components/SocialButtons.astro";
+import RootLayout from "@/layouts/RootLayout.astro";
 ---
 
-<Layout title="henrik's website" description="henrik's simple website">
-  <div class="w-full flex justify-center">
-    <div class="grid w-3/5 grid-cols-8 grid-flow-row">
-      <!-- Title & Pfp  -->
-      <Card grid={{ width: "full" }} class={"col-start-1"}>
-        <ProfilePic />
-        <h1 class="text-4xl">Henrik VT</h1>
-      </Card>
-      <Card class="col-start-7 col-span-1" grid={{}} />
+<RootLayout title="henrik's website" description="henrik's simple website">
+  <div class="w-screen overflow-x-hidden flex min-h-screen justify-center">
+    <div class="sm:w-[640px] w-full border-x-2 *:w-full">
+      <HeaderNav />
+      <main class="flex flex-col mt-20 px-4 font-serif gap-y-4">
+        <h1 class="text-4xl">hi, i'm henrik</h1>
+        <SocialButtons />
+        <p>
+          i am a web developer, homelabber, & cs student. i also like to unicycle, ski, and make
+          timelapses.
+        </p>
+      </main>
     </div>
   </div>
-</Layout>
-
-<style is:global></style>
+</RootLayout>
