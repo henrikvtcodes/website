@@ -1,5 +1,4 @@
 import partytown from "@astrojs/partytown";
-import prefetch from "@astrojs/prefetch";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
 import tailwind from "@astrojs/tailwind";
@@ -15,7 +14,6 @@ export default defineConfig({
         forward: ["plausible"],
       },
     }),
-    prefetch(),
     react(),
     sitemap(),
   ],
