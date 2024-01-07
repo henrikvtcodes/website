@@ -1,0 +1,16 @@
+---
+import { cardVariants, type CardVariants } from "../Card/card-variants";
+import { gridVariants, type GridVariants } from "../grid-variants";
+
+type Props = CardVariants & { class?: string; grid: GridVariants };
+
+const classes = cardVariants(Astro.props);
+const gridClasses = gridVariants(Astro.props.grid);
+---
+
+<div class={`p-2 ${gridClasses} `}>
+  <div class={`${classes}${Astro.props.class}`}>
+    <slot />
+  </div>
+</div>
+ ./card-variants../ui/grid-variants

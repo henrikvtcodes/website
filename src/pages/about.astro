@@ -1,0 +1,29 @@
+---
+import ProfilePic from "@/components/ProfilePic.astro";
+import NarrowPageLayout from "@/layouts/NarrowPageLayout.astro";
+---
+
+<NarrowPageLayout>
+  <article class="px-6 w-full">
+    <h1 class="text-3xl w-full text-center">About Me</h1>
+    <section class="w-full flex justify-center py-8">
+      <ProfilePic src="https://github.com/henrikvtcodes.png" dimension={186} />
+    </section>
+    <section class="flex flex-col items-center [&>p]:w-5/6 border-separate">
+      <p>
+        Hey! My name is Henrik and I am a self-taught software developer, homelabber, & unicyclist.
+        I am currently studying computer science at the university level. My primary discipline is
+        fullstack web dev (using Typescript), however I dabble in systems programming (with Rust) &
+        some Java/Python for class. <br /> I've been using Next.js and React (with the T3 Stack) for
+        most of my projects so far, however I am interested in learning Svelte & SvelteKit. I am also
+        a Tailwind CSS ride-or-die.
+      </p>
+      <p>
+        Despite using some Python & RobotC (proprietary robotics language) starting in 2017, I
+        really got into software development in Dec 2020. Thanks to Fireship.io by Jeff Delaney, I
+        started making a website using Create React App. I've since picked up a number of tools &
+        frameworks, such as tRPC, Tailwind CSS, Vite, and Astro.
+      </p>
+    </section>
+  </article>
+</NarrowPageLayout>

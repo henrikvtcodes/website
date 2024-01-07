@@ -1,24 +1,21 @@
 ---
-import InfoCard from "../components/InfoCard.astro";
-import ProfilePic from "components/ProfilePic.astro";
-import Layout from "layouts/Layout.astro";
-import Title from "components/Title.astro";
-import NavButtons from "components/NavButtons.astro";
-import SocialButtons from "components/SocialButtons";
+import SocialButtons from "@/components/SocialButtons.astro";
+import NarrowPageLayout from "@/layouts/NarrowPageLayout.astro";
 ---
 
-<Layout title="henrik's website" description="henrik's simple website">
-  <InfoCard>
-    <ProfilePic />
-    <Title />
-    <p class="max-w-md px-4">
-      Hi! I&apos;m Henrik VT. I am a hobby/freelance software developer and am
-      currently studying Computer Science in college. I&apos;m interested in web
-      development, embedded/systems programming, system adminstration, robotics,
-      AV, public transportation, and unicycling. Linked below are my Github and
-      LinkedIn profiles.
+<NarrowPageLayout>
+  <main class="flex flex-col mt-20 px-6 font-serif gap-y-4">
+    <h1 class="text-4xl font-semibold">hi, i'm henrik</h1>
+    <SocialButtons />
+    <p>
+      i am a developer, homelabber, urbanist, & cs student. my primary discipline is fullstack web
+      dev, however i dabble in systems programming (with Rust) & some embedded (arduino) stuff. i
+      also like running my own thin-client based servers.
+      <br />
+      outside of tech, i also like to unicycle, ski, and make timelapses. big fan of equitable public
+      transport as well.
+      <br />
+      i go by <code class="font-mono bg-gray-100 p-1 rounded-sm">@henrikvtcodes</code> on most platforms.
     </p>
-    <NavButtons />
-    <SocialButtons client:idle />
-  </InfoCard>
-</Layout>
+  </main>
+</NarrowPageLayout>

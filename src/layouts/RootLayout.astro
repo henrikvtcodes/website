@@ -1,0 +1,55 @@
+---
+import "@fontsource/ibm-plex-sans";
+import "@fontsource/ibm-plex-serif";
+
+export interface Props {
+  title: string | undefined;
+  description: string | undefined;
+}
+
+const { title = "henrik's website", description = "henrik's portfolio website" } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <meta name="title" content={title} />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/png" href={"/favicon.ico"} />
+    <link rel="preconnect" href="https://github.com" />
+    <link rel="prefetch" href="https://github.com/henrikvtcodes.png" />
+    <link rel="canonical" href={Astro.url} />
+    {/** FACEBOOK / OPENGRAPH */}
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={"/mountain-sunrise.jpg"} />
+    {/* TWITTER */}
+    <meta property="twitter:card" content={"summary"} />
+    <meta property="twitter:url" content={Astro.url} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={"/mountain-sunrise.jpg"} />
+    <!-- <meta property="twitter:site" content={DefaultProps.twitter?.site} /> -->
+
+    <!-- TODO: Get/setup a new analytics provider -->
+    <!-- <script
+      defer
+      type="text/partytown"
+      data-domain="henrikvt.com"
+      src="https://plausible.orangeunilabs.com/js/plausible.outbound-links.js"></script> -->
+  </head>
+  <body class={`w-screen`}>
+    <style>
+      :root {
+        @apply font-sans;
+      }
+    </style>
+    <slot />
+  </body>
+</html>
