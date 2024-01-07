@@ -8,5 +8,6 @@
     "jsx": "react-jsx",
     "jsxImportSource": "react"
   },
+  "include": ["src/**/*", "astro.config.ts"],
   "exclude": ["node_modules", "astro.config.mjs"]
 }

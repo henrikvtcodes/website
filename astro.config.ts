@@ -1,4 +1,3 @@
-// @ts-check
 import partytown from "@astrojs/partytown";
 import prefetch from "@astrojs/prefetch";
 import react from "@astrojs/react";
