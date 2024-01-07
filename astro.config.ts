@@ -17,4 +17,5 @@ export default defineConfig({
     react(),
     sitemap(),
   ],
+  prefetch: true,
 });
