@@ -10,6 +10,7 @@ export default {
       fontFamily: {
         sans: ["IBM Plex Sans", ...defaultTheme.fontFamily.sans],
         serif: ["IBM Plex Serif", ...defaultTheme.fontFamily.serif],
+        mono: ["JetBrains Mono Variable", "JetBrains Mono", ...defaultTheme.fontFamily.mono],
       },
       colors: {
         gray: {
