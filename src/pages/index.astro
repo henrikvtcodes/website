@@ -1,21 +1,21 @@
 ---
-import HeaderNav from "@/components/HeaderNav.astro";
 import SocialButtons from "@/components/SocialButtons.astro";
-import RootLayout from "@/layouts/RootLayout.astro";
+import NarrowPageLayout from "@/layouts/NarrowPageLayout.astro";
 ---
 
-<RootLayout title="henrik's website" description="henrik's simple website">
-  <div class="w-screen overflow-x-hidden flex min-h-screen justify-center">
-    <div class="sm:w-[640px] w-full border-x-2 *:w-full">
-      <HeaderNav />
-      <main class="flex flex-col mt-20 px-4 font-serif gap-y-4">
-        <h1 class="text-4xl">hi, i'm henrik</h1>
-        <SocialButtons />
-        <p>
-          i am a web developer, homelabber, & cs student. i also like to unicycle, ski, and make
-          timelapses.
-        </p>
-      </main>
-    </div>
-  </div>
-</RootLayout>
+<NarrowPageLayout>
+  <main class="flex flex-col mt-20 px-6 font-serif gap-y-4">
+    <h1 class="text-4xl font-semibold">hi, i'm henrik</h1>
+    <SocialButtons />
+    <p>
+      i am a developer, homelabber, urbanist, & cs student. my primary discipline is fullstack web
+      dev, however i dabble in systems programming (with Rust) & some embedded (arduino) stuff. i
+      also like running my own thin-client based servers.
+      <br />
+      outside of tech, i also like to unicycle, ski, and make timelapses. big fan of equitable public
+      transport as well.
+      <br />
+      i go by <code class="font-mono bg-gray-100 p-1 rounded-sm">@henrikvtcodes</code> on most platforms.
+    </p>
+  </main>
+</NarrowPageLayout>

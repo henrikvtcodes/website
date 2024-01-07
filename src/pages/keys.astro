@@ -1,0 +1,21 @@
+---
+import NarrowPageLayout from "@/layouts/NarrowPageLayout.astro";
+
+const sshKey = await (
+  await fetch("https://raw.githubusercontent.com/henrikvtcodes/henrikvtcodes/main/id_ed25519.pub")
+).text();
+---
+
+<NarrowPageLayout>
+  <div class="w-full max-w-full px-6">
+    <h1 class="text-4xl">ssh</h1>
+    <div class="w-full max-w-full py-4">
+      <!-- TODO: Make this "click to copy" for good UX -->
+      <code
+        class="block font-mono w-full overflow-x-scroll p-4 rounded bg-gray-100 whitespace-nowrap"
+      >
+        {sshKey}
+      </code>
+    </div>
+  </div>
+</NarrowPageLayout>
