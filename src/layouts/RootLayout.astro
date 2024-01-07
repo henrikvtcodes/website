@@ -3,8 +3,8 @@ import "@fontsource/ibm-plex-sans";
 import "@fontsource/ibm-plex-serif";
 
 export interface Props {
-  title: string;
-  description?: string;
+  title: string | undefined;
+  description: string | undefined;
 }
 
 const { title = "henrik's website", description = "henrik's portfolio website" } = Astro.props;
@@ -44,7 +44,7 @@ const { title = "henrik's website", description = "henrik's portfolio website" }
       data-domain="henrikvt.com"
       src="https://plausible.orangeunilabs.com/js/plausible.outbound-links.js"></script> -->
   </head>
-  <body class={`min-h-screen w-screen`}>
+  <body class={`w-screen`}>
     <style>
       :root {
         @apply font-sans;
