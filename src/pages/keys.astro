@@ -10,14 +10,14 @@ const sshKey = await (
 <NarrowPageLayout>
   <div class="w-full max-w-full px-6">
     <h1 class="text-4xl">ssh</h1>
-    <div class="w-full max-w-full py-4">
-      <!-- TODO: Make this "click to copy" for good UX -->
+    <div class="w-full max-w-full py-4 inline-flex items-center">
       <code
-        class="block font-mono w-full overflow-x-scroll p-4 rounded bg-gray-100 whitespace-nowrap"
+        class="block font-mono w-full overflow-x-scroll px-4 py-2 rounded bg-gray-100 whitespace-nowrap"
       >
         {sshKey}
       </code>
       <CopyButton toCopy={sshKey} client:load />
     </div>
+    Please note this key is separate from my Git signing key and keys I use to access my personal infrastructure.
   </div>
 </NarrowPageLayout>
