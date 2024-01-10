@@ -1,4 +1,5 @@
 ---
+import Ellipses from "@/components/Ellipsis.astro";
 import ProfilePic from "@/components/ProfilePic.astro";
 import NarrowPageLayout from "@/layouts/NarrowPageLayout.astro";
 ---
@@ -14,15 +15,23 @@ import NarrowPageLayout from "@/layouts/NarrowPageLayout.astro";
         Hey! My name is Henrik and I am a self-taught software developer, homelabber, & unicyclist.
         I am currently studying computer science at the university level. My primary discipline is
         fullstack web dev (using Typescript), however I dabble in systems programming (with Rust) &
-        some Java/Python for class. <br /> I've been using Next.js and React (with the T3 Stack) for
-        most of my projects so far, however I am interested in learning Svelte & SvelteKit. I am also
-        a Tailwind CSS ride-or-die.
+        some other stuff for class.
       </p>
+      <Ellipses />
       <p>
-        Despite using some Python & RobotC (proprietary robotics language) starting in 2017, I
-        really got into software development in Dec 2020. Thanks to Fireship.io by Jeff Delaney, I
-        started making a website using Create React App. I've since picked up a number of tools &
-        frameworks, such as tRPC, Tailwind CSS, Vite, and Astro.
+        My preferred (web dev) stack is based on the T3 Stack (Next.js, Tailwind CSS, tRPC,
+        NextAuth/Auth.js) with the difference that I like to sub-in Lucia or Supabase for the
+        authentication aspect. For serverside, I've used Nest and vanilla Express in the past,
+        however, I have switched to using Elysia (in the Bun runtime) for full fledged APIs & Hono
+        for environments like CF Workers.
+      </p>
+      <Ellipses />
+      <p>
+        My homelab is currently small, but I am working on expanding it. So far, I've got a 4tb {
+          "<$200"
+        } NAS box based on a HP EliteDesk G4 SFF, and a Lenovo ThinkCentre thin client. I also have a
+        Hetzner server for some stuff. In the future, I'd like to get an ASN (and some IPv4/IPv6 blocks)
+        to build out a network. With that I'd also probably get a rack and a few servers off ebay.
       </p>
     </section>
   </article>
