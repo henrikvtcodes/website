@@ -4,7 +4,12 @@ import LucideIcon from "./Icon/lucide-icon.astro";
 ---
 
 <nav class="flex flex-row space-x-6">
-  <a class="hover:bg-blue-300 rounded p-1" href="https://github.com/henrikvtcodes" target="_blank">
+  <a
+    class="hover:bg-blue-300 rounded p-1"
+    href="https://github.com/henrikvtcodes"
+    target="_blank"
+    aria-label="Github Link"
+  >
     <LucideIcon class={"w-6 h-auto"} icon={Github} />
   </a>
   <a
@@ -12,6 +17,7 @@ import LucideIcon from "./Icon/lucide-icon.astro";
     href="https://twitter.com/henrikvtcodes"
     title="This is intentional. It's called Twitter."
     target="_blank"
+    aria-label="Twitter Link"
   >
     <LucideIcon class={"w-6 h-auto"} icon={Twitter} />
   </a>
@@ -19,6 +25,7 @@ import LucideIcon from "./Icon/lucide-icon.astro";
     class="hover:bg-blue-300 rounded p-1"
     href="https://www.linkedin.com/in/henrikvtcodes"
     target="_blank"
+    aria-label="LinkedIn Link"
   >
     <LucideIcon class={"w-6 h-auto"} icon={Linkedin} />
   </a>
@@ -27,6 +34,7 @@ import LucideIcon from "./Icon/lucide-icon.astro";
     href="https://urbanists.social/@henrik"
     rel="me"
     target="_blank"
+    aria-label="Mastodon Link"
   >
     <svg class={"w-6 h-auto"} viewBox="0 0 74 79" fill="black" xmlns="http://www.w3.org/2000/svg">
       <path
