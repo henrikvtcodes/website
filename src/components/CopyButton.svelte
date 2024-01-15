@@ -18,7 +18,7 @@
 <div class="pl-2">
   <button
     title="Copy to clipboard"
-    class="p-1 rounded border border-gray-200 hover:bg-gray-100 bg-white"
+    class="p-1 rounded border border-gray-200 dark:border-zinc-600 hover:bg-zinc-100 dark:bg-zinc-700 bg-white dark:hover:bg-zinc-800"
     disabled={copying}
     on:click={clickToCopy}
   >
