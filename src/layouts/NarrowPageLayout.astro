@@ -1,5 +1,6 @@
 ---
 import HeaderNav from "@/components/HeaderNav.astro";
+import RenderedAt from "@/components/RenderedAt.astro";
 import RootLayout from "./RootLayout.astro";
 
 export interface Props {
@@ -15,6 +16,7 @@ const { title, description } = Astro.props;
     <div class="sm:w-[640px] h-screen overflow-auto w-full border-x-2 *:w-full">
       <HeaderNav />
       <slot />
+      <RenderedAt />
     </div>
   </div>
 </RootLayout>

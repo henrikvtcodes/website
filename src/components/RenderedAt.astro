@@ -1,0 +1,9 @@
+---
+const currDateTime = new Date();
+const dateString = currDateTime.toLocaleDateString();
+const timeString = currDateTime.toLocaleTimeString();
+---
+
+<div class="text-center text-xs text-zinc-500 pl-6 mt-4 static left-[50vw] right-[50vw]">
+  Page generated on <time>{dateString} at {timeString}</time>
+</div>
