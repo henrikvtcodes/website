@@ -98,6 +98,9 @@ dependencies:
   svelte:
     specifier: ^4.2.8
     version: 4.2.8
+  svelte-lanyard:
+    specifier: ^1.0.2
+    version: 1.0.2
   tailwind-merge:
     specifier: ^2.2.0
     version: 2.2.0
@@ -4073,6 +4076,10 @@ packages:
       svelte: ^3.19.0 || ^4.0.0
     dependencies:
       svelte: 4.2.8
+    dev: false
+
+  /svelte-lanyard@1.0.2:
+    resolution: {integrity: sha512-JxXHaTkIyDE7BAg6PHP/QP9qsqYcQO/SOmCokb6rKfDHAKsn09XtRC8mBcLKjaqDG/MVSONCaQSsXi85hUhWCQ==}
     dev: false
 
   /svelte2tsx@0.6.27(svelte@4.2.8)(typescript@5.3.3):
