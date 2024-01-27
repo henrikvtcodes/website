@@ -1,0 +1,83 @@
+message:  {
+  "op": 0,
+  "d": {
+    "kv": {},
+    "spotify": null,
+    "discord_user": {
+      "id": "380134323963297794",
+      "username": "hemnirk",
+      "avatar": "ada5d33d00781d468a53f27a0863562e",
+      "discriminator": "0",
+      "bot": false,
+      "global_name": "Henrik",
+      "avatar_decoration_data": null,
+      "display_name": "Henrik",
+      "public_flags": 128
+    },
+    "activities": [],
+    "discord_status": "online",
+    "active_on_discord_web": false,
+    "active_on_discord_desktop": true,
+    "active_on_discord_mobile": false,
+    "listening_to_spotify": false
+  },
+  "t": "INIT_STATE"
+}
+message:  {
+  "op": 0,
+  "d": {
+    "kv": {},
+    "spotify": {
+      "track_id": "1YBvhB1094Q5Niw1GDSRY3",
+      "timestamps": {
+        "start": 1706286706385,
+        "end": 1706286886229
+      },
+      "album": "Youthful Kids",
+      "album_art_url": "https://i.scdn.co/image/ab67616d0000b273d0b1c88513199c9eb620061a",
+      "artist": "it's murph",
+      "song": "Youthful Kids"
+    },
+    "discord_user": {
+      "id": "380134323963297794",
+      "username": "hemnirk",
+      "avatar": "ada5d33d00781d468a53f27a0863562e",
+      "discriminator": "0",
+      "bot": false,
+      "global_name": "Henrik",
+      "avatar_decoration_data": null,
+      "display_name": "Henrik",
+      "public_flags": 128
+    },
+    "activities": [
+      {
+        "flags": 48,
+        "id": "spotify:1",
+        "name": "Spotify",
+        "type": 2,
+        "state": "it's murph",
+        "session_id": "7987a386dd3e38079cdaba41108295b8",
+        "details": "Youthful Kids",
+        "timestamps": {
+          "start": 1706286706385,
+          "end": 1706286886229
+        },
+        "assets": {
+          "large_image": "spotify:ab67616d0000b273d0b1c88513199c9eb620061a",
+          "large_text": "Youthful Kids"
+        },
+        "sync_id": "1YBvhB1094Q5Niw1GDSRY3",
+        "created_at": 1706286751120,
+        "party": {
+          "id": "spotify:380134323963297794"
+        }
+      }
+    ],
+    "discord_status": "online",
+    "active_on_discord_web": false,
+    "active_on_discord_desktop": true,
+    "active_on_discord_mobile": false,
+    "listening_to_spotify": true
+  },
+  "t": "PRESENCE_UPDATE"
+} 
