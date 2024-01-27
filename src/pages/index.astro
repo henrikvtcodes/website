@@ -1,12 +1,21 @@
 ---
+import LanyardCard from "@/components/LanyardCard/LanyardCard.astro";
 import SocialButtons from "@/components/SocialButtons.astro";
 import NarrowPageLayout from "@/layouts/NarrowPageLayout.astro";
 ---
 
 <NarrowPageLayout>
   <main class="flex flex-col mt-20 px-6 font-serif gap-y-4">
-    <h1 class="text-4xl font-semibold">hi, i'm henrik</h1>
-    <SocialButtons />
+    <div class="grid grid-rows-2 grid-cols-2 gap-y-4">
+      <h1 class="text-4xl font-semibold basis-1/2 col-start-1 col-span-1 row-start-1 row-span-1">
+        hi, i'm henrik
+      </h1>
+      <SocialButtons />
+      <div class="col-start-2 col-span-1 row-start-1 row-span-2 grid place-content-center">
+        <LanyardCard />
+      </div>
+    </div>
+
     <p>
       i am a developer, homelabber, urbanist, & cs student. my primary discipline is fullstack web
       dev, however i dabble in systems programming (with Rust) & some embedded (arduino) stuff. i
