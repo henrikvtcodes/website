@@ -1,0 +1,22 @@
+---
+import { getDiscordStatus } from "@/lib/lanyard";
+import { cn } from "@/lib/utils";
+import LanyardRenderer from "./LanyardRenderer.svelte";
+
+const lanyard = await getDiscordStatus();
+
+type Props = {
+  class?: string;
+};
+
+// @ts-ignore
+const { class: className } = Astro.props;
+---
+
+<div
+  class={cn(
+    "p-2 rounded border-white border-2 bg-zinc-800 grid place-content-center w-full h-full"
+  )}
+>
+  <LanyardRenderer lanyardData={lanyard} client:load />
+</div>
