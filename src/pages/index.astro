@@ -7,12 +7,16 @@ import NarrowPageLayout from "@/layouts/NarrowPageLayout.astro";
 <NarrowPageLayout>
   <main class="flex flex-col mt-20 px-6 font-serif gap-y-4">
     <div class="grid grid-rows-2 grid-cols-2 gap-y-4">
-      <h1 class="text-4xl font-semibold basis-1/2 col-start-1 col-span-1 row-start-1 row-span-1">
-        hi, i'm henrik
-      </h1>
+      <div class="">
+        <h1
+          class="text-4xl font-semibold basis-1/2 col-start-1 col-span-1 row-start-1 row-span-1 bg-clip-text text-transparent bg-gradient-to-r from-orange-400 via-purple-400 to-blue-400"
+        >
+          hi, i'm henrik
+        </h1>
+      </div>
       <SocialButtons />
       <div class="col-start-2 col-span-1 row-start-1 row-span-2 grid place-content-center">
-        <LanyardCard />
+        <!-- <LanyardCard /> -->
       </div>
     </div>
 
@@ -24,9 +28,11 @@ import NarrowPageLayout from "@/layouts/NarrowPageLayout.astro";
       outside of tech, i also like to unicycle, ski, and make timelapses. big fan of equitable public
       transport as well.
       <br />
-      i go by <code class="font-mono bg-zinc-100 dark:bg-zinc-800 p-1 mt-1 rounded-sm"
-        >@henrikvtcodes</code
-      > on most platforms.
+      <span class="py-2">
+        i go by <code class="font-mono bg-zinc-100 dark:bg-zinc-800 p-1 mt-1 rounded-sm"
+          >@henrikvtcodes</code
+        > on most platforms.
+      </span>
     </p>
   </main>
 </NarrowPageLayout>
