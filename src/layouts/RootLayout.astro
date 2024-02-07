@@ -46,9 +46,15 @@ const { title = "henrik's website", description = "henrik's portfolio website" }
       src="https://plausible.orangeunilabs.com/js/plausible.outbound-links.js"></script> -->
   </head>
   <body class={`w-screen bg-zinc-100 dark:bg-zinc-900 text-black dark:text-white`}>
-    <style>
+    <style is:global>
       :root {
         @apply font-sans;
+      }
+
+      .cool-text-gradient {
+        background-clip: text;
+        color: transparent;
+        @apply bg-gradient-to-r from-orange-400 via-purple-400 to-blue-400 bg-clip-text text-transparent;
       }
     </style>
     <slot />
