@@ -51,11 +51,30 @@ const { title = "henrik's website", description = "henrik's portfolio website" }
         @apply font-sans;
       }
 
+      /* Default styles for external links */
+      a[target="_blank"] {
+        @apply text-blue-500 visited:text-purple-500 dark:text-blue-300 dark:visited:text-purple-300;
+      }
+
       .cool-text-gradient {
         background-clip: text;
         color: transparent;
-        @apply bg-gradient-to-r from-orange-400 via-purple-400 to-blue-400 bg-clip-text text-transparent;
+        @apply bg-gradient-to-r bg-clip-text text-transparent;
+        @apply from-orange-400 via-purple-400 to-blue-400;
+        animation: gradient-animation 5s ease 0s infinite;
       }
+      /* 
+      @keyframes gradient-animation {
+        0% {
+          @apply from-orange-400 via-purple-400 to-blue-400;
+        }
+        50% {
+          @apply from-blue-400 via-orange-400 to-purple-400;
+        }
+        100% {
+          @apply from-purple-400 via-blue-400 to-orange-400;
+        }
+      } */
     </style>
     <slot />
   </body>
