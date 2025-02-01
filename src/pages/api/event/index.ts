@@ -1,7 +1,9 @@
 import type { APIRoute } from "astro";
 
 export const GET: APIRoute = async ({ request }) => {
-  const scriptData = await fetch("https://assets.onedollarstats.com/stonks.js");
+  const scriptData = await fetch("https://assets.onedollarstats.com/stonks.js", {
+    headers: request.headers,
+  });
   const script = await scriptData.text();
   const { status, headers } = scriptData;
 
@@ -19,6 +21,7 @@ export const POST: APIRoute = async ({ request }) => {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      ...request.headers,
     },
   });
 
