@@ -4,42 +4,25 @@ import LucideIcon from "./Icon/lucide-icon.astro";
 ---
 
 <nav
-  class="flex flex-row space-x-6 text-black dark:text-white col-start-1 col-span-1 row-start-2 row-span-1"
+  class="flex flex-row space-x-6 bg-inherit text-black dark:text-white col-start-1 col-span-1 row-start-2 row-span-1"
 >
-  <a
-    class="hover:bg-blue-300 rounded p-1"
-    href="https://github.com/henrikvtcodes"
-    target="_blank"
-    aria-label="Github Link"
-  >
-    <LucideIcon class={"w-6 h-auto"} icon={Github} />
+  <a href="https://github.com/henrikvtcodes" target="_blank" aria-label="Github Link">
+    <LucideIcon class={""} icon={Github} />
   </a>
   <a
-    class="hover:bg-blue-300 rounded p-1"
     href="https://twitter.com/henrikvtcodes"
     title="This is intentional. It's called Twitter."
     target="_blank"
     aria-label="Twitter Link"
   >
-    <LucideIcon class={"w-6 h-auto"} icon={Twitter} />
+    <LucideIcon class={""} icon={Twitter} />
   </a>
-  <a
-    class="hover:bg-blue-300 rounded p-1"
-    href="https://www.linkedin.com/in/henrikvtcodes"
-    target="_blank"
-    aria-label="LinkedIn Link"
-  >
-    <LucideIcon class={"w-6 h-auto"} icon={Linkedin} />
+  <a href="https://www.linkedin.com/in/henrikvtcodes" target="_blank" aria-label="LinkedIn Link">
+    <LucideIcon class={""} icon={Linkedin} />
   </a>
-  <a
-    class="hover:bg-blue-300 rounded p-1"
-    href="https://urbanists.social/@henrik"
-    rel="me"
-    target="_blank"
-    aria-label="Mastodon Link"
-  >
+  <a href="https://urbanists.social/@henrik" rel="me" target="_blank" aria-label="Mastodon Link">
     <svg
-      class={"w-6 h-auto text-black dark:invert"}
+      class={" text-black dark:invert"}
       viewBox="0 0 74 79"
       fill="black"
       xmlns="http://www.w3.org/2000/svg"
@@ -51,10 +34,33 @@ import LucideIcon from "./Icon/lucide-icon.astro";
       ></path>
     </svg>
   </a>
+  <a
+    href="https://bsky.app/profile/henrikvt.com"
+    rel="me"
+    target="_blank"
+    aria-label="Bluesky Link"
+  >
+    <!-- Bluesky logo -->
+    <svg
+      class={" text-black dark:invert"}
+      width="568"
+      height="501"
+      viewBox="0 0 568 501"
+      fill="inherit"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M123.121 33.6637C188.241 82.5526 258.281 181.681 284 234.873C309.719 181.681 379.759 82.5526 444.879 33.6637C491.866 -1.61183 568 -28.9064 568 57.9464C568 75.2916 558.055 203.659 552.222 224.501C531.947 296.954 458.067 315.434 392.347 304.249C507.222 323.8 536.444 388.56 473.333 453.32C353.473 576.312 301.061 422.461 287.631 383.039C285.169 375.812 284.017 372.431 284 375.306C283.983 372.431 282.831 375.812 280.369 383.039C266.939 422.461 214.527 576.312 94.6667 453.32C31.5556 388.56 60.7778 323.8 175.653 304.249C109.933 315.434 36.0535 296.954 15.7778 224.501C9.94525 203.659 0 75.2916 0 57.9464C0 -28.9064 76.1345 -1.61183 123.121 33.6637Z"
+        fill="black"></path>
+    </svg>
+  </a>
 </nav>
 
 <style>
   a {
-    @apply hover:bg-blue-300 dark:hover:bg-blue-900;
+    @apply grid aspect-square place-content-center rounded p-1.5 hover:bg-zinc-300 dark:hover:bg-zinc-800;
+  }
+  a > svg {
+    @apply h-6 w-6;
   }
 </style>
