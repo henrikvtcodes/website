@@ -8,9 +8,9 @@
 
   async function clickToCopy() {
     copying = true;
-    /* Runs for a minimum of 1000ms - this is a little UX touch. 
+    /* Runs for a minimum of 550ms - this is a little UX touch, it makes people feel like the button actually worked 
     Tailwind CSS' animate-spin runs for 1s so that's where the value came from. */
-    await Promise.allSettled([navigator.clipboard.writeText(toCopy), fakeDelay(1000)]);
+    await Promise.allSettled([navigator.clipboard.writeText(toCopy), fakeDelay(550)]);
     copying = false;
   }
 </script>
