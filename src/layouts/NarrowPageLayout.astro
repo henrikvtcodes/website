@@ -1,4 +1,5 @@
 ---
+import Badges from "@/components/Badges.astro";
 import HeaderNav from "@/components/HeaderNav.astro";
 import RenderedAt from "@/components/RenderedAt.astro";
 import RootLayout from "./RootLayout.astro";
@@ -13,9 +14,10 @@ const { title, description } = Astro.props;
 
 <RootLayout title={title} description={description}>
   <div class="w-screen flex justify-center font-serif">
-    <div class="sm:w-[640px] h-screen overflow-auto w-full *:w-full">
+    <div class="sm:w-[640px] bg-inherit h-screen overflow-auto w-full *:w-full">
       <HeaderNav />
       <slot />
+      <Badges />
       <RenderedAt />
     </div>
   </div>
