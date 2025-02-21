@@ -2,6 +2,7 @@
 import "@fontsource/ibm-plex-sans";
 import "@fontsource/ibm-plex-serif";
 import "@fontsource-variable/jetbrains-mono";
+import PrideCorner from "@/components/PrideCorner.astro";
 
 export interface Props {
   title: string | undefined;
@@ -73,4 +74,5 @@ const { title = "henrik's website", description = "henrik's portfolio website" }
     </style>
     <slot />
   </body>
+  <PrideCorner />
 </html>
