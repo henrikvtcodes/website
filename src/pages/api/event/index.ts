@@ -20,24 +20,24 @@ export const POST: APIRoute = async ({ request }) => {
 
   const collectorURL = new URL("https://collector.onedollarstats.com/events");
 
-  const redir = new Request(collectorURL, request);
-  // @ts-expect-error Yeah okay buddy
-  redir.url = collectorURL;
+  // const redir = new Request(collectorURL, request);
+  // // @ts-expect-error Yeah okay buddy
+  // redir.url = collectorURL;
 
-  console.log("Redirected request", redir);
+  // console.log("Redirected request", redir);
 
-  const response = await fetch(redir, {
-    method: "POST",
-  });
-
-  // const response = await fetch("https://collector.onedollarstats.com/events", {
-  //   body: body,
+  // const response = await fetch(redir, {
   //   method: "POST",
-  //   headers: {
-  //     "Content-Type": "application/json",
-  //     ...request.headers,
-  //   },
   // });
+
+  const response = await fetch(collectorURL, {
+    body: body,
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      ...request.headers,
+    },
+  });
 
   const responseBody = await response.text();
   const { status, headers } = response;
