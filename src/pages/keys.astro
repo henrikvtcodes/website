@@ -3,11 +3,11 @@ import CopyButton from "@/components/CopyButton.svelte";
 import SshKey from "@/components/SshKey.astro";
 import NarrowPageLayout from "@/layouts/NarrowPageLayout.astro";
 
-const sshKeyAddCmd = "curl https://henrikvt.com/id_ed25519.pub >> ~/.ssh/authorized_keys";
+const sshKeyAddCmd = "curl https://henrikvt.com/hvtssh.pub >> ~/.ssh/authorized_keys";
 ---
 
 <NarrowPageLayout>
-  <div class="w-full max-w-full px-6">
+  <div class="w-full max-w-full px-6 mb-24">
     <h1 class="text-4xl">ssh</h1>
     <SshKey />
     Use this command to copy my public key to your `authorized_keys` file.
